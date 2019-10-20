@@ -34,7 +34,7 @@ module.exports = {
         // 你的GitHub仓库
         repo: 'https://github.com/Tinnnny/Tiny-blog',
         // 自定义仓库链接文字。
-        repoLabel: 'My GitHub',
+        repoLabel: 'GitHub',
         nav: [
             {text: '主页', link: '/'},
             {text: '博客', link: '/'},
