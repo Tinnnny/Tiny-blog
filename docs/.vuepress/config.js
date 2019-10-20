@@ -12,8 +12,8 @@ module.exports = {
         repoLabel: 'My GitHub',
         nav: [
             {text: '主页', link: '/'},
-            {text: '博客', link: '/blog/FirstBlog.md'},
-            {text: '关于我', link: '/blog/FirstBlog.md'},
+            {text: '博客', link: '/'},
+            {text: '关于我', link: '/'},
             {
                 text: 'Languages',
                 items: [
@@ -30,35 +30,35 @@ module.exports = {
                     ['/', 'java继承'],
                     ['/', 'java多态']
                 ]
-            // },
-            // {
-            //     title: '框架和工具',
-            //     collapsable: false,
-            //     children: [
-            //         ['/blog/spring-boot-annotation', 'Spring注解'],
-            //         ['/blog/spring-boot-pagehelper&&tkmybatis', 'Pagehelper和tkmybatis使用方法1'],
-            //         ['/blog/spring-boot-pagehelper&&tkmybatis2', 'Pagehelper和tkmybatis使用方法2'],
-            //         ['/blog/spring-boot-start', 'Spring起步'],
-            //         ['/blog/spring-boot-swagger2', 'Swagger2 接口文档引擎'],
-            //         ['/blog/spring-boot-thymeleaf', 'thymeleaf'],
-            //         ['/blog/spring-boot-validation', 'Spring校验注解'],
-            //         ['/blog/nginx-cdn', 'Nginx反向代理cdn'],
-            //     ]
-            // },
-            // {
-            //     title: '项目开发',
-            //     collapsable: false,
-            //     children: [
-            //         ['/', '项目创建'],
-            //         ['/', '页面绘制']
-            //     ]
-            // },
-            // {
-            //     title: '问题解决',
-            //     collapsable: false,
-            //     children: [
-            //         ['/blog/spring-boot-static', '静态资源无法访问'],
-            //     ]
+            },
+            {
+                title: '框架和工具',
+                collapsable: false,
+                children: [
+                    ['/blog/spring-boot-annotation', 'Spring注解'],
+                    ['/blog/spring-boot-pagehelper&&tkmybatis', 'Pagehelper和tkmybatis使用方法1'],
+                    ['/blog/spring-boot-pagehelper&&tkmybatis2', 'Pagehelper和tkmybatis使用方法2'],
+                    ['/blog/spring-boot-start', 'Spring起步'],
+                    ['/blog/spring-boot-swagger2', 'Swagger2 接口文档引擎'],
+                    ['/blog/spring-boot-thymeleaf', 'thymeleaf'],
+                    ['/blog/spring-boot-validation', 'Spring校验注解'],
+                    ['/blog/nginx-cdn', 'Nginx反向代理cdn'],
+                ]
+            },
+            {
+                title: '项目开发',
+                collapsable: false,
+                children: [
+                    ['/blog/project-build', '项目创建过程'],
+                    ['/', '页面绘制']
+                ]
+            },
+            {
+                title: '问题解决',
+                collapsable: false,
+                children: [
+                    ['/blog/spring-boot-static', '静态资源无法访问'],
+                ]
             }
         ]
     }
