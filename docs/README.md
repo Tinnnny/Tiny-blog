@@ -2,7 +2,7 @@
 home: true
 heroImage: /swk.png
 heroText: Tiny-blog
-tagline: 是不是所做的一切，都有报答
+tagline: Stay Hungry, Stay Foolish!
 actionText: 我的博客→
 actionLink: /blog/FirstBlog.md
 features:

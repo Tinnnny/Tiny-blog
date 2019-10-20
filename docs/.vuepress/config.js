@@ -3,7 +3,7 @@ module.exports = {
     title: 'Tiny-blog',
     description: 'Vuepress blog',
     head: [
-        ['link', { rel: 'icon', href: '/vue-logo.png' }]
+        ['link', {rel: 'icon', href: '/vue-logo.png'}]
     ],
     themeConfig: {
         // 你的GitHub仓库
@@ -11,12 +11,14 @@ module.exports = {
         // 自定义仓库链接文字。
         repoLabel: 'My GitHub',
         nav: [
-            { text: 'Home', link: '/' },
-            { text: 'FirstBlog', link: '/blog/FirstBlog.md' }
+            {text: 'Home', link: '/'},
+            {text: 'Blog', link: '/blog/FirstBlog.md'},
         ],
         sidebar: [
             ['/', '首页'],
-            ['/blog/FirstBlog.md', '我的第一篇博客']
+            ['/blog/FirstBlog.md', '我的第一篇博客'],
+            ['/blog/second.md', '我的博客'],
+
         ]
     }
-}
+};
