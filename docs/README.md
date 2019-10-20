@@ -1,9 +1,9 @@
 ---
 home: true
-heroImage: /vue-logo.png
+heroImage: /swk.png
 heroText: Tiny-blog
-tagline: 博客示例
-actionText: 快速上手 →
+tagline: 是不是所做的一切，都有报答
+actionText: 我的博客→
 actionLink: /blog/FirstBlog.md
 features:
 - title: 简洁至上
