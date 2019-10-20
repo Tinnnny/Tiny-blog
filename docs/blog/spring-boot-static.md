@@ -1,13 +1,7 @@
 ---
-layout: post
-title: "解决spring boot静态资源无法访问的问题 "
-subtitle: ''
-author: "Tiny"
-header-style: text
-tags:
-  - Spring Boot
+title: "静态资源无法访问"
 ---
-
+# 静态资源无法访问
 ### 问题描述
 在引入css和js等静态资源时，浏览器显示404not found。但是输入静态资源的网址如
 `http://localhost:8080/assets/global/plugins/font-awesome/css/font-awesome.min.css`

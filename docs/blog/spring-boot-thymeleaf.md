@@ -1,13 +1,6 @@
 ---
-layout: post
-title: "Spring Boot thymeleaf "
-subtitle: ''
-author: "Tiny"
-header-style: text
-tags:
-  - Spring Boot
+title: "Thymeleaf "
 ---
-
 
 ### 概述
 Thymeleaf 是一个跟 Velocity、FreeMarker 类似的模板引擎，它可以完全替代 JSP 。相较与其他的模板引擎。

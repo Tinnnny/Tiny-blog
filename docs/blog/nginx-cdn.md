@@ -1,13 +1,7 @@
 ---
-layout: post 
-title: "利用Nginx反向代理做cdn " 
-subtitle: '' 
-author: "Tiny"
-header-style: text 
-tags:
--   Nginx
+title: "nginx反向代理cdn" 
 ---
-
+# nginx反向代理cdn
 ### docker-compose.yml
 `usr/local/docker/nginx`目录下，创建docker-compose.yml。
 

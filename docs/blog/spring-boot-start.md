@@ -1,22 +1,8 @@
 ---
-layout: post
-title: "spring boot 快速上手"
-subtitle: ''
-author: "Tiny"
-header-style: text
-tags:
-  - Spring Boot
+title: "Spring boot起步"
 ---
-### 用SpringBoot构建应用程序
-本指南提供了如何spring boot帮助您加速和促进应用程序开发。当您阅读更多Spring入门指南时，您将看到SpringBoot的更多用例。
-它的目的是给你一个快速的spring启动的味道。如果您想创建自己的基于SpringBoot的项目，请访问Spring Initializr，填写项目详细信息，选择选项，可以下载Maven构建文件，也可以下载打包成zip文件的项目。
-
-### 你要建什么
-您将使用SpringBoot构建一个简单的Web应用程序，并向其添加一些有用的服务。
-
+# Spring boot起步
 ### 用Maven构建
-首先，您设置了一个基本的构建脚本。在使用Spring构建应用程序时，您可以使用任何您喜欢的构建系统，但是需要有Maven。
-
 #### pom.xml
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -58,7 +44,7 @@ tags:
 </project>
 ```
 
-#### 创建一个简单的web应用程序
+### 创建一个简单的web应用程序
 `src/main/java/hello/HelloController.java`
 
 ```
@@ -81,7 +67,7 @@ public class HelloController {
 添加`@RestController`注解，意味着SpringMVC已经为处理Web请求做好了准备。
 `@RequestMapping`关联了“/”和index()方法。当从浏览器调用或在命令行上使用curl时，该方法将返回纯文本。那是因为`@RestController`联合`@Controller`和`@ResponseBody`，这两个注释导致Web请求返回数据而不是视图。
 
-#### 创建application类
+### 创建application类
 在这里，创建了一个Application使用以下组件初始化：
 
 `src/main/java/hello/Application.java`

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "配置 Swagger2 接口文档引擎 "
 subtitle: ''
 author: "Tiny"

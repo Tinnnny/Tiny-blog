@@ -1,45 +1,38 @@
 ---
-layout: post
-title: "Spring Validation "
-subtitle: ''
-author: "Tiny"
-header-style: text
-tags:
-  - Spring Boot
+title: "Spring注解校验"
 ---
 
+# Spring注解校验
 
-### 校验注解
-
-#### 空检查
+### 空检查
 
 - @Null 验证对象是否为 null
 - @NotNull 验证对象是否不为 null, 无法查检长度为 0 的字符串
 - @NotBlank 检查约束字符串是不是 Null 还有被 Trim 的长度是否大于 0,只对字符串,且会去掉前后空格
 - @NotEmpty 检查约束元素是否为 NULL 或者是 EMPTY
 
-#### 布尔检查
+### 布尔检查
 
 - @AssertTrue 验证 Boolean 对象是否为 true
 - @AssertFalse 验证 Boolean 对象是否为 false
 
-#### 长度检查
+### 长度检查
 
 - @Size(min=, max=) 验证对象（Array, Collection , Map, String）长度是否在给定的范围之内
 - @Length(min=, max=) 验证字符串长度介于 min 和 max 之间
 
-#### 日期检查
+### 日期检查
 
 - @Past 验证 Date 和 Calendar 对象是否在当前时间之前，验证成立的话被注释的元素一定是一个过去的日期
 - @Future 验证 Date 和 Calendar 对象是否在当前时间之后 ，验证成立的话被注释的元素一定是一个将来的日期
 
-#### 正则检查
+### 正则检查
 
 - @Pattern 验证 String 对象是否符合正则表达式的规则，被注释的元素符合制定的正则表达式
   - regexp：正则表达式
   - flags：指定 Pattern.Flag 的数组，表示正则表达式的相关选项
   
-#### 数值检查
+### 数值检查
 
 
 注意： 建议使用在 String ,Integer 类型，不建议使用在 int 类型上，因为表单值为 “” 时无法转换为 int，但可以转换为 String 为 “”，Integer 为 null

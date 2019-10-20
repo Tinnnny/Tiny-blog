@@ -13,5 +13,8 @@
   "license": "ISC",
   "devDependencies": {
     "vuepress": "^1.2.0"
+  },
+  "dependencies": {
+    "vuepress-plugin-helper-live2d": "^1.0.0"
   }
 }
