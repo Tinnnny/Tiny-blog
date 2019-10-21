@@ -11,8 +11,6 @@ module.exports = {
             live2d: {
                 // 是否启用(关闭请设置为false)(default: true)
                 enable: true,
-                // 模型名称(default: hibiki)>>>取值请参考：
-                // https://github.com/JoeyBling/hexo-theme-yilia-plus/wiki/live2d%E6%A8%A1%E5%9E%8B%E5%8C%85%E5%B1%95%E7%A4%BA
                 model: 'hibiki',
                 display: {
                     position: "right", // 显示位置：left/right(default: 'right')
@@ -36,9 +34,9 @@ module.exports = {
         // 自定义仓库链接文字。
         repoLabel: 'GitHub',
         nav: [
-            {text: '主页', link: '/'},
-            {text: '博客', link: '/'},
-            {text: '关于我', link: '/'},
+            {text: 'guide', link: '/guide/'},
+            {text: 'config', link: '/config.html'},
+            {text: '关于我', link: 'getThemeSidebar("关于我"," ")'},
             {
                 text: 'Languages',
                 items: [
@@ -47,51 +45,65 @@ module.exports = {
                 ]
             }
         ],
-        sidebar: [
-            {
-                title: 'Java基础',
-                collapsable: false,
-                children: [
-                    ['/', 'java继承'],
-                    ['/', 'java多态']
-                ]
-            },
-            {
-                title: 'Spring',
-                collapsable: false,
-                children: [
-                    ['/blog/spring-boot-start', 'Spring起步'],
-                    ['/blog/spring-boot-annotation', 'Spring注解'],
-                    ['/blog/spring-boot-validation', 'Spring注解校验'],
-                ]
-            },
-            {
-                title: '框架和工具',
-                collapsable: false,
-                children: [
-                    ['/blog/vuepress', 'VuePress'],
-                    ['/blog/templateuse', '利用前端模板'],
-                    ['/blog/spring-boot-thymeleaf', 'Thymeleaf'],
-                    ['/blog/spring-boot-pagehelper&&tkmybatis', 'pagehelper和tk.mybatis使用'],
-                    ['/blog/spring-boot-swagger2', 'Swagger2 接口文档引擎'],
-                    ['/blog/nginx-cdn', 'nginx反向代理cdn'],
-                ]
-            },
-            {
-                title: '项目开发',
-                collapsable: false,
-                children: [
-                    ['/blog/project-build', '项目创建过程'],
-                    ['/', '页面绘制']
-                ]
-            },
-            {
-                title: '问题解决',
-                collapsable: false,
-                children: [
-                    ['/blog/spring-boot-static', '静态资源无法访问'],
-                ]
-            }
-        ]
+        smoothScroll: true,
+        sidebar:{
+            "/blog/": [
+                {
+                        title: 'Java基础',
+                        collapsable: false,
+                        children: [
+                            ['/', 'java继承'],
+                            ['/', 'java多态']
+                        ]
+                    },
+                    {
+                        title: 'Spring',
+                        collapsable: false,
+                        children: [
+                            ['/blog/spring-boot-start', 'Spring起步'],
+                            ['/blog/spring-boot-annotation', 'Spring注解'],
+                            ['/blog/spring-boot-validation', 'Spring注解校验'],
+                        ]
+                    },
+                    {
+                        title: '框架和工具',
+                        collapsable: false,
+                        children: [
+                            ['/blog/vuepress', 'VuePress'],
+                            ['/blog/spring-boot-thymeleaf', 'Thymeleaf'],
+                            ['/blog/spring-boot-pagehelper&&tkmybatis', 'pagehelper和tk.mybatis使用'],
+                            ['/blog/spring-boot-swagger2', 'Swagger2 接口文档引擎'],
+                            ['/blog/nginx-cdn', 'nginx反向代理cdn'],
+                        ]
+                    },
+                    {
+                        title: '项目开发',
+                        collapsable: false,
+                        children: [
+                            ['/blog/project-build', '项目创建过程'],
+                            ['/blog/templateuse', '利用前端模板'],
+                        ]
+                    },
+                    {
+                        title: '问题解决',
+                        collapsable: false,
+                        children: [
+                            ['/blog/spring-boot-static', '静态资源无法访问'],
+                        ]
+                    }
+            ],
+            "/guide/" : [
+                {
+                    title: ' ',
+                    collapsable: false,
+                    children: [
+
+                        ['/guide/', ' '],
+                    ]
+                }
+            ]
+        }
     }
 };
+
+

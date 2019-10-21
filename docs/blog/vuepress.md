@@ -3,10 +3,10 @@ title: "使用vuepress"
 ---
 
 # 概述
-VuePress是一个以Vue驱动的静态网站生成器，是一个由Vue、Vue Router和webpack驱动的单页应用。主要通过config.js来配置导航栏、侧边栏、页面导航、应用插件等。
+VuePress是一个以Vue驱动的静态网站生成器，是一个由Vue、Vue Router和webpack驱动的单页应用。
 
 ### 最大特点
-在VuePress中，可以使用Markdown编写文档，然后生成网页。其中根目录的README.md就是网页的主页。
+在VuePress中，可以使用Markdown编写文档，然后生成网页。其中根目录的README.md就是网页的主页,并通过config.js来配置导航栏、侧边栏、页面导航、应用插件等。
 
 ### 运行原理
 运行原理(how it works)VuePress网站实际上是由Vue, Vue Router和webpack驱动的单页面应用程序。每个markdown文件都使用`markdown-it`编译为 HTML，然后作为 Vue 组件的模板进行处理。
