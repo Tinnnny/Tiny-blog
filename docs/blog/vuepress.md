@@ -3,11 +3,10 @@ title: "使用vuepress"
 ---
 
 # 概述
-VuePress是以Vue驱动的静态网站生成器，是一个由Vue、Vue Router和webpack驱动的单页应用。主要通过config.js来配置导航、侧边、页面导航、插件等。
-其中README.md就是网页的主页。
+VuePress是一个以Vue驱动的静态网站生成器，是一个由Vue、Vue Router和webpack驱动的单页应用。主要通过config.js来配置导航栏、侧边栏、页面导航、应用插件等。
+
 ### 最大特点
-在VuePress中，可以使用Markdown编写文档，然后生成网页，每一个由VuePress生成的页面都带有预渲染好的HTML，
-也因此具有非常好的加载性能和搜索引擎优化。
+在VuePress中，可以使用Markdown编写文档，然后生成网页。其中根目录的README.md就是网页的主页。
 
 ### 运行原理
 运行原理(how it works)VuePress网站实际上是由Vue, Vue Router和webpack驱动的单页面应用程序。每个markdown文件都使用`markdown-it`编译为 HTML，然后作为 Vue 组件的模板进行处理。
@@ -16,22 +15,23 @@ VuePress是以Vue驱动的静态网站生成器，是一个由Vue、Vue Router�
 完成后的项目结构为：
 
 <div align="center">
-  <img src="../.vuepress/public/vuepress架构截图.png" style="a">
+  <img src="../.vuepress/public/vuepress架构截图.png">
 </div>
 
-1. 新建一个名为 blog-demo 的文件夹，命令行进入到该文件夹目录，输入命令：
+1. 新建一个名为`blog-demo`的文件夹，命令行进入到该文件夹目录，输入命令：
 
 ```
 # 按默认配置初始化一个项目，此时会在当前目录下生成 package.json 文件
 npm init -y
 ```
-2. 将 VuePress 作为一个本地依赖安装
+
+2. 将VuePress作为一个本地依赖安装
 
 ```
 npm install -D vuepress
 ```
 
-3.在 package.json 里的 scripts 中添加如下代码，不需要修改其它代码
+3.在`package.json` 里的scripts中添加如下代码，不需要修改其它代码
 
 ``` js{4}
 {
@@ -42,13 +42,13 @@ npm install -D vuepress
 }
 ```
 
-4. 在项目根目录下，新建 docs 文件夹
+4. 在项目根目录下，新建`docs`文件夹
 
 ```
 mkdir docs
 ```
 
-5. 新建一个 markdown 文件
+5. 新建一个markdown文件
 
 ```
 echo '# Hello VuePress!' > docs/README.md
@@ -60,19 +60,24 @@ echo '# Hello VuePress!' > docs/README.md
 npm run docs:dev
 ```
 
-此时,因为并没有在创建README.md,也没有在config.js中配置任何东西，所以近乎是一个空白页。
+此时,因为并没有在创建`README.md`,也没有在`config.js`中配置任何东西，所以近乎是一个空白页。
 
-![undefined](http://ww1.sinaimg.cn/large/007Rnr4nly1g85lkdriihj311y09j745.jpg)
 
-为了更好地自定义我们的网站，接着在docs目录下新建.vuepress文件夹，执行命令如下：
+<div align="center">
+<img src="http://ww1.sinaimg.cn/large/007Rnr4nly1g85lkdriihj311y09j745.jpg">
+</div>
 
-7. 新建`.vuepress`和README.md文件夹
+
+为了更好地自定义我们的网站，接着在docs目录下新建`.vuepress`文件夹，执行命令如下：
+
+7. 新建`.vuepress`和`README.md`文件夹
+
 ```
 mkdir docs\.vuepress
 ```
 
 8. 配置首页
-默认主题提供了一个首页的布局，在你的根级README.md以格式 YAML front matter 指定 home: true即可使用它。
+默认主题提供了一个首页的布局，在根级`README.md`以格式 YAML front matter 指定 home: true即可使用它。
 
 ```
 ---
@@ -91,6 +96,7 @@ features:
   details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
 ---
 ```
+
 ::: tip 配置项含义：
 - heroImage: 首页图片，图片放置在.vupress/public文件夹下，若没有该文件夹则自己创建一个，保存一张你想要的首页图片，并在此处引用。
 - actionText:首页中间的一个按钮
@@ -99,7 +105,9 @@ features:
 
 运行后效果：
 
-![undefined](http://ww1.sinaimg.cn/large/007Rnr4nly1g85m330yfkj311y0i9glu.jpg)
+<div align="center">
+  <img src="http://ww1.sinaimg.cn/large/007Rnr4nly1g85m330yfkj311y0i9glu.jpg">
+</div>
 
 9. 接着在.vuepress文件夹下新建config.js文件，在其中添加如下代码：
 
@@ -148,16 +156,39 @@ module.exports = {
 }
 ```
 
-11. 在docs目录下新建blog文件夹,在blog目录下创建 /blog/FirstBlog.md 作为我们第一篇博客的内容：
+侧边栏组：
+```js{4}
+{
+                title: 'group1',
+                collapsable: false,
+                children: [
+                    ['/', 'title1'],
+                    ['/', 'title2']
+                ]
+            },
+            {
+                title: 'group2',
+                collapsable: false,
+                children: [
+                    ['/', 'title1'],
+                ]
+            }
+```
+
+其中`collapsable: false`可以强制侧边栏组不能折叠。
+
+11. 在docs目录下新建blog文件夹,在blog目录下创建 `/blog/FirstBlog.md`作为我们第一篇博客的内容：
 
 ```
 # 我的第一篇博客
 My First Blog
 ```
 
-因为在README.md中配置的actionLink为FirstBlog.md，所以点击快速上手按钮以后的网页为：
+因为在README.md中配置的actionLink为`FirstBlog.md`，所以点击快速上手按钮以后的网页为：
 
-![undefined](http://ww1.sinaimg.cn/large/007Rnr4nly1g85m7qpywyj30xc09xglh.jpg)
+<div align="center">
+  <img src="http://ww1.sinaimg.cn/large/007Rnr4nly1g85m7qpywyj30xc09xglh.jpg">
+</div>
 
 
 ## 部署
@@ -214,4 +245,28 @@ cd -
 
 6. 这是最后一步了，在 GitHub 项目点击 Setting 按钮，找到 GitHub Pages - Source，选择 gh-pages 分支,等待一段时间后即可部署完成。
 
-![undefined](http://ww1.sinaimg.cn/large/007Rnr4nly1g85mi8nfjqj30l30hujrv.jpg)
+<div align="center">
+  <img src="http://ww1.sinaimg.cn/large/007Rnr4nly1g85mi8nfjqj30l30hujrv.jpg">
+</div>
+
+::: tip 注意事项：
+1. 图片要放在指定的public目录下，否则.vuepress/config.js中的引用的图片加载不出来。
+2. base问题：如果你打算用`https://<仓库名>.github.io/`来访问的话，base可以省略不写。
+:::
+
+::: warning 关于deploy.sh
+1. deploy.sh的运行方法为cd到所在目录，然后选中deploy.sh回车。
+2. 在运行deploy.sh脚本时因为各种问题可能会运行不成功，这时不要死命运行，可以手动执行脚本，看看是哪里出现了问题。
+在blog-demo目录下，依次运行以下命令。
+
+```
+npm run docs:build
+cd docs/.vuepress/dist
+git init
+git add -A
+git commit -m 'deploy'
+# 如果发布到 https://<USERNAME>.github.io/<REPO>
+git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
+```
+3. 运行deploy.sh脚本需要在github上配置ssh秘钥，如果没有配置将会出现构建一段时间后，在最后时刻闪退的问题。
+:::

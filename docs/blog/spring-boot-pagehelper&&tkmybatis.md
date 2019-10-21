@@ -188,14 +188,22 @@ mvn mybatis-generator:generate
 
 最后要注意的是：直接使用tk.mybatis 封装的方法如insert 插入数据时会出现语法错误。
 
-![](http://ww1.sinaimg.cn/large/af2b2d1bly1g3kho79atnj215905u44q.jpg)
+<div align="center">
+<img src="http://ww1.sinaimg.cn/large/af2b2d1bly1g3kho79atnj215905u44q.jpg">
+</div>
 
 究其原因是在mybatis-generator-maven-plugin 插件自动生成的代码上又一个
 @Table注解，注解上除了表名还写了数据库。删掉数据库名即可正确使用方法。
 
-![](http://ww1.sinaimg.cn/large/af2b2d1bly1g3khvqd4pfj20ha086q6l.jpg)
+<div align="center">
+<img src="http://ww1.sinaimg.cn/large/af2b2d1bly1g3khvqd4pfj20ha086q6l.jpg">
+</div>
 
-![](http://ww1.sinaimg.cn/large/af2b2d1bly1g3khurgliqj20h90790vy.jpg)
+<div align="center">
+<img src="http://ww1.sinaimg.cn/large/af2b2d1bly1g3khurgliqj20h90790vy.jpg">
+</div>
+
+
 
 
 ## `ExampleMapper<T>`方法

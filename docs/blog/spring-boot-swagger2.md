@@ -253,6 +253,8 @@ Swagger 通过注解表明该接口会生成文档，包括接口名、请求方
 
 ### 访问 Swagger2
 
-访问地址：http://localhost:8080/swagger-ui.html
+访问地址：`http://localhost:8080/swagger-ui.html`
 
-![](http://ww1.sinaimg.cn/large/af2b2d1bly1g3lpqgbn0gj214l0krmxu.jpg)
+<div align="center">
+<img src="http://ww1.sinaimg.cn/large/af2b2d1bly1g3lpqgbn0gj214l0krmxu.jpg">
+</div>

@@ -257,4 +257,6 @@ public class IndexController {
 
 输出：
 
-![](http://ww1.sinaimg.cn/large/af2b2d1bly1g3lequwjarj20d90jpgls.jpg)
+<div align="center">
+<img src="http://ww1.sinaimg.cn/large/af2b2d1bly1g3lequwjarj20d90jpgls.jpg">
+</div>
