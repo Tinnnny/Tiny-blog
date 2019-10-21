@@ -1,14 +1,8 @@
 ---
-layout: post
-title: "spring boot 整合druid、pagehelper和tk.mybatis以及自动生成插件"
-subtitle: ''
-author: "Tiny"
-header-style: text
-tags:
-  - Spring Boot
+title: "pagehelper和tk.mybatis"
 ---
 
-### 概述
+### pagehelper和tk.mybatis以及自动生成插件
 PageHelper 是 Mybatis 的分页插件，支持多数据库、多数据源。可以简化数据库的分页查询操作，整合过程也极其简单，只需引入依赖即可。
 
 tk.mybatis 是在 MyBatis 框架的基础上提供了很多工具，让开发更加高效。是一个国人开发的工具框架，封装了很多数据库相关的方法。
@@ -18,8 +12,9 @@ tk.mybatis 是在 MyBatis 框架的基础上提供了很多工具，让开发更
 ### 引入依赖
 在pom文件中引入以下依赖
 
-```
- <dependency>
+```xml
+<dependencies>
+        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.46</version>
@@ -39,7 +34,7 @@ tk.mybatis 是在 MyBatis 框架的基础上提供了很多工具，让开发更
             <artifactId>pagehelper-spring-boot-starter</artifactId>
             <version>1.2.10</version>
         </dependency>
-
+</dependencies>
 ```
 
 在`application.yml `中配置数据库连接
@@ -67,7 +62,7 @@ mybatis:
 
 创建一个通用的父级接口，以达到使用 tk.mybatis 的目的。因为子类具有父类的所有方法。
 
-```
+```java
 package com.funtl.utils;
 
 import tk.mybatis.mapper.common.Mapper;
@@ -89,9 +84,9 @@ public interface MyMapper<T> extends Mapper<T>, MySqlMapper<T> {
 
 ### 使用 MyBatis 的 Maven 插件生成代码
 
-在 pom.xml 文件中增加 mybatis-generator-maven-plugin 插件
+在 `pom.xml`文件中增加 `mybatis-generator-maven-plugin`插件
 
-```
+```xml
 <build>
     <plugins>
         <plugin>
@@ -121,9 +116,9 @@ public interface MyMapper<T> extends Mapper<T>, MySqlMapper<T> {
 ```
 
 #### 自动生成的配置
-在 src/main/resources/generator/ 目录下创建 generatorConfig.xml 配置文件：
+在 `src/main/resources/generator/ `目录下创建 `generatorConfig.xml` 配置文件：
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE generatorConfiguration
         PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
@@ -253,7 +248,7 @@ List<UserRole> userRoleList = userRoleService.selectByExample(example);
 参考：https://blog.csdn.net/q564495021/article/details/81607515 
 
 ## 测试类实例
-```
+```java
 package com.funtl.hello.spring.boot;
 
 import com.funtl.hello.spring.boot.entity.TbUser;
@@ -369,5 +364,5 @@ public class MyBatisTests {
 }
 ```
 
-其中，在更新数据时如果使用updateByExample(tbSysUser, example)方法其实不太好，因为需要填写要求的not null的字段。而updateByExampleSelective(tbSysUser, example)方法
+其中，在更新数据时如果使用`updateByExample(tbSysUser, example)`方法其实不太好，因为需要填写要求的not null的字段。而updateByExampleSelective(tbSysUser, example)方法
 可以只填写需要更新的数据则可。

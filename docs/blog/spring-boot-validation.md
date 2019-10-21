@@ -73,11 +73,10 @@ title: "Spring注解校验"
 ### 定义异常处理工具类
 
 
-```
+```java
 package com.funtl.my.shop.commons.validator;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
 import javax.validation.Validator;
@@ -112,7 +111,6 @@ public class BeanValidator {
     public static void setValidator(Validator validator) {
         BeanValidator.validator = validator;
     }
-
     /**
      * 调用 JSR303 的 validate 方法, 验证失败时抛出 ConstraintViolationException.
      */
@@ -228,7 +226,7 @@ public class BeanValidator {
 ### 工具类静态注入
 当使用springMVC时，修改 spring-context.xml 文件，注入 Validator 工具类，配置如下：
 
-```
+```xml
 <!-- 配置 Bean Validator 定义 -->
 <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>
 <bean id="beanValidator" class="com.funtl.my.shop.commons.validator.BeanValidator">
@@ -241,7 +239,7 @@ public class BeanValidator {
 
 **（1）使用@PostConstruct注解**
 
-```
+```java
 @Component
 public class Demo {
     @Autowired
@@ -262,7 +260,7 @@ public class Demo {
 
 **（2）加个构造函数**
 
-```
+```java
 @Component
 public class Demo {
 

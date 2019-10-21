@@ -6,7 +6,7 @@ title: "Spring MVC项目的创建过程"
 ### 2.用Idea打开项目文件夹，
 新建`README.md`说明项目相关信息，新建`pom.xml`并复制基本内容，再托管到maven。
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -49,7 +49,7 @@ title: "Spring MVC项目的创建过程"
 
 新建`src/main/java(resources、webapp/WEB-INF/web.xml)`,并复制web.xml基本内容。新建test/java。并mark Directory as相应文件夹类型。
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -65,7 +65,7 @@ title: "Spring MVC项目的创建过程"
 ### 5.配置Spring和Log4j。
 spring的总配置，一般起名为`spring-context.xml`，从此类的实例化工作交给Spring容器管理（Ioc）。新建`log4j.properties`
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"

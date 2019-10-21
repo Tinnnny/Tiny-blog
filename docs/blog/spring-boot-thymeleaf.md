@@ -13,7 +13,7 @@ Thymeleaf 是一个跟 Velocity、FreeMarker 类似的模板引擎，它可以�
 
 完整的 pom.xml 如下：
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -62,7 +62,6 @@ Thymeleaf 是一个跟 Velocity、FreeMarker 类似的模板引擎，它可以�
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>net.sourceforge.nekohtml</groupId>
             <artifactId>nekohtml</artifactId>
@@ -98,13 +97,12 @@ spring:
 ```
 
 #### 创建测试用 JavaBean
-创建一个测试效果的 JavaBean，简单封装一下即可
+创建一个测试效果的JavaBean，简单封装一下即可
 
-```
+```java
 package com.funtl.hello.spring.boot.entity;
 
 import java.io.Serializable;
-
 public class PersonBean implements Serializable {
 
     private String name;
@@ -131,7 +129,7 @@ public class PersonBean implements Serializable {
 #### 创建测试用 Controller
 创建一个 Controller，造一些测试数据并设置跳转
 
-```
+```java
 package com.funtl.hello.spring.boot.controller;
 
 import com.funtl.hello.spring.boot.entity.PersonBean;
@@ -139,10 +137,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
 import java.util.ArrayList;
 import java.util.List;
-
 @Controller
 @RequestMapping(value = "thymeleaf")
 public class IndexController {
@@ -178,9 +174,9 @@ public class IndexController {
 ```
 
 # 创建测试页面
-在 templates 目录下创建 index.html 文件，代码如下：
+在`templates`目录下创建`index.html`文件，代码如下：
 
-```
+```html
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -246,20 +242,19 @@ public class IndexController {
 <!--4.用fragment引入模板文件-->
 <div th:include="footer::copy1"></div>
 </body>
-
 </html>
 ```
 
 另外，如果想要让th：text里的内容换行的话，可以在里面写上<br>换行符，然后将th:text 改成th:utext。
-```
+
+```html
  <th:block th:if="${baseResult!=null}">
-
-
             <div  class="alert alert-danger" style="text-align: center">
                 <div th:utext="${baseResult.message}" > </div>
             </div>
-
         </th:block>
 ```
+
 输出：
+
 ![](http://ww1.sinaimg.cn/large/af2b2d1bly1g3lequwjarj20d90jpgls.jpg)

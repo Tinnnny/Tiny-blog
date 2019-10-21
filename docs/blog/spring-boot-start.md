@@ -4,7 +4,7 @@ title: "Spring boot起步"
 # Spring boot起步
 ### 用Maven构建
 #### pom.xml
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -47,7 +47,7 @@ title: "Spring boot起步"
 ### 创建一个简单的web应用程序
 `src/main/java/hello/HelloController.java`
 
-```
+```java
 package hello;
 
 import org.springframework.web.bind.annotation.RestController;
@@ -72,7 +72,7 @@ public class HelloController {
 
 `src/main/java/hello/Application.java`
 
-```
+```java
 package hello;
 
 import java.util.Arrays;
@@ -169,7 +169,7 @@ viewControllerHandlerMapping
 如果添加一个测试，SpringTest已经为此提供了一些机制，并且很容易将其包含到项目中。
 
 如果使用的是Maven，将其添加到依赖项列表中：
-```
+```xml
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -177,10 +177,9 @@ viewControllerHandlerMapping
         </dependency>
 ```
 现在编写一个简单的单元测试，通过端点模拟servlet请求和响应：
-```
-src/test/java/hello/HelloControllerTest.java
+`src/test/java/hello/HelloControllerTest.java`
 
-
+```java
 package hello;
 
 import static org.hamcrest.Matchers.equalTo;
@@ -213,6 +212,7 @@ public class HelloControllerTest {
     }
 }
 ```
+
 这个MockMvc来自SpringTest，并允许通过一组方便的构建器类将HTTP请求发送到DispatcherServlet并对结果做出断言。
 注意使用`@AutoConfigureMockMvc`连同`@SpringBootTest`注入MockMvc举个例子。有了`@SpringBootTest`我们要求创建整个应用程序上下文。另一种选择是要求SpringBoot只使用@WebMvcTest。Spring Boot在任何情况下都会自动尝试定位应用程序的主应用程序类，但是如果想要构建不同的东西，可以重写它，或者缩小它的范围。
 
@@ -220,7 +220,7 @@ public class HelloControllerTest {
 
 `src/test/java/hello/HelloControllerIT.java`
 
-```
+```java
 package hello;
 
 import static org.hamcrest.Matchers.*;
@@ -263,4 +263,5 @@ public class HelloControllerIT {
     }
 }
 ```
+
 由于有`webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT`，嵌入式服务器是在一个随机端口上启动的。又因为有`@LocalServerPort`，运行时会发现实际端口.

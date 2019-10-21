@@ -1,16 +1,13 @@
 ---
-title: "配置 Swagger2 接口文档引擎 "
-subtitle: ''
-author: "Tiny"
-header-style: text
-tags:
-  - Spring Boot
+title: "Swagger2接口文档引擎"
 ---
 
+# Swagger2接口文档引擎
 
 ### Maven
 增加 Swagger2 所需依赖，pom.xml 配置如下：
-```
+
+```xml
 <!-- Swagger2 Begin -->
 <dependency>
     <groupId>io.springfox</groupId>
@@ -27,7 +24,7 @@ tags:
 
 #### 配置 Swagger2
 
-```
+```java
 package com.tiny.mall.admin.config;
 
 import org.springframework.context.annotation.Bean;
@@ -73,7 +70,7 @@ public class Swagger2Config {
 ### 使用 Swagger2
 在 Controller 中增加 Swagger2 相关注解，代码如下：
 
-```
+```java
 package com.tiny.mall.admin.controller;
 
 import com.tiny.mall.admin.commons.BaseResult;
@@ -240,6 +237,7 @@ public class TbUserController {
 
 Swagger 通过注解表明该接口会生成文档，包括接口名、请求方法、参数、返回信息的等等。
 
+::: tip
 - @Api：修饰整个类，描述 Controller 的作用
 - @ApiOperation：描述一个类的一个方法，或者说一个接口
 - @ApiParam：单个参数描述
@@ -251,6 +249,7 @@ Swagger 通过注解表明该接口会生成文档，包括接口名、请求方
 - @ApiError：发生错误返回的信息
 - @ApiImplicitParam：一个请求参数
 - @ApiImplicitParams：多个请求参数
+:::
 
 ### 访问 Swagger2
 

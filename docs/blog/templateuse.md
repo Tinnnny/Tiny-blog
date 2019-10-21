@@ -17,9 +17,9 @@ title: "使用前端模板"
 ### 3.复制源码
 寻找到对应的页面并按需copy源码。注意养成良好的习惯，在代码前后包裹注释。比如
 
-![]C5IW(B.png](http://ww1.sinaimg.cn/large/007Rnr4nly1g82ob8uftrj308x042glx.jpg)
+![](http://ww1.sinaimg.cn/large/007Rnr4nly1g82ob8uftrj308x042glx.jpg)
 
-::: warning
+::: warning 注意
   - 更换theme可以更换模板的主题。
   - 不能复制(Google Font)谷歌字体，因为网络原因会造成阻塞，造成页面不能正常显示。
   - 在复制静态资源文件时可能会遇到404的问题。解决方法是添加配置类。

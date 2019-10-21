@@ -9,7 +9,7 @@ title: "静态资源无法访问"
 
 新建一个目录创建一个配置类，专门指定静态资源的位置，(如果在controller目录下创建会报错)。这样就能正确访问了
 
-```
+```java
 package com.tiny.mall.admin.config;
 
 import org.springframework.stereotype.Component;
