@@ -2,7 +2,7 @@
 title: "pagehelper和tk.mybatis"
 ---
 
-### pagehelper和tk.mybatis以及自动生成插件
+### 概述
 PageHelper 是 Mybatis 的分页插件，支持多数据库、多数据源。可以简化数据库的分页查询操作，整合过程也极其简单，只需引入依赖即可。
 
 tk.mybatis 是在 MyBatis 框架的基础上提供了很多工具，让开发更加高效。是一个国人开发的工具框架，封装了很多数据库相关的方法。
@@ -82,7 +82,7 @@ public interface MyMapper<T> extends Mapper<T>, MySqlMapper<T> {
 }
 ```
 
-### 使用 MyBatis 的 Maven 插件生成代码
+### 使用MyBatis的Maven插件生成代码
 
 在 `pom.xml`文件中增加 `mybatis-generator-maven-plugin`插件
 
@@ -198,10 +198,12 @@ mvn mybatis-generator:generate
 ![](http://ww1.sinaimg.cn/large/af2b2d1bly1g3khurgliqj20h90790vy.jpg)
 
 
-## ExampleMapper<T>内方法使用说明：
-所有方法均需要传入tk.mybatis.mapper.entity.Example，
+## `ExampleMapper<T>`方法
+
+所有方法均需要传入`tk.mybatis.mapper.entity.Example`，
 
 首先进行实例化：
+
 ```
 Example example = new Example(UserRole.class);//实例化
 Example.Criteria criteria = example.createCriteria();
@@ -221,7 +223,7 @@ orGreaterThan(String property, Object value)
 
 传入的property为实体类中的属性名，非数据度字段名。
 
-举例说明，如orEqualTo(String property, Object value)，代码如下：
+举例说明，如`orEqualTo(String property, Object value)`，代码如下：
 
 ```
 Example example = new Example(UserRole.class);//实例化
@@ -239,15 +241,16 @@ List<UserRole> userRoleList = userRoleService.selectByExample(example);
 
 其余方法同理。 
 
-其中andCondition(String condition)方法支持手写条件，传入的字符串为最终的查询条件，如：length(f_user_id)<5
+其中`andCondition(String condition)`方法支持手写条件，传入的字符串为最终的查询条件，如：length(f_user_id)<5
 
 以及likeTo()的方法是不带百分号%的，需要自己对传入参数进行构建（加左like或者右like等）。
 
 
 
-参考：https://blog.csdn.net/q564495021/article/details/81607515 
+参考：`https://blog.csdn.net/q564495021/article/details/81607515`
 
 ## 测试类实例
+
 ```java
 package com.funtl.hello.spring.boot;
 

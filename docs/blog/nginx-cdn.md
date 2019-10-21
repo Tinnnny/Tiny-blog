@@ -49,9 +49,7 @@ http {
 ```
 
 ### 移动资源文件 
-
-    将模板文件放在` /usr/local/docker/nginx/wwwroot/cdn`文件夹下。
-
+将模板文件放在` /usr/local/docker/nginx/wwwroot/cdn`文件夹下。
 ### 访问
 
 在`nginx`文件夹下启动docker-compose，浏览器访问如`http://192.168.27.136:81/adminlte/v2.4.3/index2.html`即可获取静态资源。

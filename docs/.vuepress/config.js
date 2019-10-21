@@ -69,7 +69,8 @@ module.exports = {
                 title: '框架和工具',
                 collapsable: false,
                 children: [
-                    ['/blog/templateuse', '使用前端模板'],
+                    ['/blog/vuepress', 'VuePress'],
+                    ['/blog/templateuse', '利用前端模板'],
                     ['/blog/spring-boot-thymeleaf', 'Thymeleaf'],
                     ['/blog/spring-boot-pagehelper&&tkmybatis', 'pagehelper和tk.mybatis使用'],
                     ['/blog/spring-boot-swagger2', 'Swagger2 接口文档引擎'],
