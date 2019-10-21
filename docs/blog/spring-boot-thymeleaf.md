@@ -3,15 +3,15 @@ title: "Thymeleaf "
 ---
 
 ### 概述
-Thymeleaf 是一个跟 Velocity、FreeMarker 类似的模板引擎，它可以完全替代 JSP 。相较与其他的模板引擎。
+Thymeleaf 是一个跟 Velocity、FreeMarker 类似的模板引擎，它可以完全替代JSP。
 
 ### Thymeleaf常用表达方式
 #### 引入依赖
-主要增加 spring-boot-starter-thymeleaf 和 nekohtml 这两个依赖。
+主要增加`spring-boot-starter-thymeleaf `和 `nekohtml`这两个依赖。
 - spring-boot-starter-thymeleaf：Thymeleaf 自动配置
 - nekohtml：允许使用非严格的 HTML 语法
 
-完整的 pom.xml 如下：
+完整的 `pom.xml` 如下：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -84,7 +84,7 @@ Thymeleaf 是一个跟 Velocity、FreeMarker 类似的模板引擎，它可以�
 
 ```
 
-#### 在 application.yml 中配置 Thymeleaf
+#### 在`application.yml`中配置Thymeleaf
 
 ```
 spring:
@@ -96,7 +96,7 @@ spring:
       content-type: text/html
 ```
 
-#### 创建测试用 JavaBean
+#### 创建测试用JavaBean
 创建一个测试效果的JavaBean，简单封装一下即可
 
 ```java
@@ -245,7 +245,7 @@ public class IndexController {
 </html>
 ```
 
-另外，如果想要让th：text里的内容换行的话，可以在里面写上<br>换行符，然后将th:text 改成th:utext。
+另外，如果想要让`th：text`里的内容换行的话，可以在里面写上<br>换行符，然后将`th:text` 改成`th:utext`。
 
 ```html
  <th:block th:if="${baseResult!=null}">

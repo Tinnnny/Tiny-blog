@@ -77,7 +77,7 @@ mkdir docs\.vuepress
 ```
 
 8. 配置首页
-默认主题提供了一个首页的布局，在根级`README.md`以格式 YAML front matter 指定 home: true即可使用它。
+默认主题提供了一个首页的布局，在根级`README.md`以格式` YAML front matter` 指定 `home: true`即可使用它。
 
 ```
 ---
@@ -109,7 +109,7 @@ features:
   <img src="http://ww1.sinaimg.cn/large/007Rnr4nly1g85m330yfkj311y0i9glu.jpg">
 </div>
 
-9. 接着在.vuepress文件夹下新建config.js文件，在其中添加如下代码：
+9. 接着在`.vuepress`文件夹下新建`config.js`文件，在其中添加如下代码：
 
 ```JS{4}
 module.exports = {
@@ -177,14 +177,14 @@ module.exports = {
 
 其中`collapsable: false`可以强制侧边栏组不能折叠。
 
-11. 在docs目录下新建blog文件夹,在blog目录下创建 `/blog/FirstBlog.md`作为我们第一篇博客的内容：
+11. 在`docs`目录下新建`blog`文件夹,在`blog`目录下创建 `/blog/FirstBlog.md`作为我们第一篇博客的内容：
 
 ```
 # 我的第一篇博客
 My First Blog
 ```
 
-因为在README.md中配置的actionLink为`FirstBlog.md`，所以点击快速上手按钮以后的网页为：
+因为在`README.md`中配置的`actionLink`为`FirstBlog.md`，所以点击快速上手按钮以后的网页为：
 
 <div align="center">
   <img src="http://ww1.sinaimg.cn/large/007Rnr4nly1g85m7qpywyj30xc09xglh.jpg">
@@ -193,9 +193,9 @@ My First Blog
 
 ## 部署
 
-将代码部署到GitHub Pages。
+将代码部署到`GitHub Pages`。
 
-1. 在根目录的 package.json文件中增加如下两段代码：
+1. 在根目录的`package.json`文件中增加如下两段代码：
 
 ```JS{4}
 // 配置npm scripts
@@ -210,14 +210,14 @@ My First Blog
 }
 ```
 
-2. 在github上创建一个名为 blog-demo 的仓库，并将你的代码提交到github上。
+2. 在github上创建一个名为 `blog-demo`的仓库，并将你的代码提交到github上。
 
 3. 在`config.js`中设置base。
 
 如果打算发布到`https://<USERNAME>.github.io/<REPO>/`（也就是说你的仓库在`https://github.com/<USERNAME>/<REPO>`），
 则将base设置为 `/<REPO>/`，此处我设置为 `/blog-demo/` 。
 
-4. 在项目根目录中，创建一个如下的 deploy.sh 脚本文件。
+4. 在项目根目录中，创建一个如下的 `deploy.sh` 脚本文件。
 
 ```
 #!/usr/bin/env sh
@@ -250,13 +250,13 @@ cd -
 </div>
 
 ::: tip 注意事项：
-1. 图片要放在指定的public目录下，否则.vuepress/config.js中的引用的图片加载不出来。
+1. 图片要放在指定的public目录下，否则`.vuepress/config.js`中的引用的图片加载不出来。
 2. base问题：如果你打算用`https://<仓库名>.github.io/`来访问的话，base可以省略不写。
 :::
 
-::: warning 关于deploy.sh
-1. deploy.sh的运行方法为cd到所在目录，然后选中deploy.sh回车。
-2. 在运行deploy.sh脚本时因为各种问题可能会运行不成功，这时不要死命运行，可以手动执行脚本，看看是哪里出现了问题。
+::: warning 关于`deploy.sh`
+1. `deploy.sh`的运行方法为cd到所在目录，然后选中`deploy.sh`回车。
+2. 在运行`deploy.sh`脚本时因为各种问题可能会运行不成功，这时不要死命运行，可以手动执行脚本，看看是哪里出现了问题。
 在blog-demo目录下，依次运行以下命令。
 
 ```
@@ -268,5 +268,5 @@ git commit -m 'deploy'
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 ```
-3. 运行deploy.sh脚本需要在github上配置ssh秘钥，如果没有配置将会出现构建一段时间后，在最后时刻闪退的问题。
+3. 运行`deploy.sh`脚本需要在github上配置ssh秘钥，如果没有配置将会出现构建一段时间后，在最后时刻闪退的问题。
 :::

@@ -60,7 +60,7 @@ mybatis:
   mapper-locations: classpath:mapper/*.xml
 ```
 
-创建一个通用的父级接口，以达到使用 tk.mybatis 的目的。因为子类具有父类的所有方法。
+创建一个通用的父级接口，以达到使用 `tk.mybatis` 的目的。因为子类具有父类的所有方法。
 
 ```java
 package com.funtl.utils;
