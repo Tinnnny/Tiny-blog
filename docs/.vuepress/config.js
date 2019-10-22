@@ -5,6 +5,9 @@ module.exports = {
     head: [
         ['link', {rel: 'icon', href: '/vue-logo.png'}]
     ],
+    markdown: {
+        lineNumbers: true
+      },
     plugins: [
         [
             'vuepress-plugin-helper-live2d',{
@@ -30,20 +33,24 @@ module.exports = {
     ],
     themeConfig: {
         // 你的GitHub仓库
-        repo: 'https://github.com/Tinnnny/Tiny-blog',
+        // repo: 'https://github.com/Tinnnny/Tiny-blog',
         // 自定义仓库链接文字。
-        repoLabel: 'GitHub',
+        // repoLabel: 'GitHub',
         nav: [
-            {text: 'guide', link: '/guide/'},
-            {text: 'config', link: '/config.html'},
-            {text: '关于我', link: 'getThemeSidebar("关于我"," ")'},
+            {text: '指南', link: '/blog/Spring/spring-boot-start'},
+            // {text: 'guide', link: '/guide/'},
             {
-                text: 'Languages',
+                text: 'api online',
                 items: [
-                    { text: 'Chinese', link: '/language/chinese' },
-                    { text: 'English', link: '/language/japanese' }
+                    { text: 'Vue', link: 'https://cn.vuejs.org/v2/api/' },
+                    { text: 'Vuex', link: 'https://vuex.vuejs.org/zh/api/#vuex-store' },
+                    { text: 'Axios', link: 'https://www.kancloud.cn/yunye/axios/234845' },
+                    { text: 'jQuery', link: 'https://www.jquery123.com/' },
+                    { text: 'Bootstrap', link: 'https://www.runoob.com/bootstrap/bootstrap-tutorial.html' },
                 ]
-            }
+            },
+            // {text: 'config', link: '/config.html'},
+            {text: '关于我', link: '/aboutme/'},
         ],
         smoothScroll: true,
         sidebar:{
@@ -60,35 +67,42 @@ module.exports = {
                         title: 'Spring',
                         collapsable: false,
                         children: [
-                            ['/blog/spring-boot-start', 'Spring起步'],
-                            ['/blog/spring-boot-annotation', 'Spring注解'],
-                            ['/blog/spring-boot-validation', 'Spring注解校验'],
+                            ['/blog/Spring/spring-boot-start', 'Spring起步'],
+                            ['/blog/Spring/spring-boot-annotation', 'Spring注解'],
+                            ['/blog/Spring/spring-boot-validation', 'Spring注解校验'],
                         ]
                     },
                     {
                         title: '框架和工具',
                         collapsable: false,
                         children: [
-                            ['/blog/vuepress', 'VuePress'],
-                            ['/blog/spring-boot-thymeleaf', 'Thymeleaf'],
-                            ['/blog/spring-boot-pagehelper&&tkmybatis', 'pagehelper和tk.mybatis使用'],
-                            ['/blog/spring-boot-swagger2', 'Swagger2 接口文档引擎'],
-                            ['/blog/nginx-cdn', 'nginx反向代理cdn'],
+                            ['/blog/tech/vuepress', 'VuePress'],
+                            ['/blog/tech/spring-boot-thymeleaf', 'Thymeleaf'],
+                            ['/blog/tech/spring-boot-pagehelper&&tkmybatis', 'pagehelper和tk.mybatis使用'],
+                            ['/blog/tech/spring-boot-swagger2', 'Swagger2 接口文档引擎'],
+                            ['/blog/tech/nginx-cdn', 'nginx反向代理cdn'],
                         ]
                     },
                     {
                         title: '项目开发',
                         collapsable: false,
                         children: [
-                            ['/blog/project-build', '项目创建过程'],
-                            ['/blog/templateuse', '利用前端模板'],
+                            ['/blog/project/project-build', '项目创建过程'],
+                            ['/blog/project/templateuse', '利用前端模板'],
                         ]
                     },
                     {
                         title: '问题解决',
                         collapsable: false,
                         children: [
-                            ['/blog/spring-boot-static', '静态资源无法访问'],
+                            ['/blog/solve/spring-boot-static', '静态资源无法访问'],
+                        ]
+                    }
+                    ,{
+                        title: '日志',
+                        collapsable: false,
+                        children: [
+                            ['/blog/essay/2019-schedule', '2019年和接下来安排'],
                         ]
                     }
             ],
