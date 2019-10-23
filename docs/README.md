@@ -4,7 +4,7 @@ heroImage: /swk.png
 heroText: Tiny-blog
 tagline: Stay Hungry, Stay Foolish!
 actionText: 博客
-actionLink: /blog/Spring/spring-boot-start
+actionLink: /blog/
 features:
 - title: 简洁至上
   details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。

@@ -1,7 +1,12 @@
 module.exports = {
     base: '/Tiny-blog/',
     title: 'Tiny-blog',
-    description: 'Vuepress blog',
+    description: 'Tiny-blog,Vuepress文档，Vuepress博客',
+    locales: {
+        '/': {
+          lang: 'zh-CN', 
+        }
+      },
     head: [
         ['link', {rel: 'icon', href: '/vue-logo.png'}]
     ],
@@ -29,7 +34,8 @@ module.exports = {
                     opacity: 0.8 // 模型透明度(default: 0.8)
                 }
             }
-        }]
+        }],
+        ['@vuepress/back-to-top', true],
     ],
     themeConfig: {
         // 你的GitHub仓库
@@ -38,10 +44,10 @@ module.exports = {
         // repoLabel: 'GitHub',
         nav: [
             {text: '指南', link: '/blog/Spring/spring-boot-start'},
-            // {text: 'guide', link: '/guide/'},
             {
                 text: 'api online',
                 items: [
+                    { text: 'Spring', link: 'https://www.w3cschool.cn/wkspring/' },                
                     { text: 'Vue', link: 'https://cn.vuejs.org/v2/api/' },
                     { text: 'Vuex', link: 'https://vuex.vuejs.org/zh/api/#vuex-store' },
                     { text: 'Axios', link: 'https://www.kancloud.cn/yunye/axios/234845' },
@@ -50,8 +56,10 @@ module.exports = {
                 ]
             },
             // {text: 'config', link: '/config.html'},
+            {text: '日志', link: '/guide/'},
             {text: '关于我', link: '/aboutme/'},
         ],
+        lastUpdated: '最近更新',
         smoothScroll: true,
         sidebar:{
             "/blog/": [
@@ -98,21 +106,20 @@ module.exports = {
                             ['/blog/solve/spring-boot-static', '静态资源无法访问'],
                         ]
                     }
-                    ,{
-                        title: '日志',
-                        collapsable: false,
-                        children: [
-                            ['/blog/essay/2019-schedule', '2019年和接下来安排'],
-                        ]
-                    }
             ],
             "/guide/" : [
                 {
                     title: ' ',
                     collapsable: false,
                     children: [
-
                         ['/guide/', ' '],
+                        {
+                            title: '日志',
+                            collapsable: false,
+                            children: [
+                                ['/guide/essay/2019-schedule', '2019年和接下来安排'],
+                            ]
+                        }
                     ]
                 }
             ]
