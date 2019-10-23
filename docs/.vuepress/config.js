@@ -63,23 +63,7 @@ module.exports = {
         smoothScroll: true,
         sidebar:{
             "/blog/": [
-                {
-                        title: 'Java基础',
-                        collapsable: false,
-                        children: [
-                            ['/', 'java继承'],
-                            ['/', 'java多态']
-                        ]
-                    },
-                    {
-                        title: 'Spring',
-                        collapsable: false,
-                        children: [
-                            ['/blog/Spring/spring-boot-start', 'Spring起步'],
-                            ['/blog/Spring/spring-boot-annotation', 'Spring注解'],
-                            ['/blog/Spring/spring-boot-validation', 'Spring注解校验'],
-                        ]
-                    },
+                    ['/blog/','Java基础'],
                     {
                         title: '框架和工具',
                         collapsable: false,
@@ -112,7 +96,6 @@ module.exports = {
                     title: ' ',
                     collapsable: false,
                     children: [
-                        ['/guide/', ' '],
                         {
                             title: '日志',
                             collapsable: false,
@@ -120,6 +103,17 @@ module.exports = {
                                 ['/guide/essay/2019-schedule', '2019年和接下来安排'],
                             ]
                         }
+                    ]
+                }
+            ],
+            "/Spring/" : [
+                {
+                    title: 'Spring学习',
+                    collapsable: false,
+                    children: [
+                            ['/Spring/spring-boot-start', 'Spring起步'],
+                            ['/Spring/spring-boot-annotation', 'Spring注解'],
+                            ['/Spring/spring-boot-validation', 'Spring注解校验'],
                     ]
                 }
             ]

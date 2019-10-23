@@ -22,7 +22,7 @@ export default {
                 verify:false,
                 avatar:'retro',
                 placeholder: '欢迎评论留言'
-});
+            });
         }
     }
 }
