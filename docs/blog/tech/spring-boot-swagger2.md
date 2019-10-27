@@ -258,5 +258,3 @@ Swagger 通过注解表明该接口会生成文档，包括接口名、请求方
 <div align="center">
 <img src="http://ww1.sinaimg.cn/large/af2b2d1bly1g3lpqgbn0gj214l0krmxu.jpg">
 </div>
-
-<Valine></Valine>

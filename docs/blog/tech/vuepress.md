@@ -258,7 +258,6 @@ cd -
 1. `deploy.sh`的运行方法为cd到所在目录，然后选中`deploy.sh`回车。
 2. 在运行`deploy.sh`脚本时因为各种问题可能会运行不成功，这时不要死命运行，可以手动执行脚本，看看是哪里出现了问题。
 在blog-demo目录下，依次运行以下命令。
-
 ```
 npm run docs:build
 cd docs/.vuepress/dist

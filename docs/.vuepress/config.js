@@ -43,7 +43,7 @@ module.exports = {
         // 自定义仓库链接文字。
         // repoLabel: 'GitHub',
         nav: [
-            {text: '指南', link: '/blog/Spring/spring-boot-start'},
+            {text: '指南', link: '/blog/'},
             {
                 text: 'api online',
                 items: [
@@ -63,9 +63,20 @@ module.exports = {
         smoothScroll: true,
         sidebar:{
             "/blog/": [
-                    ['/blog/','Java基础'],
                     {
-                        title: '框架和工具',
+                        title: '基础',
+                        collapsable: false,
+                        children: [
+                            ['/Spring/', 'Spring'],
+                            ['/Junit/', 'Junit'],
+                            ['/Log4j/', 'Log4j'],
+                            ['/springweb/', 'Spring Web'],
+                            ['/springmvc/', 'Spring MVC'],
+                            ['/MyBatis/', 'MyBatis'],
+                        ]
+                    },
+                    {
+                        title: '技术笔记',
                         collapsable: false,
                         children: [
                             ['/blog/tech/vuepress', 'VuePress'],
@@ -73,13 +84,15 @@ module.exports = {
                             ['/blog/tech/spring-boot-pagehelper&&tkmybatis', 'pagehelper和tk.mybatis使用'],
                             ['/blog/tech/spring-boot-swagger2', 'Swagger2 接口文档引擎'],
                             ['/blog/tech/nginx-cdn', 'nginx反向代理cdn'],
+                            ['/blog/tech/rememberme', '登录记住我功能实现'],
+                            ['/blog/tech/utf-8', '关于UTF-8'],
                         ]
                     },
                     {
                         title: '项目开发',
                         collapsable: false,
                         children: [
-                            ['/blog/project/project-build', '项目创建过程'],
+                            ['/blog/project/project-build', 'Spring Web骨架创建'],
                             ['/blog/project/templateuse', '利用前端模板'],
                         ]
                     },
@@ -88,8 +101,10 @@ module.exports = {
                         collapsable: false,
                         children: [
                             ['/blog/solve/spring-boot-static', '静态资源无法访问'],
+                            ['/blog/solve/solve01', 'SQLyog导入sql数据文件报错'],
                         ]
-                    }
+                    },
+                    ['/utils/','Utils工具类']
             ],
             "/guide/" : [
                 {
@@ -108,15 +123,71 @@ module.exports = {
             ],
             "/Spring/" : [
                 {
-                    title: 'Spring学习',
+                    title: 'Spring',
                     collapsable: false,
                     children: [
-                            ['/Spring/spring-boot-start', 'Spring起步'],
+                            ['/Spring/', '简介'],
+                            ['/Spring/spring01', '起步'],
                             ['/Spring/spring-boot-annotation', 'Spring注解'],
                             ['/Spring/spring-boot-validation', 'Spring注解校验'],
                     ]
                 }
-            ]
+            ],
+            "/Junit/" : [
+                {
+                    title: 'Junit',
+                    collapsable: false,
+                    children: [
+                            ['/Junit/', '简介'],
+                            ['/Junit/Junit01', '起步'],
+                    ]
+                }
+            ],
+            "/Log4j/" : [
+                {
+                    title: 'Log4j',
+                    collapsable: false,
+                    children: [
+                            ['/Log4j/', '简介'],
+                            ['/Log4j/Log4j01', '起步'],
+                    ]
+                }
+            ],
+            "/springweb/" : [
+                {
+                    title: 'Spring web',
+                    collapsable: false,
+                    children: [
+                            ['/springweb/', 'Spring 整合 Web'],
+                            ['/springweb/springweb01', 'Bean的装配方式'],
+                    ]
+                }
+            ],
+            "/springmvc/" : [
+                {
+                    title: 'Spring MVC',
+                    collapsable: false,
+                    children: [
+                            ['/springmvc/', 'Spring 整合 MVC'],
+                            ['/springmvc/springmvc01', '起步'],
+                            ['/springmvc/springmvc02', 'Spring MVC 拦截器'],
+                            ['/springmvc/springmvc03', 'Maven模块化开发'],
+                    ]
+                }
+            ],
+            "/MyBatis/" : [
+                {
+                    title: 'Spring MVC',
+                    collapsable: false,
+                    children: [
+                            ['/MyBatis/', 'MyBatis'],
+                            ['/MyBatis/mybatis01', 'Spring整合Druid'],
+                            ['/MyBatis/mybatis02', 'Spring 整合 MyBatis'],
+                            ['/MyBatis/mybatis03', '第一个MyBatis对象关系映射'],
+                            ['/MyBatis/mybatis04', 'MyBatis CRUD操作'],
+                    ]
+                }
+            ],
         }
     }
 };
