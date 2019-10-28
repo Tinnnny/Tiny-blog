@@ -64,8 +64,8 @@ module.exports = {
         sidebar:{
             "/blog/": [
                     {
-                        title: '基础',
-                        collapsable: false,
+                        title: '单体应用基础',
+                        // collapsable: false,
                         children: [
                             ['/Spring/', 'Spring'],
                             ['/Junit/', 'Junit'],
@@ -77,7 +77,7 @@ module.exports = {
                     },
                     {
                         title: '技术笔记',
-                        collapsable: false,
+                        // collapsable: false,
                         children: [
                             ['/blog/tech/vuepress', 'VuePress'],
                             ['/blog/tech/spring-boot-thymeleaf', 'Thymeleaf'],
@@ -86,19 +86,27 @@ module.exports = {
                             ['/blog/tech/nginx-cdn', 'nginx反向代理cdn'],
                             ['/blog/tech/rememberme', '登录记住我功能实现'],
                             ['/blog/tech/utf-8', '关于UTF-8'],
+                            ['/blog/tech/dateformat', '格式化时间'],
                         ]
                     },
                     {
                         title: '项目开发',
-                        collapsable: false,
+                        // collapsable: false,
                         children: [
                             ['/blog/project/project-build', 'Spring Web骨架创建'],
                             ['/blog/project/templateuse', '利用前端模板'],
                         ]
                     },
                     {
+                        title: '插件',
+                        // collapsable: false,
+                        children: [
+                            ['/plugins/', 'Lombok'],
+                        ]
+                    },
+                    {
                         title: '问题解决',
-                        collapsable: false,
+                        // collapsable: false,
                         children: [
                             ['/blog/solve/spring-boot-static', '静态资源无法访问'],
                             ['/blog/solve/solve01', 'SQLyog导入sql数据文件报错'],
@@ -185,6 +193,15 @@ module.exports = {
                             ['/MyBatis/mybatis02', 'Spring 整合 MyBatis'],
                             ['/MyBatis/mybatis03', '第一个MyBatis对象关系映射'],
                             ['/MyBatis/mybatis04', 'MyBatis CRUD操作'],
+                    ]
+                }
+            ],
+            "/plugins/" : [
+                {
+                    title: '插件',
+                    collapsable: false,
+                    children: [
+                            ['/plugins/', 'Lombok'],
                     ]
                 }
             ],
