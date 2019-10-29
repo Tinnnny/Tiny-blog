@@ -4,7 +4,7 @@ module.exports = {
     description: 'Tiny-blog,Vuepress文档，Vuepress博客',
     locales: {
         '/': {
-          lang: 'zh-CN', 
+          lang: 'zh-CN',
         }
       },
     head: [
@@ -47,7 +47,7 @@ module.exports = {
             {
                 text: 'api online',
                 items: [
-                    { text: 'Spring', link: 'https://www.w3cschool.cn/wkspring/' },                
+                    { text: 'Spring', link: 'https://www.w3cschool.cn/wkspring/' },
                     { text: 'Vue', link: 'https://cn.vuejs.org/v2/api/' },
                     { text: 'Vuex', link: 'https://vuex.vuejs.org/zh/api/#vuex-store' },
                     { text: 'Axios', link: 'https://www.kancloud.cn/yunye/axios/234845' },
@@ -56,6 +56,11 @@ module.exports = {
                 ]
             },
             // {text: 'config', link: '/config.html'},
+            {text: 'Java', link: '/java/'},
+            {text: 'Spring Boot', link: '/springboot/'},
+            {text: 'Spring Cloud', link: '/springcloud/'},
+            {text: 'JVM', link: '/jvm/'},
+            {text: '架构', link: '/architecture/'},
             {text: '日志', link: '/guide/'},
             {text: '关于我', link: '/aboutme/'},
         ],
@@ -116,19 +121,61 @@ module.exports = {
             ],
             "/guide/" : [
                 {
-                    title: ' ',
+                    title: '日志',
                     collapsable: false,
                     children: [
-                        {
-                            title: '日志',
-                            collapsable: false,
-                            children: [
-                                ['/guide/essay/2019-schedule', '2019年和接下来安排'],
-                            ]
-                        }
+                        ['/guide/', '2019年和接下来安排'],
                     ]
                 }
             ],
+            "/springboot/" : [
+                {
+                    title: 'Spring Boot',
+                    collapsable: false,
+                    children: [
+                        ['/springboot/', 'ss'],
+                        ['/springboot/springboot01', '11'],
+                    ]
+                }
+            ],
+            "/springcloud/": [
+                {
+                    title: 'Spring Cloud',
+                    collapsable: false,
+                    children: [
+                            ['/springcloud/', 'ss'],
+                            ['/springcloud/springcloud01', '11'],
+                    ]
+                }
+            ],
+            "/jvm/" : [
+                {
+                    title: 'JVM',
+                    collapsable: false,
+                    children: [
+                        ['/jvm/', 'jvm'],
+                    ]
+                }
+            ],
+            "/java/" : [
+                {
+                    title: 'Java',
+                    collapsable: false,
+                    children: [
+                        ['/java/', 'java'],
+                    ]
+                }
+            ],
+            "/architecture/" : [
+                {
+                    title: '架构',
+                    collapsable: false,
+                    children: [
+                        ['/architecture/', 'architecture'],
+                    ]
+                }
+            ],
+
             "/Spring/" : [
                 {
                     title: 'Spring',
