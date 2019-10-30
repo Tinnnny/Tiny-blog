@@ -78,6 +78,8 @@ module.exports = {
                             ['/springweb/', 'Spring Web'],
                             ['/springmvc/', 'Spring MVC'],
                             ['/MyBatis/', 'MyBatis'],
+                            ['/springtransation/', 'Spring事务管理'],
+                            ['/communication/', '解决模块间通信问题'],
                         ]
                     },
                     {
@@ -87,7 +89,6 @@ module.exports = {
                             ['/blog/tech/vuepress', 'VuePress'],
                             ['/blog/tech/spring-boot-thymeleaf', 'Thymeleaf'],
                             ['/blog/tech/spring-boot-pagehelper&&tkmybatis', 'pagehelper和tk.mybatis使用'],
-                            ['/blog/tech/spring-boot-swagger2', 'Swagger2 接口文档引擎'],
                             ['/blog/tech/nginx-cdn', 'nginx反向代理cdn'],
                             ['/blog/tech/rememberme', '登录记住我功能实现'],
                             ['/blog/tech/utf-8', '关于UTF-8'],
@@ -100,6 +101,7 @@ module.exports = {
                         children: [
                             ['/blog/project/project-build', 'Spring Web骨架创建'],
                             ['/blog/project/templateuse', '利用前端模板'],
+                            ['/blog/project/refactor', '代码重构与优化'],
                         ]
                     },
                     {
@@ -188,6 +190,28 @@ module.exports = {
                     ]
                 }
             ],
+            "/springtransation/" : [
+                {
+                    title: 'Spring事务管理',
+                    collapsable: false,
+                    children: [
+                            ['/springtransation/', '简介'],
+                            ['/springtransation/springtransation01', '使用Spring注解管理事务'],
+                    ]
+                }
+            ],
+            "/communication/" : [
+                {
+                    title: '解决模块间通信问题',
+                    collapsable: false,
+                    children: [
+                            ['/communication/', 'Apache HttpClient'],
+                            ['/communication/communication01', 'Jackson'],
+                            ['/communication/communication02', 'RESTful风格api'],
+                            ['/communication/spring-boot-swagger2', 'Swagger2 接口文档引擎'],
+                    ]
+                }
+            ],
             "/Junit/" : [
                 {
                     title: 'Junit',
@@ -249,6 +273,17 @@ module.exports = {
                     collapsable: false,
                     children: [
                             ['/plugins/', 'Lombok'],
+                    ]
+                }
+            ],
+            "/utils/" : [
+                {
+                    title: '工具类',
+                    collapsable: false,
+                    children: [
+                            ['/utils/', 'CookieUtils'],
+                            ['/utils/utils01', 'MapperUtils'],
+                            ['/utils/utils02', 'HttpClientUtils'],
                     ]
                 }
             ],

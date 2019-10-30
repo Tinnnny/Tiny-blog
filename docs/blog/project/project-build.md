@@ -98,7 +98,7 @@ log4j.appender.file.layout.ConversionPattern=%d %p [%c] - %m%n
 ### 8.配置tomcat
 启动检查是否有问题。
 
-::: warn
+::: warning
 1. 在配置tomcat时最好把，deploymet最下面的命名清空，否则会出现路径错误的问题，导致404。
 2. 在jsp中配置路径时，要反复确认有没有加/，也会导致路径错误。
 3. java web程序要在pom中配置打war包，要是打jar包就会导致配置tomcat时没有artifact。

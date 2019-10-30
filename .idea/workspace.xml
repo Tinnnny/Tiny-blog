@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74681051-9e3d-45f6-8b10-b0571e5e5500" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/architecture/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/jvm/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/springboot/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/springboot/springboot01.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/springcloud/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/springcloud/springcloud01.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/aboutme/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/aboutme/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/aboutme/aboutme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guide/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guide/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guide/essay/2019-schedule.md" beforeDir="false" />
-    </list>
+    <list default="true" id="74681051-9e3d-45f6-8b10-b0571e5e5500" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/deploy.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+            <state relative-caret-position="133">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -223,6 +208,7 @@
       <workItem from="1572272691382" duration="107000" />
       <workItem from="1572314299499" duration="3713000" />
       <workItem from="1572320313891" duration="70000" />
+      <workItem from="1572320563812" duration="112000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1571540486894</created>
@@ -336,17 +322,23 @@
       <option name="project" value="LOCAL" />
       <updated>1572272750771</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="再次改版">
+      <created>1572320646696</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1572320646696</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53831000" />
+    <option name="totallyTimeSpent" value="53943000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21313673" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21581769" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -615,8 +607,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/deploy.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        <state relative-caret-position="133">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
