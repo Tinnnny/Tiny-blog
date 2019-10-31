@@ -93,6 +93,7 @@ module.exports = {
                             ['/blog/tech/rememberme', '登录记住我功能实现'],
                             ['/blog/tech/utf-8', '关于UTF-8'],
                             ['/blog/tech/dateformat', '格式化时间'],
+                            ['/blog/tech/kaptcha', 'kaptcha'],
                         ]
                     },
                     {
@@ -164,7 +165,10 @@ module.exports = {
                     title: 'Java',
                     collapsable: false,
                     children: [
-                        ['/java/', 'java'],
+                        ['/java/', 'static关键字'],
+                        ['/java/arraylist' , 'ArrayList'],
+                        ['/java/extends' , '继承'],
+                        ['/java/interface' , '接口'],
                     ]
                 }
             ],
