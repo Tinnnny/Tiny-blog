@@ -61,6 +61,14 @@ module.exports = {
             {text: 'Spring Cloud', link: '/springcloud/'},
             {text: 'JVM', link: '/jvm/'},
             {text: '架构', link: '/architecture/'},
+            {
+                text: '容器化部署',
+                items: [
+                    { text: 'Linux', link: '/linux/' },
+                    { text: 'Docker', link: '/docker/' },
+                    { text: 'Kubernetes', link: '/kubernetes/' },
+                ]
+            },
             {text: '日志', link: '/guide/'},
             {text: '关于我', link: '/aboutme/'},
         ],
@@ -79,16 +87,14 @@ module.exports = {
                             ['/springmvc/', 'Spring MVC'],
                             ['/MyBatis/', 'MyBatis'],
                             ['/springtransation/', 'Spring事务管理'],
-                            ['/communication/', '解决模块间通信问题'],
+                            ['/communication/', '解决模块间通信问题']
                         ]
                     },
                     {
                         title: '技术笔记',
-                        // collapsable: false,
+                        collapsable: false,
                         children: [
                             ['/blog/tech/vuepress', 'VuePress'],
-                            ['/blog/tech/spring-boot-thymeleaf', 'Thymeleaf'],
-                            ['/blog/tech/spring-boot-pagehelper&&tkmybatis', 'pagehelper和tk.mybatis使用'],
                             ['/blog/tech/nginx-cdn', 'nginx反向代理cdn'],
                             ['/blog/tech/rememberme', '登录记住我功能实现'],
                             ['/blog/tech/utf-8', '关于UTF-8'],
@@ -107,14 +113,14 @@ module.exports = {
                     },
                     {
                         title: '插件',
-                        // collapsable: false,
+                        collapsable: false,
                         children: [
                             ['/plugins/', 'Lombok'],
                         ]
                     },
                     {
                         title: '问题解决',
-                        // collapsable: false,
+                        collapsable: false,
                         children: [
                             ['/blog/solve/spring-boot-static', '静态资源无法访问'],
                             ['/blog/solve/solve01', 'SQLyog导入sql数据文件报错'],
@@ -136,8 +142,11 @@ module.exports = {
                     title: 'Spring Boot',
                     collapsable: false,
                     children: [
-                        ['/springboot/', 'ss'],
-                        ['/springboot/springboot01', '11'],
+                        ['/springboot/', 'Spring 简介'],
+                        ['/springboot/springboot01', 'Spring Boot常用配置'],
+                        ['/springboot/springboot02', 'Thymeleaf'],
+                        ['/springboot/springboot03', 'Spring Boot整合HikariCP'],
+                        ['/springboot/springboot04', 'Pagehelper和Tk.mybatis'],
                     ]
                 }
             ],
@@ -164,11 +173,91 @@ module.exports = {
                 {
                     title: 'Java',
                     collapsable: false,
+                    sidebarDepth: 2,
                     children: [
                         ['/java/', 'static关键字'],
                         ['/java/arraylist' , 'ArrayList'],
                         ['/java/extends' , '继承'],
                         ['/java/interface' , '接口'],
+                        ['/java/innerclass' , '内部类'],
+                        ['/java/date' , '日期时间类'],
+                        ['/java/system' , 'System类'],
+                        ['/java/stringbuilder' , 'StringBuilder类'],
+                        ['/java/wrap' , '包装类'],
+                        ['/java/collection' , 'Collection集合'],
+                        ['/java/iterator' , 'Iterator迭代器'],
+                        ['/java/generic' , '泛型'],
+                        ['/java/data' , '数据结构'],
+                        ['/java/list' , 'List'],
+                        ['/java/set' , 'Set接口'],
+                        ['/java/collections' , 'Collections工具类'],
+                        ['/java/map' , 'Map集合'],
+                        ['/java/exception' , '异常'],
+                        ['/java/thread' , '线程'],
+                    ]
+                }
+            ],
+            "/linux/" : [
+                {
+                    title: 'Linux',
+                    collapsable: false,
+                    children: [
+                        ['/linux/', 'Linux'],
+                        ['/linux/linux01', 'Linux 远程控制管理'],
+                        ['/linux/linux02', 'Linux 目录管理'],
+                        ['/linux/linux03', 'Linux 系统管理'],
+                        ['/linux/linux04', 'Linux Vim 编辑器'],
+                        ['/linux/linux05', 'Linux 用户和组管理'],
+                        ['/linux/linux06', 'Linux 文件权限管理'],
+                        ['/linux/linux07', 'Linux 软件包管理'],
+                        ['/linux/linux08', 'Linux 部署应用程序'],
+                    ]
+                }
+            ],
+            "/docker/" : [
+                {
+                    title: 'Docker',
+                    collapsable: false,
+                    children: [
+                        ['/docker/', 'Docker简介'],
+                        ['/docker/docker01', '安装 Docker'],
+                        ['/docker/docker02', 'Docker 概述'],
+                        ['/docker/docker03', 'Docker操作镜像'],
+                        ['/docker/docker04', 'Docker操作容器'],
+                        ['/docker/docker05', 'Dockerfile 定制镜像'],
+                        ['/docker/docker06', 'Dockerfile 指令'],
+                        ['/docker/docker07', 'Docker Compose简介'],
+                        ['/docker/docker08', 'Docker Compose使用'],
+                        ['/docker/docker09', 'Docker Compose部署应用程序'],
+                        ['/docker/docker10', 'Docker Compose部署GitLab'],
+                        ['/docker/docker11', 'Docker Compose部署Nexus'],
+                        ['/docker/docker12', 'Docker Compose部署Harbor'],
+                        ['/docker/docker13', 'Docker Compose网络设置'],
+                    ]
+                }
+            ],
+            "/kubernetes/" : [
+                {
+                    title: 'Kubernetes',
+                    collapsable: false,
+                    children: [
+                        ['/kubernetes/', 'Kubernetes简介'],
+                        ['/kubernetes/kubernetes01', 'Kubernetes安装前的准备'],
+                        ['/kubernetes/kubernetes02', 'Kubernetes安装集群'],
+                        ['/kubernetes/kubernetes03', 'Kubernetes配置网络'],
+                        ['/kubernetes/kubernetes04', 'Kubernetes第一个容器'],
+                        ['/kubernetes/kubernetes05', 'Kubernetes概念总结'],
+                        ['/kubernetes/kubernetes06', 'Kubernetes通过资源配置运行容器'],
+                        ['/kubernetes/kubernetes07', 'Kubernetes Ingress简介'],
+                        ['/kubernetes/kubernetes08', 'Nginx 虚拟主机'],
+                        ['/kubernetes/kubernetes09', 'Nginx 反向代理'],
+                        ['/kubernetes/kubernetes10', 'Nginx 负载均衡'],
+                        ['/kubernetes/kubernetes11', 'Nginx Ingress Controller'],
+                        ['/kubernetes/kubernetes12', 'Kubernetes 准备数据卷'],
+                        ['/kubernetes/kubernetes13', 'Kubernetes使用数据卷'],
+                        ['/kubernetes/kubernetes14', 'Kubernetes ConfigMap'],
+                        ['/kubernetes/kubernetes15', 'Kubernetes Dashboard'],
+                        ['/kubernetes/kubernetes16', '使用 Kuboard 替代 Kubernetes Dashboard'],
                     ]
                 }
             ],
@@ -181,7 +270,6 @@ module.exports = {
                     ]
                 }
             ],
-
             "/Spring/" : [
                 {
                     title: 'Spring',
@@ -277,6 +365,8 @@ module.exports = {
                     collapsable: false,
                     children: [
                             ['/plugins/', 'Lombok'],
+                            ['/plugins/plugins01', 'MyBatisCodeHelper'],
+                            ['/plugins/plugins02', 'generaterAllSetter'],
                     ]
                 }
             ],
@@ -294,5 +384,3 @@ module.exports = {
         }
     }
 };
-
-
