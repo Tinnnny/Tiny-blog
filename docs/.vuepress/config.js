@@ -18,7 +18,7 @@ module.exports = {
             'vuepress-plugin-helper-live2d',{
             live2d: {
                 // 是否启用(关闭请设置为false)(default: true)
-                enable: true,
+                enable: false,
                 model: 'hibiki',
                 display: {
                     position: "right", // 显示位置：left/right(default: 'right')
@@ -38,6 +38,7 @@ module.exports = {
         ['@vuepress/back-to-top', true],
     ],
     themeConfig: {
+        // logo: '/swk.png',
         // 你的GitHub仓库
         // repo: 'https://github.com/Tinnnny/Tiny-blog',
         // 自定义仓库链接文字。
