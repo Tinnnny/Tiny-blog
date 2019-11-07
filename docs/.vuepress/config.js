@@ -8,7 +8,7 @@ module.exports = {
         }
       },
     head: [
-        ['link', {rel: 'icon', href: '/vue-logo.png'}]
+        ['link', {rel: 'icon', href: '/favicon.jpg'}]
     ],
     markdown: {
         lineNumbers: true

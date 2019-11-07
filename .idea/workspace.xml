@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74681051-9e3d-45f6-8b10-b0571e5e5500" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/tech/nginx-cdn.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/blog/tech/nginx-cdn.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/tech/spring-boot-pagehelper&amp;&amp;tkmybatis.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/tech/spring-boot-thymeleaf.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/java/interface.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/java/interface.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/springboot/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/springboot/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/springboot/springboot01.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/springboot/springboot01.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,59 +19,13 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docs/.vuepress/config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/java/interface.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="57">
-                <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-              </first_editor>
-              <second_editor>
-                <markdownNavigatorState />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/deploy.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="95">
-                <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-              </first_editor>
-              <second_editor>
-                <markdownNavigatorState />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/java/extends.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="114">
-                <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+              <first_editor relative-caret-position="38">
+                <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -124,11 +76,11 @@
         <option value="$PROJECT_DIR$/docs/architecture/README.md" />
         <option value="$PROJECT_DIR$/docs/guide/README.md" />
         <option value="$PROJECT_DIR$/docs/aboutme/README.md" />
-        <option value="$PROJECT_DIR$/docs/README.md" />
         <option value="$PROJECT_DIR$/docs/java/README.md" />
         <option value="$PROJECT_DIR$/docs/java/extends01.md" />
         <option value="$PROJECT_DIR$/docs/java/interface01.md" />
         <option value="$PROJECT_DIR$/docs/.vuepress/config.js" />
+        <option value="$PROJECT_DIR$/docs/README.md" />
       </list>
     </option>
   </component>
@@ -141,8 +93,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="501" />
-    <option name="y" value="126" />
+    <option name="x" value="267" />
+    <option name="y" value="165" />
     <option name="width" value="1940" />
     <option name="height" value="1100" />
   </component>
@@ -154,7 +106,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -177,20 +129,14 @@
               <item name="Tiny-blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="Tiny-blog" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tiny-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tiny-blog" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="tech" type="462c0819:PsiDirectoryNode" />
+              <item name=".vuepress" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -204,17 +150,18 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\java学习\我的项目\完整项目\Tiny-blog项目\Tiny-blog\docs\.vuepress\public" />
+      <recent name="E:\java学习\我的项目\Tiny-blog项目\Tiny-blog\docs" />
+      <recent name="E:\java学习\我的项目\Tiny-blog项目\Tiny-blog\docs\.vuepress\essay" />
+      <recent name="E:\java学习\我的项目\Tiny-blog项目\Tiny-blog\docs\.vuepress" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\java学习\我的项目\完整项目\Tiny-blog项目\Tiny-blog\docs\architecture" />
       <recent name="E:\java学习\我的项目\Tiny-blog项目\Tiny-blog\docs\.vuepress\public" />
       <recent name="E:\java学习\我的项目\Tiny-blog项目\Tiny-blog\docs\blog" />
       <recent name="C:\Users\Administrator\Desktop\Tiny-blog\docs\blog" />
       <recent name="C:\Users\Administrator\Desktop\Tiny-blog\docs\.vuepress\public" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\java学习\我的项目\Tiny-blog项目\Tiny-blog\docs" />
-      <recent name="E:\java学习\我的项目\Tiny-blog项目\Tiny-blog\docs\.vuepress\essay" />
-      <recent name="E:\java学习\我的项目\Tiny-blog项目\Tiny-blog\docs\.vuepress" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -280,6 +227,8 @@
       <workItem from="1572482117491" duration="104000" />
       <workItem from="1572505606401" duration="3849000" />
       <workItem from="1572601957403" duration="241000" />
+      <workItem from="1572950513325" duration="59000" />
+      <workItem from="1573106795577" duration="823000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1571540486894</created>
@@ -407,17 +356,23 @@
       <option name="project" value="LOCAL" />
       <updated>1572509485504</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="增加文章">
+      <created>1572950538848</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1572950538848</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59466000" />
+    <option name="totallyTimeSpent" value="60348000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
-    <editor active="true" />
+    <frame x="214" y="132" width="1552" height="880" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22587131" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23159304" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -434,7 +389,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49865952" visible="true" weight="0.36997318" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49865952" visible="true" weight="0.36898395" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5013405" side_tool="true" weight="0.24396783" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -465,7 +420,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="增加文章" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/blog/FirstBlog.md" />
     <entry file="file://$PROJECT_DIR$/docs/blog/2018-10-06-linux.md" />
     <entry file="file://$PROJECT_DIR$/docs/blog/2018-10-8-linux-download.md" />
     <entry file="file://$PROJECT_DIR$/docs/blog/2018-10-11-linux-ssh.md" />
@@ -666,6 +620,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/blog/tech/spring-boot-thymeleaf.md" />
+    <entry file="file://$PROJECT_DIR$/docs/.vuepress/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/kubernetes/kubernetes14.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/docs/java/extends.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
@@ -675,6 +646,13 @@
           <second_editor>
             <markdownNavigatorState />
           </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deploy.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -690,29 +668,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deploy.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="95">
-            <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <first_editor relative-caret-position="38">
+            <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
           </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/.vuepress/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
         </state>
       </provider>
     </entry>
