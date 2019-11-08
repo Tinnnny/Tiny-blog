@@ -8,7 +8,7 @@ module.exports = {
         }
       },
     head: [
-        ['link', {rel: 'icon', href: '/favicon.jpg'}]
+        ['link', {rel: 'icon', href: '/favicon.ico'}]
     ],
     markdown: {
         lineNumbers: true
@@ -44,7 +44,7 @@ module.exports = {
         // 自定义仓库链接文字。
         // repoLabel: 'GitHub',
         nav: [
-            {text: '指南', link: '/blog/'},
+            // {text: '指南', link: '/blog/'},
             {
                 text: 'api online',
                 items: [
@@ -56,12 +56,32 @@ module.exports = {
                     { text: 'Bootstrap', link: 'https://www.runoob.com/bootstrap/bootstrap-tutorial.html' },
                 ]
             },
-            // {text: 'config', link: '/config.html'},
-            {text: 'Java', link: '/java/'},
-            {text: 'Spring Boot', link: '/springboot/'},
-            {text: 'Spring Cloud', link: '/springcloud/'},
-            {text: 'JVM', link: '/jvm/'},
-            {text: '架构', link: '/architecture/'},
+            {
+                text: 'Official website',
+                items: [
+                    { text: 'Nginx', link: 'https://www.w3cschool.cn/wkspring/' },
+                ]
+            },
+            {
+                text: 'frontEnd',
+                items: [
+                    { text: 'Vue', link: 'https://www.w3cschool.cn/wkspring/' },
+                    {text: 'other', link: '/frontother/templateuse'},
+                ]
+            },
+            {
+                text: 'backEnd',
+                items: [
+                    {text: 'Java', link: '/java/'},
+                    {text: 'Monomer application', link: '/monomer/'},
+                    {text: 'Spring Boot', link: '/springboot/'},
+                    {text: 'Spring Cloud', link: '/springcloud/'},
+                    {text: 'JVM', link: '/jvm/'},
+                    {text: 'Plugins&Utils', link: '/plugins&utils/'},
+                    {text: 'Solved problems', link: '/solvedproblems/spring-boot-static'},
+                    {text: 'other', link: '/other/project-build'},
+                ]
+            },
             {
                 text: '容器化部署',
                 items: [
@@ -76,59 +96,6 @@ module.exports = {
         lastUpdated: '最近更新',
         smoothScroll: true,
         sidebar:{
-            "/blog/": [
-                    {
-                        title: '单体应用基础',
-                        // collapsable: false,
-                        children: [
-                            ['/Spring/', 'Spring'],
-                            ['/Junit/', 'Junit'],
-                            ['/Log4j/', 'Log4j'],
-                            ['/springweb/', 'Spring Web'],
-                            ['/springmvc/', 'Spring MVC'],
-                            ['/MyBatis/', 'MyBatis'],
-                            ['/springtransation/', 'Spring事务管理'],
-                            ['/communication/', '解决模块间通信问题']
-                        ]
-                    },
-                    {
-                        title: '技术笔记',
-                        collapsable: false,
-                        children: [
-                            ['/blog/tech/vuepress', 'VuePress'],
-                            ['/blog/tech/nginx-cdn', 'nginx反向代理cdn'],
-                            ['/blog/tech/rememberme', '登录记住我功能实现'],
-                            ['/blog/tech/utf-8', '关于UTF-8'],
-                            ['/blog/tech/dateformat', '格式化时间'],
-                            ['/blog/tech/kaptcha', 'kaptcha'],
-                        ]
-                    },
-                    {
-                        title: '项目开发',
-                        // collapsable: false,
-                        children: [
-                            ['/blog/project/project-build', 'Spring Web骨架创建'],
-                            ['/blog/project/templateuse', '利用前端模板'],
-                            ['/blog/project/refactor', '代码重构与优化'],
-                        ]
-                    },
-                    {
-                        title: '插件',
-                        collapsable: false,
-                        children: [
-                            ['/plugins/', 'Lombok'],
-                        ]
-                    },
-                    {
-                        title: '问题解决',
-                        collapsable: false,
-                        children: [
-                            ['/blog/solve/spring-boot-static', '静态资源无法访问'],
-                            ['/blog/solve/solve01', 'SQLyog导入sql数据文件报错'],
-                        ]
-                    },
-                    ['/utils/','Utils工具类']
-            ],
             "/guide/" : [
                 {
                     title: '日志',
@@ -195,6 +162,23 @@ module.exports = {
                         ['/java/map' , 'Map集合'],
                         ['/java/exception' , '异常'],
                         ['/java/thread' , '线程'],
+                    ]
+                }
+            ],
+            "/monomer/" : [
+                {
+                    title: '单体应用',
+                    collapsable: false,
+                    sidebarDepth: 2,
+                    children: [
+                        ['/Spring/', 'Spring'],
+                        ['/Junit/', 'Junit'],
+                        ['/Log4j/', 'Log4j'],
+                        ['/springweb/', 'Spring Web'],
+                        ['/springmvc/', 'Spring MVC'],
+                        ['/MyBatis/', 'MyBatis'],
+                        ['/springtransation/', 'Spring事务管理'],
+                        ['/communication/', '解决模块间通信问题']
                     ]
                 }
             ],
@@ -280,6 +264,61 @@ module.exports = {
                             ['/Spring/spring01', '起步'],
                             ['/Spring/spring-boot-annotation', 'Spring注解'],
                             ['/Spring/spring-boot-validation', 'Spring注解校验'],
+                    ]
+                }
+            ],
+            "/Vue/" : [
+                {
+                    title: '其他',
+                    collapsable: false,
+                    children: [
+                            ['/vue/vuepress', 'VuePress'],
+                    ]
+                }
+            ],
+            "/frontother/" : [
+                {
+                    title: '其他',
+                    collapsable: false,
+                    children: [
+                            ['/frontother/templateuse', '利用前端模板'],
+                    ]
+                }
+            ],
+            "/other/" : [
+                {
+                    title: '其他',
+                    collapsable: false,
+                    children: [
+                            ['/other/project-build', 'Spring web骨架创建'],
+                            ['/other/refactor', '重构代码'],
+                            ['/other/nginx-cdn', 'nginx反向代理cdn'],
+                            ['/other/rememberme', '登录记住我功能实现'],
+                            ['/other/utf-8', '关于UTF-8'],
+                            ['/other/dateformat', '格式化时间'],
+                            ['/other/kaptcha', 'kaptcha'],
+                    ]
+                }
+            ],
+            "/plugins&utils/" : [
+                {
+                    title: '插件和工具类',
+                    collapsable: false,
+                    children: [
+                            ['/plugins&utils/', 'CookieUtils'],
+                            ['/plugins&utils/utils01', 'MapperUtils'],
+                            ['/plugins&utils/utils02', 'HttpClientUtils'],
+                            ['/plugins&utils/lombok', 'lombok插件'],
+                    ]
+                }
+            ],
+            "/solvedproblems/" : [
+                {
+                    title: '问题解决',
+                    collapsable: false,
+                    children: [
+                        ['/solvedproblems/spring-boot-static', '静态资源无法访问'],
+                        ['/solvedproblems/solve01', 'SQLyog导入sql数据文件报错'],
                     ]
                 }
             ],
