@@ -48,18 +48,16 @@ module.exports = {
             {
                 text: 'api online',
                 items: [
-                    { text: 'Spring', link: 'https://www.w3cschool.cn/wkspring/' },
+                    { text: 'Spring', link: 'https://spring.io/' },
+                    { text: 'Spring Cloud Alibaba GitHub', link: 'https://github.com/alibaba/spring-cloud-alibaba' },    
+                    { text: 'Nacos', link: 'https://nacos.io/zh-cn/index.html' },
                     { text: 'Vue', link: 'https://cn.vuejs.org/v2/api/' },
                     { text: 'Vuex', link: 'https://vuex.vuejs.org/zh/api/#vuex-store' },
                     { text: 'Axios', link: 'https://www.kancloud.cn/yunye/axios/234845' },
                     { text: 'jQuery', link: 'https://www.jquery123.com/' },
                     { text: 'Bootstrap', link: 'https://www.runoob.com/bootstrap/bootstrap-tutorial.html' },
-                ]
-            },
-            {
-                text: 'Official website',
-                items: [
-                    { text: 'Nginx', link: 'https://www.w3cschool.cn/wkspring/' },
+                    { text: 'Axure', link: 'https://www.w3cschool.cn/axurezwjc/' },
+                    { text: 'Morris.js', link: 'http://morrisjs.github.io/morris.js/' },
                 ]
             },
             {
@@ -102,6 +100,7 @@ module.exports = {
                     collapsable: false,
                     children: [
                         ['/guide/', '2019年和接下来安排'],
+                        ['/guide/essay01', '记和师兄师姐的一次交流'],
                     ]
                 }
             ],
@@ -123,8 +122,9 @@ module.exports = {
                     title: 'Spring Cloud',
                     collapsable: false,
                     children: [
-                            ['/springcloud/', 'ss'],
-                            ['/springcloud/springcloud01', '11'],
+                            ['/springcloud/', 'spring-cloud-alibaba'],
+                            ['/springcloud/springcloud01', 'Spring Cloud Alibaba项目实践'],
+                            ['/springcloud/springcloud02', 'Nacos'],
                     ]
                 }
             ],
@@ -133,7 +133,7 @@ module.exports = {
                     title: 'JVM',
                     collapsable: false,
                     children: [
-                        ['/jvm/', 'jvm'],
+                        ['/jvm/', 'JVM有必要学吗?'],
                     ]
                 }
             ],
@@ -297,6 +297,9 @@ module.exports = {
                             ['/other/utf-8', '关于UTF-8'],
                             ['/other/dateformat', '格式化时间'],
                             ['/other/kaptcha', 'kaptcha'],
+                            ['/other/highconcurrency', '如何应对高并发'],
+                            ['/other/microservice', '微服务的实践'],
+                            
                     ]
                 }
             ],

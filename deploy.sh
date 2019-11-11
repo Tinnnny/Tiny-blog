@@ -16,3 +16,6 @@ git commit -m 'deploy'
 git push -f git@github.com:Tinnnny/Tiny-blog.git master:gh-pages
 
 cd -
+
+git config --global user.email "847022952@qq.com"
+git config --global user.name "Tinnnny"
