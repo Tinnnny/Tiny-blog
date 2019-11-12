@@ -70,7 +70,7 @@ module.exports = {
             {
                 text: 'backEnd',
                 items: [
-                    {text: 'Java', link: '/java/'},
+                    {text: 'Java', link: '/java/java01'},
                     {text: 'Monomer application', link: '/monomer/'},
                     {text: 'Spring Boot', link: '/springboot/'},
                     {text: 'Spring Cloud', link: '/springcloud/'},
@@ -143,6 +143,9 @@ module.exports = {
                     collapsable: false,
                     sidebarDepth: 2,
                     children: [
+                        ['/java/java01', 'Java 基础语法'],
+                        ['/java/java02', 'Java 对象和类'],
+                        ['/java/java03', 'Java 基本数据类型'],
                         ['/java/', 'static关键字'],
                         ['/java/arraylist' , 'ArrayList'],
                         ['/java/extends' , '继承'],
