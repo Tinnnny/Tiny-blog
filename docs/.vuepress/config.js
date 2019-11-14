@@ -48,9 +48,11 @@ module.exports = {
             {
                 text: 'api online',
                 items: [
+                    { text: 'LeetCode', link: 'https://leetcode-cn.com/problemset/algorithms/' },
                     { text: 'Spring', link: 'https://spring.io/' },
                     { text: 'Spring Cloud Alibaba GitHub', link: 'https://github.com/alibaba/spring-cloud-alibaba' },    
                     { text: 'Nacos', link: 'https://nacos.io/zh-cn/index.html' },
+                    { text: 'Helm', link: 'https://helm.sh/docs/intro/quickstart/' },     
                     { text: 'Vue', link: 'https://cn.vuejs.org/v2/api/' },
                     { text: 'Vuex', link: 'https://vuex.vuejs.org/zh/api/#vuex-store' },
                     { text: 'Axios', link: 'https://www.kancloud.cn/yunye/axios/234845' },
@@ -137,6 +139,42 @@ module.exports = {
                     ]
                 }
             ],
+            "/javalambda/" : [
+                {
+                    title: 'Lambda 表达式',
+                    collapsable: false,
+                    children: [
+                        ['/javalambda/', 'Java Lambda语法'],
+                    ]
+                }
+            ],
+            "/javareflection/" : [
+                {
+                    title: 'Java 反射',
+                    collapsable: false,
+                    children: [
+                        ['/javareflection/', 'Java 反射'],
+                    ]
+                }
+            ],
+            "/javajpa/" : [
+                {
+                    title: 'Java JPA',
+                    collapsable: false,
+                    children: [
+                        ['/javajpa/', 'Java JPA'],
+                    ]
+                }
+            ],
+            "/javadesign/" : [
+                {
+                    title: 'Java 设计模式',
+                    collapsable: false,
+                    children: [
+                        ['/javadesign/', 'Java 设计模式'],
+                    ]
+                }
+            ],
             "/java/" : [
                 {
                     title: 'Java',
@@ -146,24 +184,59 @@ module.exports = {
                         ['/java/java01', 'Java 基础语法'],
                         ['/java/java02', 'Java 对象和类'],
                         ['/java/java03', 'Java 基本数据类型'],
-                        ['/java/', 'static关键字'],
-                        ['/java/arraylist' , 'ArrayList'],
-                        ['/java/extends' , '继承'],
-                        ['/java/interface' , '接口'],
-                        ['/java/innerclass' , '内部类'],
-                        ['/java/date' , '日期时间类'],
-                        ['/java/system' , 'System类'],
-                        ['/java/stringbuilder' , 'StringBuilder类'],
-                        ['/java/wrap' , '包装类'],
-                        ['/java/collection' , 'Collection集合'],
-                        ['/java/iterator' , 'Iterator迭代器'],
-                        ['/java/generic' , '泛型'],
-                        ['/java/data' , '数据结构'],
+                        ['/java/data' , 'Java 数据结构'],
+                        ['/java/java04', 'Java 变量类型'],
+                        ['/java/java05', 'Java 修饰符'],
+                       
+                        ['/java/java06', 'Java 运算符'],
+                        ['/java/java07', 'Java 循环结构 - for, while 及 do…while'],
+                        ['/java/java08', 'Java 分支结构 - if…else/switch'],
+                        ['/java/java09', 'Java Number类'],
+                        ['/java/java10', 'Java Character类'],
+                        ['/java/java11', 'Java String类'],
+                        ['/java/java12', 'Java StringBuffer和StringBuilder类'],
+                        ['/java/system' , 'Java System类'],
+                        ['/java/object' , 'Java Object类'],
+                        ['/java/innerclass' , 'Java 内部类'],
+                        
+                        ['/java/java13', 'Java 数组'],
+                        ['/java/iterator' , 'Java Iterator迭代器'],
+                        ['/java/java14', 'Java 日期时间'],
+                        ['/java/java15', 'Java 正则表达式'],
+                        ['/java/generic' , 'Java 泛型'],
+                        ['/java/java16', 'Java 方法'],
+                        ['/java/java17', 'Java 流(Stream)、文件(File)和IO'],
+                        ['/java/java18', 'Java Scanner 类'],
+                        ['/java/java19', 'Java 异常处理'],
+                        ['/java/java20', 'Java 继承'],
+                        ['/java/java21', 'Java 重写(Override)与重载(Overload)'],
+                        ['/java/java22', 'Java 多态'],
+                        ['/java/java23', 'Java 抽象类'],
+                        ['/java/java24', 'Java 封装'],
+                        ['/java/java25', 'Java 接口'],
+                        ['/java/java26', 'Java 包(package)'],
+                        ['/java/java28', 'Java 集合框架'],
+                        ['/java/java29', 'Java 泛型'],
+                        ['/java/java30', 'Java 序列化'],
+                        ['/java/java31', 'Java 网络编程'],
+                        ['/java/java32', 'Java 发送邮件'],
+                        ['/java/java33', 'Java 多线程编程'],
+                        ['/java/java34', 'Java Applet基础'],
+                        ['/java/java35', 'Java 文档注释'],
+
+                        ['/javalambda/', 'Java Lambda语法'],
+                        ['/javadesign/', 'Java 设计模式'],
+                        ['/javajpa/', 'Java JPA'],
+                        ['/javareflection/', 'Java 反射'],
+
+
+                        ['/java/arraylist' , 'ArrayList'],               
+                        ['/java/collection' , 'Collection集合'],         
+                        
                         ['/java/list' , 'List'],
                         ['/java/set' , 'Set接口'],
                         ['/java/collections' , 'Collections工具类'],
                         ['/java/map' , 'Map集合'],
-                        ['/java/exception' , '异常'],
                         ['/java/thread' , '线程'],
                     ]
                 }
