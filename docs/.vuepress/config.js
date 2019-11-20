@@ -197,7 +197,8 @@ module.exports = {
                         ['/java/java16', 'Java 方法'],
                         ['/java/java29', 'Java File类'],
                         ['/java/java36', 'Java 递归'],
-                        ['/java/java32', 'Java IO'],
+                        ['/java/java32', 'Java IO1'],
+                        ['/java/java35', 'Java IO2'],
                         ['/java/java18', 'Java Scanner 类'],
                         ['/java/java19', 'Java 异常处理'],
                         ['/java/java20', 'Java 继承'],
@@ -215,7 +216,7 @@ module.exports = {
                         ['/java/java33', 'Java 多线程'],
                         ['/javadesign/', 'Java 设计模式'],
                         ['/javajpa/', 'Java JPA'],
-                        ['/javareflection/', 'Java 反射'],
+                        ['/java/java34', 'Java 反射'],
                     ]
                 }
             ],
