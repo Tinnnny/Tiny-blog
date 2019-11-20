@@ -50,9 +50,9 @@ module.exports = {
                 items: [
                     { text: 'LeetCode', link: 'https://leetcode-cn.com/problemset/algorithms/' },
                     { text: 'Spring', link: 'https://spring.io/' },
-                    { text: 'Spring Cloud Alibaba GitHub', link: 'https://github.com/alibaba/spring-cloud-alibaba' },    
+                    { text: 'Spring Cloud Alibaba GitHub', link: 'https://github.com/alibaba/spring-cloud-alibaba' },
                     { text: 'Nacos', link: 'https://nacos.io/zh-cn/index.html' },
-                    { text: 'Helm', link: 'https://helm.sh/docs/intro/quickstart/' },     
+                    { text: 'Helm', link: 'https://helm.sh/docs/intro/quickstart/' },
                     { text: 'Vue', link: 'https://cn.vuejs.org/v2/api/' },
                     { text: 'Vuex', link: 'https://vuex.vuejs.org/zh/api/#vuex-store' },
                     { text: 'Axios', link: 'https://www.kancloud.cn/yunye/axios/234845' },
@@ -103,6 +103,7 @@ module.exports = {
                     children: [
                         ['/guide/', '2019年和接下来安排'],
                         ['/guide/essay01', '记和师兄师姐的一次交流'],
+                        ['/guide/essay02', '华立电表质量管理系统'],
                     ]
                 }
             ],
@@ -136,15 +137,6 @@ module.exports = {
                     collapsable: false,
                     children: [
                         ['/jvm/', 'JVM有必要学吗?'],
-                    ]
-                }
-            ],
-            "/javalambda/" : [
-                {
-                    title: 'Lambda 表达式',
-                    collapsable: false,
-                    children: [
-                        ['/javalambda/', 'Java Lambda语法'],
                     ]
                 }
             ],
@@ -187,7 +179,6 @@ module.exports = {
                         ['/java/data' , 'Java 数据结构'],
                         ['/java/java04', 'Java 变量类型'],
                         ['/java/java05', 'Java 修饰符'],
-                       
                         ['/java/java06', 'Java 运算符'],
                         ['/java/java07', 'Java 循环结构'],
                         ['/java/java08', 'Java 分支结构'],
@@ -198,33 +189,30 @@ module.exports = {
                         ['/java/system' , 'Java System类'],
                         ['/java/object' , 'Java Object类'],
                         ['/java/innerclass' , 'Java 内部类'],
-                        
                         ['/java/java13', 'Java 数组'],
                         ['/java/iterator' , 'Java Iterator迭代器'],
                         ['/java/java14', 'Java 日期时间'],
                         ['/java/java15', 'Java 正则表达式'],
                         ['/java/generic' , 'Java 泛型'],
                         ['/java/java16', 'Java 方法'],
-                        ['/java/java17', 'Java 流、文件和IO'],
+                        ['/java/java29', 'Java File类'],
+                        ['/java/java36', 'Java 递归'],
+                        ['/java/java32', 'Java IO'],
                         ['/java/java18', 'Java Scanner 类'],
                         ['/java/java19', 'Java 异常处理'],
                         ['/java/java20', 'Java 继承'],
                         ['/java/java22', 'Java 多态'],
-                        ['/java/java23', 'Java 抽象类'],
                         ['/java/java24', 'Java 封装'],
                         ['/java/java25', 'Java 接口'],
                         ['/java/java26', 'Java 包(package)'],
                         ['/java/java27', 'Java 集合'],
                         ['/java/java28', 'Java List和Set'],
-                        ['/java/arraylist' , 'Java ArrayList'],  
-                        ['/java/collections' , 'Java Collections工具类'],  
+                        ['/java/arraylist' , 'Java ArrayList'],
+                        ['/java/collections' , 'Java Collections工具类'],
                         ['/java/java30', 'Java 序列化'],
+                        ['/java/java21', 'Java Lambda表达式'],
                         ['/java/java31', 'Java 网络编程'],
                         ['/java/java33', 'Java 多线程'],
-                        ['/java/java34', 'Java Applet基础'],
-                        ['/java/java35', 'Java 文档注释'],
-
-                        ['/javalambda/', 'Java Lambda语法'],
                         ['/javadesign/', 'Java 设计模式'],
                         ['/javajpa/', 'Java JPA'],
                         ['/javareflection/', 'Java 反射'],
@@ -365,7 +353,7 @@ module.exports = {
                             ['/other/kaptcha', 'kaptcha'],
                             ['/other/highconcurrency', '如何应对高并发'],
                             ['/other/microservice', '微服务的实践'],
-                            
+
                     ]
                 }
             ],
