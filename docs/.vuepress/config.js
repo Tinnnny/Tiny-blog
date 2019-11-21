@@ -51,6 +51,7 @@ module.exports = {
                     { text: 'LeetCode', link: 'https://leetcode-cn.com/problemset/algorithms/' },
                     { text: 'Spring', link: 'https://spring.io/' },
                     { text: 'Spring Cloud Alibaba GitHub', link: 'https://github.com/alibaba/spring-cloud-alibaba' },
+                    { text: 'Jhipster', link: 'https://www.jhipster.tech/' },
                     { text: 'Nacos', link: 'https://nacos.io/zh-cn/index.html' },
                     { text: 'Helm', link: 'https://helm.sh/docs/intro/quickstart/' },
                     { text: 'Vue', link: 'https://cn.vuejs.org/v2/api/' },
@@ -149,12 +150,17 @@ module.exports = {
                     ]
                 }
             ],
-            "/javajpa/" : [
+            "/javaio/" : [
                 {
-                    title: 'Java JPA',
+                    title: 'Java IO',
                     collapsable: false,
                     children: [
-                        ['/javajpa/', 'Java JPA'],
+                        ['/javaio/', '概述'],
+                        ['/javaio/java32', '字节流'],
+                        ['/javaio/java37', '字符流'],
+                        ['/javaio/java35', '缓冲流'],
+                        ['/javaio/java38', '转换流'],
+                        ['/javaio/java39', '序列化'],
                     ]
                 }
             ],
@@ -197,8 +203,7 @@ module.exports = {
                         ['/java/java16', 'Java 方法'],
                         ['/java/java29', 'Java File类'],
                         ['/java/java36', 'Java 递归'],
-                        ['/java/java32', 'Java IO1'],
-                        ['/java/java35', 'Java IO2'],
+                        ['/javaio/', 'Java IO'],
                         ['/java/java18', 'Java Scanner 类'],
                         ['/java/java19', 'Java 异常处理'],
                         ['/java/java20', 'Java 继承'],
@@ -215,7 +220,6 @@ module.exports = {
                         ['/java/java31', 'Java 网络编程'],
                         ['/java/java33', 'Java 多线程'],
                         ['/javadesign/', 'Java 设计模式'],
-                        ['/javajpa/', 'Java JPA'],
                         ['/java/java34', 'Java 反射'],
                     ]
                 }
