@@ -14,27 +14,27 @@ module.exports = {
         lineNumbers: true
       },
     plugins: [
-        [
-            'vuepress-plugin-helper-live2d',{
-            live2d: {
-                // 是否启用(关闭请设置为false)(default: true)
-                enable: false,
-                model: 'hibiki',
-                display: {
-                    position: "right", // 显示位置：left/right(default: 'right')
-                    width: 135, // 模型的长度(default: 135)
-                    height: 300, // 模型的高度(default: 300)
-                    hOffset: 65, //  水平偏移(default: 65)
-                    vOffset: 0, //  垂直偏移(default: 0)
-                },
-                mobile: {
-                    show: false // 是否在移动设备上显示(default: false)
-                },
-                react: {
-                    opacity: 0.8 // 模型透明度(default: 0.8)
-                }
-            }
-        }],
+        // [
+        //     'vuepress-plugin-helper-live2d',{
+        //     live2d: {
+        //         // 是否启用(关闭请设置为false)(default: true)
+        //         enable: false,
+        //         model: 'hibiki',
+        //         display: {
+        //             position: "right", // 显示位置：left/right(default: 'right')
+        //             width: 135, // 模型的长度(default: 135)
+        //             height: 300, // 模型的高度(default: 300)
+        //             hOffset: 65, //  水平偏移(default: 65)
+        //             vOffset: 0, //  垂直偏移(default: 0)
+        //         },
+        //         mobile: {
+        //             show: false // 是否在移动设备上显示(default: false)
+        //         },
+        //         react: {
+        //             opacity: 0.8 // 模型透明度(default: 0.8)
+        //         }
+        //     }
+        // }],
         ['@vuepress/back-to-top', true],
     ],
     themeConfig: {
@@ -104,7 +104,8 @@ module.exports = {
                     children: [
                         ['/guide/', '2019年和接下来安排'],
                         ['/guide/essay01', '记和师兄师姐的一次交流'],
-                        ['/guide/essay02', '华立电表质量管理系统'],
+                        ['/guide/essay02', '华立课题问题'],
+                        ['/guide/essay03', '华立电表质量管理系统原型图'],
                     ]
                 }
             ],
