@@ -48,19 +48,20 @@ module.exports = {
             {
                 text: 'api online',
                 items: [
+                    { text: 'Axios', link: 'https://www.kancloud.cn/yunye/axios/234845' },
+                    { text: 'Axure', link: 'https://www.w3cschool.cn/axurezwjc/' },
+                    { text: 'Bootstrap', link: 'https://www.runoob.com/bootstrap/bootstrap-tutorial.html' },
+                    { text: 'Helm', link: 'https://helm.sh/docs/intro/quickstart/' },
+                    { text: 'Jhipster', link: 'https://www.jhipster.tech/' },
+                    { text: 'jQuery', link: 'https://www.jquery123.com/' },
                     { text: 'LeetCode', link: 'https://leetcode-cn.com/problemset/algorithms/' },
+                    { text: 'Morris.js', link: 'http://morrisjs.github.io/morris.js/' },
+                    { text: 'Nacos', link: 'https://nacos.io/zh-cn/index.html' },
                     { text: 'Spring', link: 'https://spring.io/' },
                     { text: 'Spring Cloud Alibaba GitHub', link: 'https://github.com/alibaba/spring-cloud-alibaba' },
-                    { text: 'Jhipster', link: 'https://www.jhipster.tech/' },
-                    { text: 'Nacos', link: 'https://nacos.io/zh-cn/index.html' },
-                    { text: 'Helm', link: 'https://helm.sh/docs/intro/quickstart/' },
+                    { text: 'TiDB', link: 'https://pingcap.com/docs-cn/stable/' },
                     { text: 'Vue', link: 'https://cn.vuejs.org/v2/api/' },
                     { text: 'Vuex', link: 'https://vuex.vuejs.org/zh/api/#vuex-store' },
-                    { text: 'Axios', link: 'https://www.kancloud.cn/yunye/axios/234845' },
-                    { text: 'jQuery', link: 'https://www.jquery123.com/' },
-                    { text: 'Bootstrap', link: 'https://www.runoob.com/bootstrap/bootstrap-tutorial.html' },
-                    { text: 'Axure', link: 'https://www.w3cschool.cn/axurezwjc/' },
-                    { text: 'Morris.js', link: 'http://morrisjs.github.io/morris.js/' },
                 ]
             },
             {
@@ -91,6 +92,7 @@ module.exports = {
                     { text: 'Kubernetes', link: '/kubernetes/' },
                 ]
             },
+            {text: 'LeetCode', link: '/leetcode/'},
             {text: '日志', link: '/guide/'},
             {text: '关于我', link: '/aboutme/'},
         ],
@@ -106,6 +108,16 @@ module.exports = {
                         ['/guide/essay01', '记和师兄师姐的一次交流'],
                         ['/guide/essay02', '华立课题问题'],
                         ['/guide/essay03', '华立电表质量管理系统原型图'],
+                    ]
+                }
+            ],
+            "/leetcode/" : [
+                {
+                    title: '日志',
+                    collapsable: false,
+                    children: [
+                        ['/leetcode/', '1.两数之和'],
+                        ['/leetcode/leetcode01', '2.两数相加'],
                     ]
                 }
             ],
@@ -189,12 +201,7 @@ module.exports = {
                         ['/java/java06', 'Java 运算符'],
                         ['/java/java07', 'Java 循环结构'],
                         ['/java/java08', 'Java 分支结构'],
-                        ['/java/java09', 'Java Number类'],
-                        ['/java/java10', 'Java Character类'],
-                        ['/java/java11', 'Java String类'],
-                        ['/java/java12', 'Java StringBuffer和StringBuilder类'],
-                        ['/java/system' , 'Java System类'],
-                        ['/java/object' , 'Java Object类'],
+                        ['/class/', 'Java 常用工具类类'],                       
                         ['/java/innerclass' , 'Java 内部类'],
                         ['/java/java13', 'Java 数组'],
                         ['/java/iterator' , 'Java Iterator迭代器'],
@@ -212,11 +219,7 @@ module.exports = {
                         ['/java/java24', 'Java 封装'],
                         ['/java/java25', 'Java 接口'],
                         ['/java/java26', 'Java 包(package)'],
-                        ['/java/java27', 'Java 集合'],
-                        ['/java/java28', 'Java List和Set'],
-                        ['/java/arraylist' , 'Java ArrayList'],
-                        ['/java/collections' , 'Java Collections工具类'],
-                        ['/java/java30', 'Java 序列化'],
+                        ['/collection/', 'Java 集合'],
                         ['/java/java21', 'Java Lambda表达式'],
                         ['/java/java31', 'Java 网络编程'],
                         ['/java/java33', 'Java 多线程'],
@@ -414,6 +417,32 @@ module.exports = {
                     children: [
                             ['/Junit/', '简介'],
                             ['/Junit/Junit01', '起步'],
+                    ]
+                }
+            ],
+            "/collection/" : [
+                {
+                    title: '集合',
+                    collapsable: false,
+                    children: [
+                            ['/collection/', '概述'],
+                            ['/collection/collection01', 'List和Set'],
+                            ['/collection/collection02', 'ArrayList'],
+                            ['/collection/collection03', 'Collections工具类'],
+                    ]
+                }
+            ],
+            "/class/" : [
+                {
+                    title: '集合',
+                    collapsable: false,
+                    children: [
+                            ['/class/', 'Java Number类'],
+                            ['/class/class01', 'Java Character类'],
+                            ['/class/class02', 'Java String类'],
+                            ['/class/class03', 'Java StringBuffer和StringBuilder类'],
+                            ['/class/class04' , 'Java System类'],
+                            ['/class/class05' , 'Java Object类'],
                     ]
                 }
             ],
