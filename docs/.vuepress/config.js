@@ -118,6 +118,11 @@ module.exports = {
                     children: [
                         ['/leetcode/', '1.两数之和'],
                         ['/leetcode/leetcode01', '2.两数相加'],
+                        ['/leetcode/leetcode02', '3.无重复字符的最长子串'],
+                        ['/leetcode/leetcode03', '4.寻找两个有序数组的中位数'],
+                        ['/leetcode/leetcode04', '7.整数反转'],
+                        ['/leetcode/leetcode05', '9.回文数'],
+                        ['/leetcode/leetcode06', '17.罗马数字转整数'],
                     ]
                 }
             ],
@@ -168,12 +173,35 @@ module.exports = {
                     title: 'Java IO',
                     collapsable: false,
                     children: [
-                        ['/javaio/', '概述'],
+                        ['/javaio/java29', 'Java File类'],
+                        ['/javaio/java36', 'Java 递归'],
+                        ['/javaio/', 'IO概述'],
                         ['/javaio/java32', '字节流'],
                         ['/javaio/java37', '字符流'],
                         ['/javaio/java35', '缓冲流'],
                         ['/javaio/java38', '转换流'],
                         ['/javaio/java39', '序列化'],
+                    ]
+                }
+            ],
+            "/java00/" : [
+                {
+                    title: 'Java 基础',
+                    collapsable: false,
+                    children: [
+                        ['/java00/', 'Java 对象和类'],
+                        ['/java00/java16', 'Java 方法'],
+                        ['/java00/java26', 'Java 包(package)'],
+                        ['/java00/java03', 'Java 基本数据类型'],
+                        ['/java00/data' , 'Java 数据结构'],
+                        ['/java00/java04', 'Java 变量类型'],
+                        ['/java00/java05', 'Java 修饰符'],
+                        ['/java00/java06', 'Java 运算符'],
+                        ['/java00/java07', 'Java 循环结构'],
+                        ['/java00/java08', 'Java 分支结构'],
+                        ['/java00/java13', 'Java 数组'],
+                        ['/java00/iterator' , 'Java Iterator迭代器'],
+                        
                     ]
                 }
             ],
@@ -183,6 +211,25 @@ module.exports = {
                     collapsable: false,
                     children: [
                         ['/javadesign/', 'Java 设计模式'],
+                        
+                    ]
+                }
+            ],
+            "/java000/" : [
+                {
+                    title: 'Java 高级',
+                    collapsable: false,
+                    children: [
+                        ['/java000/', 'Java 内部类'],
+
+                        ['/java000/java15', 'Java 正则表达式'],
+                        ['/java000/generic' , 'Java 泛型'],         
+                        ['/java000/java18', 'Java Scanner 类'],
+                        ['/java000/java19', 'Java 异常处理'],
+                        ['/java000/java20', 'Java 继承'],
+                        ['/java000/java22', 'Java 多态'],
+                        ['/java000/java24', 'Java 封装'],
+                        ['/java000/java25', 'Java 接口'],          
                     ]
                 }
             ],
@@ -192,33 +239,12 @@ module.exports = {
                     collapsable: false,
                     sidebarDepth: 2,
                     children: [
-                        ['/java/java01', 'Java 基础语法'],
-                        ['/java/java02', 'Java 对象和类'],
-                        ['/java/java03', 'Java 基本数据类型'],
-                        ['/java/data' , 'Java 数据结构'],
-                        ['/java/java04', 'Java 变量类型'],
-                        ['/java/java05', 'Java 修饰符'],
-                        ['/java/java06', 'Java 运算符'],
-                        ['/java/java07', 'Java 循环结构'],
-                        ['/java/java08', 'Java 分支结构'],
-                        ['/class/', 'Java 常用工具类类'],                       
-                        ['/java/innerclass' , 'Java 内部类'],
-                        ['/java/java13', 'Java 数组'],
-                        ['/java/iterator' , 'Java Iterator迭代器'],
-                        ['/java/java14', 'Java 日期时间'],
-                        ['/java/java15', 'Java 正则表达式'],
-                        ['/java/generic' , 'Java 泛型'],
-                        ['/java/java16', 'Java 方法'],
-                        ['/java/java29', 'Java File类'],
-                        ['/java/java36', 'Java 递归'],
+                        ['/java/java01', 'Java 概述'],  
+                        ['/java00/', 'Java 基础'],                
+                        ['/java000/', 'Java 高级'],  
+                        ['/class/', 'Java 常用工具类'], 
                         ['/javaio/', 'Java IO'],
-                        ['/java/java18', 'Java Scanner 类'],
-                        ['/java/java19', 'Java 异常处理'],
-                        ['/java/java20', 'Java 继承'],
-                        ['/java/java22', 'Java 多态'],
-                        ['/java/java24', 'Java 封装'],
-                        ['/java/java25', 'Java 接口'],
-                        ['/java/java26', 'Java 包(package)'],
+                                     
                         ['/collection/', 'Java 集合'],
                         ['/java/java21', 'Java Lambda表达式'],
                         ['/java/java31', 'Java 网络编程'],
@@ -426,9 +452,12 @@ module.exports = {
                     collapsable: false,
                     children: [
                             ['/collection/', '概述'],
-                            ['/collection/collection01', 'List和Set'],
-                            ['/collection/collection02', 'ArrayList'],
-                            ['/collection/collection03', 'Collections工具类'],
+                            ['/collection/collection01', 'Collection'],
+                            ['/collection/collection02', 'Map'],
+                            ['/collection/collection03', 'List'],
+                            ['/collection/collection04', 'Set'],
+                            ['/collection/collection05', 'ArrayList'],
+                            ['/collection/collection06', 'Collections工具类'],
                     ]
                 }
             ],
@@ -439,9 +468,10 @@ module.exports = {
                     children: [
                             ['/class/', 'Java Number类'],
                             ['/class/class01', 'Java Character类'],
-                            ['/class/class02', 'Java String类'],
-                            ['/class/class03', 'Java StringBuffer和StringBuilder类'],
+                            ['/class/class02', 'Java String'],
+                            ['/class/class03', 'Java StringBuffer和StringBuilder'],
                             ['/class/class04' , 'Java System类'],
+                            ['/class/class06', 'Java 日期时间'],
                             ['/class/class05' , 'Java Object类'],
                     ]
                 }
