@@ -2,222 +2,217 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74681051-9e3d-45f6-8b10-b0571e5e5500" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/frontother/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/chitose.model.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/chitose.physics.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/chitose.pose.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/exp/f01.exp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/exp/f02.exp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/exp/f03.exp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/exp/f04.exp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/exp/f05.exp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/exp/f06.exp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/exp/f07.exp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/moc/chitose.2048/texture_00.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/moc/chitose.moc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/mtn/chitose_handwave.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/mtn/chitose_idle.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/mtn/chitose_kime01.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/mtn/chitose_kime02.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/Epsilon2.1.model.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/Epsilon2.1.physics.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/exp/f01.exp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/exp/f02.exp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/exp/f03.exp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/exp/f04.exp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/exp/f05.exp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/exp/f06.exp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/exp/f07.exp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/exp/f08.exp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/moc/Epsilon2.1.2048/texture_00.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/moc/Epsilon2.1.moc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_idle_01.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_m_01.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_m_02.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_m_03.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_m_04.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_m_05.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_m_06.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_m_07.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_m_08.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_m_sp_01.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_m_sp_02.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_m_sp_03.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_m_sp_04.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_m_sp_05.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_shake_01.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/exp/f01.exp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/exp/f02.exp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/exp/f03.exp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/exp/f04.exp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/exp/f05.exp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/exp/f06.exp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/exp/f07.exp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/izumi.model.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/izumi.physics.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/moc/izumi_illust.1024/texture_00.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/moc/izumi_illust.1024/texture_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/moc/izumi_illust.1024/texture_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/moc/izumi_illust.1024/texture_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/moc/izumi_illust.moc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/idle_01.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/idle_02.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/idle_03.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/idle_04.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/izumi_01.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/izumi_02.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/izumi_03.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/izumi_04.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/izumi_05.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/izumi_06.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/izumi_07.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/izumi_08.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/izumi_09.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/izumi_10.mtn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/snd/izumi_01.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/snd/izumi_02.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/snd/izumi_03.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/snd/izumi_04.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/snd/izumi_05.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/snd/izumi_06.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/snd/izumi_07.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/snd/izumi_08.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/snd/izumi_09.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/snd/izumi_10.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/class/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/class/class01.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/class/class02.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/class/class03.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/class/class04.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/class/class05.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/class/class06.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/collection/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/collection/collection01.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/collection/collection02.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/collection/collection03.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/collection/collection04.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/collection/collection05.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/collection/collection06.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docker/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docker/docker01.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docker/docker02.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docker/docker03.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docker/docker04.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docker/docker05.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docker/docker06.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docker/docker07.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docker/docker08.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docker/docker09.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docker/docker10.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docker/docker11.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docker/docker12.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docker/docker13.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/frontother/templateuse.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/frontpage/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/guide/essay01.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/guide/essay02.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/guide/essay03.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java/java01.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java/java21.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java/java31.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java/java33.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java/java34.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java00/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java00/data.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java00/iterator.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java00/java03.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java00/java04.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java00/java05.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java00/java06.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java00/java07.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java00/java08.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java00/java13.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java00/java16.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java00/java26.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java000/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java000/generic.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java000/java15.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java000/java18.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java000/java19.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java000/java20.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java000/java22.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java000/java24.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java000/java25.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/javadesign/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/javaio/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/javaio/java29.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/javaio/java32.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/javaio/java35.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/javaio/java36.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/javaio/java37.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/javaio/java38.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/javaio/java39.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/kubernetes/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes01.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes02.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes03.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes04.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes05.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes06.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes07.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes08.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes09.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes10.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes11.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes12.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes13.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes14.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes15.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes16.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/leetcode/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/leetcode/leetcode01.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/leetcode/leetcode02.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/leetcode/leetcode03.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/leetcode/leetcode04.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/leetcode/leetcode05.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/leetcode/leetcode06.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/leetcode/leetcode07.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/leetcode/leetcode08.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/leetcode/leetcode09.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/leetcode/leetcode10.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/linux/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/linux/linux01.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/linux/linux02.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/linux/linux03.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/linux/linux04.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/linux/linux05.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/linux/linux06.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/linux/linux07.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/linux/linux08.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/monomer/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/other/dateformat.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/other/highconcurrency.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/other/kaptcha.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/other/microservice.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/other/nginx-cdn.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/other/project-build.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/other/refactor.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/other/rememberme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/other/utf-8.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/plugins&amp;utils/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/plugins&amp;utils/lombok.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/plugins&amp;utils/utils01.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/plugins&amp;utils/utils02.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/solvedproblems/solve01.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/solvedproblems/spring-boot-static.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/springboot/springboot02.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/springboot/springboot03.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/springboot/springboot04.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/springboot/springboot05.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/springcloud/springcloud02.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/vue/vuepress.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/public/swk.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/aboutme/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/aboutme/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/config.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.recently_updates.txt" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.recently_updates.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/AsyncGenerator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/AwaitValue.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/applyDecoratedDescriptor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/arrayWithHoles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/arrayWithoutHoles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/assertThisInitialized.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/asyncGeneratorDelegate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/asyncIterator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/asyncToGenerator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/awaitAsyncGenerator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/classCallCheck.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/classNameTDZError.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/classPrivateFieldDestructureSet.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/classPrivateFieldGet.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/classPrivateFieldLooseBase.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/classPrivateFieldLooseKey.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/classPrivateFieldSet.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/classPrivateMethodGet.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/classPrivateMethodSet.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/classStaticPrivateFieldSpecGet.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/classStaticPrivateFieldSpecSet.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/classStaticPrivateMethodGet.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/classStaticPrivateMethodSet.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/construct.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/createClass.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/decorate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/defaults.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/defineEnumerableProperties.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/defineProperty.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/AsyncGenerator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/AwaitValue.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/applyDecoratedDescriptor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/arrayWithHoles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/arrayWithoutHoles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/assertThisInitialized.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/asyncGeneratorDelegate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/asyncIterator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/asyncToGenerator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/awaitAsyncGenerator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/classCallCheck.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/classNameTDZError.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/classPrivateFieldDestructureSet.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/classPrivateFieldGet.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/classPrivateFieldLooseBase.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/classPrivateFieldLooseKey.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/classPrivateFieldSet.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/classPrivateMethodGet.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/classPrivateMethodSet.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/classStaticPrivateFieldSpecGet.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/classStaticPrivateFieldSpecSet.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/classStaticPrivateMethodGet.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/classStaticPrivateMethodSet.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/construct.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/createClass.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/decorate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/defaults.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/defineEnumerableProperties.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/defineProperty.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/extends.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/get.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/getPrototypeOf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/inherits.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/inheritsLoose.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/initializerDefineProperty.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/initializerWarningHelper.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/instanceof.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/interopRequireDefault.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/interopRequireWildcard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/isNativeFunction.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/iterableToArray.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/iterableToArrayLimit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/iterableToArrayLimitLoose.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/jsx.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/newArrowCheck.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/nonIterableRest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/nonIterableSpread.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/objectDestructuringEmpty.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/objectSpread.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/objectSpread2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/objectWithoutProperties.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/possibleConstructorReturn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/readOnlyError.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/set.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/setPrototypeOf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/skipFirstGeneratorNext.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/slicedToArray.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/slicedToArrayLoose.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/superPropBase.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/taggedTemplateLiteral.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/taggedTemplateLiteralLoose.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/tdz.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/temporalRef.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/temporalUndefined.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/toArray.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/toConsumableArray.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/toPrimitive.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/toPropertyKey.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/typeof.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/wrapAsyncGenerator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/wrapNativeSuper.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/esm/wrapRegExp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/extends.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/get.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/getPrototypeOf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/inherits.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/inheritsLoose.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/initializerDefineProperty.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/initializerWarningHelper.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/instanceof.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/interopRequireDefault.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/interopRequireWildcard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/isNativeFunction.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/iterableToArray.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/iterableToArrayLimit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/iterableToArrayLimitLoose.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/jsx.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/newArrowCheck.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/nonIterableRest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/nonIterableSpread.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/objectDestructuringEmpty.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/objectSpread.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/objectSpread2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/objectWithoutProperties.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/objectWithoutPropertiesLoose.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/possibleConstructorReturn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/readOnlyError.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/set.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/setPrototypeOf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/skipFirstGeneratorNext.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/slicedToArray.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/slicedToArrayLoose.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/superPropBase.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/taggedTemplateLiteral.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/taggedTemplateLiteralLoose.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/tdz.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/temporalRef.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/temporalUndefined.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/toArray.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/toConsumableArray.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/toPrimitive.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/toPropertyKey.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/typeof.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/wrapAsyncGenerator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/wrapNativeSuper.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/helpers/wrapRegExp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_@babel_runtime@7.6.3@@babel/runtime/regenerator/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_ansi-regex@2.1.1@ansi-regex/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_ansi-regex@2.1.1@ansi-regex/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_async-limiter@1.0.1@async-limiter/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_async-limiter@1.0.1@async-limiter/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_asynckit@0.4.0@asynckit/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_asynckit@0.4.0@asynckit/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_balanced-match@1.0.0@balanced-match/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_balanced-match@1.0.0@balanced-match/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_brace-expansion@1.1.11@brace-expansion/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_brace-expansion@1.1.11@brace-expansion/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_code-point-at@1.1.0@code-point-at/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_code-point-at@1.1.0@code-point-at/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_combined-stream@1.0.8@combined-stream/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_combined-stream@1.0.8@combined-stream/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_component-emitter@1.3.0@component-emitter/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_component-emitter@1.3.0@component-emitter/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_concat-map@0.0.1@concat-map/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_concat-map@0.0.1@concat-map/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_core-util-is@1.0.2@core-util-is/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_core-util-is@1.0.2@core-util-is/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_debug@3.2.6@debug/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_debug@3.2.6@debug/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_debug@4.1.1@debug/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_debug@4.1.1@debug/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_decamelize@1.2.0@decamelize/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_decamelize@1.2.0@decamelize/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_delayed-stream@1.0.0@delayed-stream/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_delayed-stream@1.0.0@delayed-stream/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_extend@3.0.2@extend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_extend@3.0.2@extend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_fs.realpath@1.0.0@fs.realpath/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_fs.realpath@1.0.0@fs.realpath/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_inflight@1.0.6@inflight/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_inflight@1.0.6@inflight/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_inherits@2.0.4@inherits/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_inherits@2.0.4@inherits/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_is-buffer@1.1.6@is-buffer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_is-buffer@1.1.6@is-buffer/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_is-fullwidth-code-point@1.0.0@is-fullwidth-code-point/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_is-fullwidth-code-point@1.0.0@is-fullwidth-code-point/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_isarray@1.0.0@isarray/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_isarray@1.0.0@isarray/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_lodash@4.17.15@lodash/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_lodash@4.17.15@lodash/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_methods@1.1.2@methods/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_methods@1.1.2@methods/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_mime-db@1.40.0@mime-db/HISTORY.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_mime-db@1.40.0@mime-db/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_mime-db@1.40.0@mime-db/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_mime-db@1.40.0@mime-db/db.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_mime-db@1.40.0@mime-db/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_mime-db@1.40.0@mime-db/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_mime-types@2.1.24@mime-types/HISTORY.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_mime-types@2.1.24@mime-types/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_mime-types@2.1.24@mime-types/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_mime-types@2.1.24@mime-types/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_mime-types@2.1.24@mime-types/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_mime@1.6.0@mime/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_mime@1.6.0@mime/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_mime@2.4.4@mime/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_mime@2.4.4@mime/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_minimatch@3.0.4@minimatch/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_minimatch@3.0.4@minimatch/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_ms@2.1.2@ms/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_ms@2.1.2@ms/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_number-is-nan@1.0.1@number-is-nan/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_number-is-nan@1.0.1@number-is-nan/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_once@1.4.0@once/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_once@1.4.0@once/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_path-is-absolute@1.0.1@path-is-absolute/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_path-is-absolute@1.0.1@path-is-absolute/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_process-nextick-args@2.0.1@process-nextick-args/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_process-nextick-args@2.0.1@process-nextick-args/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_readable-stream@2.3.6@readable-stream/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_readable-stream@2.3.6@readable-stream/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_readable-stream@3.4.0@readable-stream/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_readable-stream@3.4.0@readable-stream/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_regenerator-runtime@0.13.3@regenerator-runtime/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_regenerator-runtime@0.13.3@regenerator-runtime/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_safe-buffer@5.1.2@safe-buffer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_safe-buffer@5.1.2@safe-buffer/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_safe-buffer@5.2.0@safe-buffer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_safe-buffer@5.2.0@safe-buffer/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_string-width@1.0.2@string-width/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_string-width@1.0.2@string-width/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_string_decoder@1.1.1@string_decoder/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_string_decoder@1.1.1@string_decoder/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_string_decoder@1.3.0@string_decoder/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_string_decoder@1.3.0@string_decoder/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_strip-ansi@3.0.1@strip-ansi/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_strip-ansi@3.0.1@strip-ansi/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_util-deprecate@1.0.2@util-deprecate/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_util-deprecate@1.0.2@util-deprecate/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_uuid@3.3.3@uuid/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_uuid@3.3.3@uuid/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_wrap-ansi@2.1.0@wrap-ansi/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_wrap-ansi@2.1.0@wrap-ansi/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/_wrappy@1.0.2@wrappy/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_wrappy@1.0.2@wrappy/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn-error.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -229,66 +224,7 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/frontother/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="38">
-                <caret line="2" selection-start-line="2" selection-end-line="2" />
-              </first_editor>
-              <second_editor>
-                <markdownNavigatorState />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/.vuepress/config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="323">
-                <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-              </first_editor>
-              <second_editor>
-                <markdownNavigatorState />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docs/docker/docker01.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor>
-                <markdownNavigatorState />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -366,7 +302,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -374,34 +310,11 @@
               <item name="Tiny-blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="Tiny-blog" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Tiny-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tiny-blog" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tiny-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tiny-blog" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name=".vuepress" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tiny-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tiny-blog" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="docker" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tiny-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tiny-blog" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="vue" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -514,6 +427,7 @@
       <workItem from="1574833016847" duration="5066000" />
       <workItem from="1574838535409" duration="293000" />
       <workItem from="1574842200524" duration="22000" />
+      <workItem from="1574842228448" duration="769000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1571540486894</created>
@@ -746,16 +660,23 @@
       <option name="project" value="LOCAL" />
       <updated>1574738244730</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="增加katex插件 2019年11月27日16:14:27">
+      <created>1574842478923</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1574842478923</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81470000" />
+    <option name="totallyTimeSpent" value="82239000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2546917" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2580429" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -770,9 +691,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.3297587" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49865952" visible="true" weight="0.36729223" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49865952" weight="0.36729223" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5013405" side_tool="true" weight="0.24396783" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -837,7 +758,8 @@
     <MESSAGE value="增加java基础内容 2019年11月21日14:12:46" />
     <MESSAGE value="增加essay03 2019年11月22日09:45:22" />
     <MESSAGE value="改变java项内容 2019年11月26日11:17:18" />
-    <option name="LAST_COMMIT_MESSAGE" value="改变java项内容 2019年11月26日11:17:18" />
+    <MESSAGE value="增加katex插件 2019年11月27日16:14:27" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加katex插件 2019年11月27日16:14:27" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/docs/.vuepress/components/Valine.vue">
@@ -1158,33 +1080,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/yarn.lock" />
     <entry file="file://$PROJECT_DIR$/docs/.vuepress/dist/index.html" />
-    <entry file="file://$PROJECT_DIR$/docs/frontother/README.md">
+    <entry file="file://$PROJECT_DIR$/docs/docker/docker01.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="38">
-            <caret line="2" selection-start-line="2" selection-end-line="2" />
-          </first_editor>
+        <state split_layout="SPLIT">
+          <first_editor />
           <second_editor>
             <markdownNavigatorState />
           </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/.vuepress/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-          <folding>
-            <element signature="e#687#1565#0" />
-            <element signature="e#1584#22486#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1192,7 +1094,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="323">
-            <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+            <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
@@ -1200,10 +1102,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/docker/docker01.md">
+    <entry file="file://$PROJECT_DIR$/docs/.vuepress/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/frontother/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor />
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="60">
+            <caret line="54" column="2" lean-forward="true" selection-start-line="54" selection-start-column="2" selection-end-line="54" selection-end-column="2" />
+          </first_editor>
           <second_editor>
             <markdownNavigatorState />
           </second_editor>
