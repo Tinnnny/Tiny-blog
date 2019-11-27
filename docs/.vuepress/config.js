@@ -8,11 +8,18 @@ module.exports = {
         }
       },
     head: [
-        ['link', {rel: 'icon', href: '/favicon.ico'}]
+        ['link', {rel: 'icon', href: '/favicon.ico'}],
+        ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css' }],
+        ['link', { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css" }]
     ],
     markdown: {
-        lineNumbers: true
-      },
+        lineNumbers: true,
+        extendMarkdown: md => {
+            // use more markdown-it plugins!
+            md.set({html: true})
+            md.use(require("markdown-it-katex"))
+        }
+    },
     plugins: [
         // [
         //     'vuepress-plugin-helper-live2d',{
@@ -36,6 +43,15 @@ module.exports = {
         //     }
         // }],
         ['@vuepress/back-to-top', true],
+        ['@vuepress/medium-zoom', {
+            selector: '.content__default img',
+            // medium-zoom options here
+            // See: https://github.com/francoischalifour/medium-zoom#options
+            options: {
+              margin: 16
+            }
+          }]
+        // ['@vuepress/medium-zoom']
     ],
     themeConfig: {
         // logo: '/swk.png',
@@ -67,7 +83,7 @@ module.exports = {
             {
                 text: 'frontEnd',
                 items: [
-                    { text: 'Vue', link: 'https://www.w3cschool.cn/wkspring/' },
+                    { text: 'Vue', link: '/vue/vuepress' },
                     {text: 'other', link: '/frontother/templateuse'},
                 ]
             },
@@ -201,7 +217,7 @@ module.exports = {
                         ['/java00/java08', 'Java 分支结构'],
                         ['/java00/java13', 'Java 数组'],
                         ['/java00/iterator' , 'Java Iterator迭代器'],
-                        
+
                     ]
                 }
             ],
@@ -211,7 +227,7 @@ module.exports = {
                     collapsable: false,
                     children: [
                         ['/javadesign/', 'Java 设计模式'],
-                        
+
                     ]
                 }
             ],
@@ -223,13 +239,13 @@ module.exports = {
                         ['/java000/', 'Java 内部类'],
 
                         ['/java000/java15', 'Java 正则表达式'],
-                        ['/java000/generic' , 'Java 泛型'],         
+                        ['/java000/generic' , 'Java 泛型'],
                         ['/java000/java18', 'Java Scanner 类'],
                         ['/java000/java19', 'Java 异常处理'],
                         ['/java000/java20', 'Java 继承'],
                         ['/java000/java22', 'Java 多态'],
                         ['/java000/java24', 'Java 封装'],
-                        ['/java000/java25', 'Java 接口'],          
+                        ['/java000/java25', 'Java 接口'],
                     ]
                 }
             ],
@@ -239,12 +255,12 @@ module.exports = {
                     collapsable: false,
                     sidebarDepth: 2,
                     children: [
-                        ['/java/java01', 'Java 概述'],  
-                        ['/java00/', 'Java 基础'],                
-                        ['/java000/', 'Java 高级'],  
-                        ['/class/', 'Java 常用工具类'], 
+                        ['/java/java01', 'Java 概述'],
+                        ['/java00/', 'Java 基础'],
+                        ['/java000/', 'Java 高级'],
+                        ['/class/', 'Java 常用工具类'],
                         ['/javaio/', 'Java IO'],
-                                     
+
                         ['/collection/', 'Java 集合'],
                         ['/java/java21', 'Java Lambda表达式'],
                         ['/java/java31', 'Java 网络编程'],
@@ -371,6 +387,7 @@ module.exports = {
                     collapsable: false,
                     children: [
                             ['/frontother/templateuse', '利用前端模板'],
+                            ['/frontother/', 'VuePress安装Katex插件'],
                     ]
                 }
             ],
