@@ -100,6 +100,7 @@ module.exports = {
                     {text: 'other', link: '/other/project-build'},
                 ]
             },
+            {text: '神经网络', link: '/neural/'},
             {
                 text: '容器化部署',
                 items: [
@@ -115,6 +116,90 @@ module.exports = {
         lastUpdated: '最近更新',
         smoothScroll: true,
         sidebar:{
+            "/architecture/" : [
+                {
+                    title: '架构',
+                    collapsable: false,
+                    children: [
+                        ['/architecture/', 'architecture'],
+                    ]
+                }
+            ],
+            "/class/" : [
+                {
+                    title: '集合',
+                    collapsable: false,
+                    children: [
+                            ['/class/', 'Java Number类'],
+                            ['/class/class01', 'Java Character类'],
+                            ['/class/class02', 'Java String'],
+                            ['/class/class03', 'Java StringBuffer和StringBuilder'],
+                            ['/class/class04' , 'Java System类'],
+                            ['/class/class06', 'Java 日期时间'],
+                            ['/class/class05' , 'Java Object类'],
+                    ]
+                }
+            ],
+            "/collection/" : [
+                {
+                    title: '集合',
+                    collapsable: false,
+                    children: [
+                            ['/collection/', '概述'],
+                            ['/collection/collection01', 'Collection'],
+                            ['/collection/collection02', 'Map'],
+                            ['/collection/collection03', 'List'],
+                            ['/collection/collection04', 'Set'],
+                            ['/collection/collection05', 'ArrayList'],
+                            ['/collection/collection06', 'Collections工具类'],
+                    ]
+                }
+            ],            
+            "/communication/" : [
+                {
+                    title: '解决模块间通信问题',
+                    collapsable: false,
+                    children: [
+                            ['/communication/', 'Apache HttpClient'],
+                            ['/communication/communication01', 'Jackson'],
+                            ['/communication/communication02', 'RESTful风格api'],
+                            ['/communication/spring-boot-swagger2', 'Swagger2 接口文档引擎'],
+                    ]
+                }
+            ],
+             "/docker/" : [
+                {
+                    title: 'Docker',
+                    collapsable: false,
+                    children: [
+                        ['/docker/', 'Docker简介'],
+                        ['/docker/docker01', '安装 Docker'],
+                        ['/docker/docker02', 'Docker 概述'],
+                        ['/docker/docker03', 'Docker操作镜像'],
+                        ['/docker/docker04', 'Docker操作容器'],
+                        ['/docker/docker05', 'Dockerfile 定制镜像'],
+                        ['/docker/docker06', 'Dockerfile 指令'],
+                        ['/docker/docker07', 'Docker Compose简介'],
+                        ['/docker/docker08', 'Docker Compose使用'],
+                        ['/docker/docker09', 'Docker Compose部署应用程序'],
+                        ['/docker/docker10', 'Docker Compose部署GitLab'],
+                        ['/docker/docker11', 'Docker Compose部署Nexus'],
+                        ['/docker/docker12', 'Docker Compose部署Harbor'],
+                        ['/docker/docker13', 'Docker Compose网络设置'],
+                    ]
+                }
+            ],
+            "/frontother/" : [
+                {
+                    title: '其他',
+                    collapsable: false,
+                    children: [
+                            ['/frontother/templateuse', '利用前端模板'],
+                            ['/frontother/', 'VuePress安装Katex插件'],
+                            ['/frontother/latexkatex', 'KaTex/LaTex 用法'],
+                    ]
+                }
+            ],
             "/guide/" : [
                 {
                     title: '日志',
@@ -142,6 +227,28 @@ module.exports = {
                     ]
                 }
             ],
+            "/solvedproblems/" : [
+                {
+                    title: '问题解决',
+                    collapsable: false,
+                    children: [
+                        ['/solvedproblems/spring-boot-static', '静态资源无法访问'],
+                        ['/solvedproblems/solve01', 'SQLyog导入sql数据文件报错'],
+                    ]
+                }
+            ],
+            "/Spring/" : [
+                {
+                    title: 'Spring',
+                    collapsable: false,
+                    children: [
+                            ['/Spring/', '简介'],
+                            ['/Spring/spring01', '起步'],
+                            ['/Spring/spring-boot-annotation', 'Spring注解'],
+                            ['/Spring/spring-boot-validation', 'Spring注解校验'],
+                    ]
+                }
+            ],
             "/springboot/" : [
                 {
                     title: 'Spring Boot',
@@ -166,37 +273,56 @@ module.exports = {
                     ]
                 }
             ],
-            "/jvm/" : [
+            "/springmvc/" : [
                 {
-                    title: 'JVM',
+                    title: 'Spring MVC',
                     collapsable: false,
                     children: [
-                        ['/jvm/', 'JVM有必要学吗?'],
+                            ['/springmvc/', 'Spring 整合 MVC'],
+                            ['/springmvc/springmvc01', '起步'],
+                            ['/springmvc/springmvc02', 'Spring MVC 拦截器'],
+                            ['/springmvc/springmvc03', 'Maven模块化开发'],
                     ]
                 }
             ],
-            "/javareflection/" : [
+            "/springtransation/" : [
                 {
-                    title: 'Java 反射',
+                    title: 'Spring事务管理',
                     collapsable: false,
                     children: [
-                        ['/javareflection/', 'Java 反射'],
+                            ['/springtransation/', '简介'],
+                            ['/springtransation/springtransation01', '使用Spring注解管理事务'],
                     ]
                 }
-            ],
-            "/javaio/" : [
+            ],          
+            "/springweb/" : [
                 {
-                    title: 'Java IO',
+                    title: 'Spring web',
                     collapsable: false,
                     children: [
-                        ['/javaio/java29', 'Java File类'],
-                        ['/javaio/java36', 'Java 递归'],
-                        ['/javaio/', 'IO概述'],
-                        ['/javaio/java32', '字节流'],
-                        ['/javaio/java37', '字符流'],
-                        ['/javaio/java35', '缓冲流'],
-                        ['/javaio/java38', '转换流'],
-                        ['/javaio/java39', '序列化'],
+                            ['/springweb/', 'Spring 整合 Web'],
+                            ['/springweb/springweb01', 'Bean的装配方式'],
+                    ]
+                }
+            ],           
+            "/java/" : [
+                {
+                    title: 'Java',
+                    collapsable: false,
+                    sidebarDepth: 2,
+                    children: [
+                        ['/java/java01', 'Java 概述'],
+                        ['/java00/', 'Java 基础'],
+                        ['/java000/', 'Java 高级'],
+                        ['/class/', 'Java 常用工具类'],
+                        ['/javaio/', 'Java IO'],
+
+                        ['/collection/', 'Java 集合'],
+                        ['/java/java21', 'Java Lambda表达式'],
+                        ['/java/java31', 'Java 网络编程'],
+                        ['/java/java33', 'Java 多线程'],
+                        ['/javadesign/', 'Java 设计模式'],
+                        ['/java/java34', 'Java 反射'],
                     ]
                 }
             ],
@@ -220,17 +346,7 @@ module.exports = {
 
                     ]
                 }
-            ],
-            "/javadesign/" : [
-                {
-                    title: 'Java 设计模式',
-                    collapsable: false,
-                    children: [
-                        ['/javadesign/', 'Java 设计模式'],
-
-                    ]
-                }
-            ],
+            ],           
             "/java000/" : [
                 {
                     title: 'Java 高级',
@@ -249,83 +365,60 @@ module.exports = {
                     ]
                 }
             ],
-            "/java/" : [
+            "/javadesign/" : [
                 {
-                    title: 'Java',
+                    title: 'Java 设计模式',
                     collapsable: false,
-                    sidebarDepth: 2,
                     children: [
-                        ['/java/java01', 'Java 概述'],
-                        ['/java00/', 'Java 基础'],
-                        ['/java000/', 'Java 高级'],
-                        ['/class/', 'Java 常用工具类'],
-                        ['/javaio/', 'Java IO'],
-
-                        ['/collection/', 'Java 集合'],
-                        ['/java/java21', 'Java Lambda表达式'],
-                        ['/java/java31', 'Java 网络编程'],
-                        ['/java/java33', 'Java 多线程'],
                         ['/javadesign/', 'Java 设计模式'],
-                        ['/java/java34', 'Java 反射'],
+
                     ]
                 }
             ],
-            "/monomer/" : [
+            "/javaio/" : [
                 {
-                    title: '单体应用',
-                    collapsable: false,
-                    sidebarDepth: 2,
-                    children: [
-                        ['/Spring/', 'Spring'],
-                        ['/Junit/', 'Junit'],
-                        ['/Log4j/', 'Log4j'],
-                        ['/springweb/', 'Spring Web'],
-                        ['/springmvc/', 'Spring MVC'],
-                        ['/MyBatis/', 'MyBatis'],
-                        ['/springtransation/', 'Spring事务管理'],
-                        ['/communication/', '解决模块间通信问题']
-                    ]
-                }
-            ],
-            "/linux/" : [
-                {
-                    title: 'Linux',
+                    title: 'Java IO',
                     collapsable: false,
                     children: [
-                        ['/linux/', 'Linux'],
-                        ['/linux/linux01', 'Linux 远程控制管理'],
-                        ['/linux/linux02', 'Linux 目录管理'],
-                        ['/linux/linux03', 'Linux 系统管理'],
-                        ['/linux/linux04', 'Linux Vim 编辑器'],
-                        ['/linux/linux05', 'Linux 用户和组管理'],
-                        ['/linux/linux06', 'Linux 文件权限管理'],
-                        ['/linux/linux07', 'Linux 软件包管理'],
-                        ['/linux/linux08', 'Linux 部署应用程序'],
+                        ['/javaio/java29', 'Java File类'],
+                        ['/javaio/java36', 'Java 递归'],
+                        ['/javaio/', 'IO概述'],
+                        ['/javaio/java32', '字节流'],
+                        ['/javaio/java37', '字符流'],
+                        ['/javaio/java35', '缓冲流'],
+                        ['/javaio/java38', '转换流'],
+                        ['/javaio/java39', '序列化'],
                     ]
                 }
             ],
-            "/docker/" : [
+            "/javareflection/" : [
                 {
-                    title: 'Docker',
+                    title: 'Java 反射',
                     collapsable: false,
                     children: [
-                        ['/docker/', 'Docker简介'],
-                        ['/docker/docker01', '安装 Docker'],
-                        ['/docker/docker02', 'Docker 概述'],
-                        ['/docker/docker03', 'Docker操作镜像'],
-                        ['/docker/docker04', 'Docker操作容器'],
-                        ['/docker/docker05', 'Dockerfile 定制镜像'],
-                        ['/docker/docker06', 'Dockerfile 指令'],
-                        ['/docker/docker07', 'Docker Compose简介'],
-                        ['/docker/docker08', 'Docker Compose使用'],
-                        ['/docker/docker09', 'Docker Compose部署应用程序'],
-                        ['/docker/docker10', 'Docker Compose部署GitLab'],
-                        ['/docker/docker11', 'Docker Compose部署Nexus'],
-                        ['/docker/docker12', 'Docker Compose部署Harbor'],
-                        ['/docker/docker13', 'Docker Compose网络设置'],
+                        ['/javareflection/', 'Java 反射'],
                     ]
                 }
             ],
+            "/Junit/" : [
+                {
+                    title: 'Junit',
+                    collapsable: false,
+                    children: [
+                            ['/Junit/', '简介'],
+                            ['/Junit/Junit01', '起步'],
+                    ]
+                }
+            ],
+            "/jvm/" : [
+                {
+                    title: 'JVM',
+                    collapsable: false,
+                    children: [
+                        ['/jvm/', 'JVM有必要学吗?'],
+                    ]
+                }
+            ],          
             "/kubernetes/" : [
                 {
                     title: 'Kubernetes',
@@ -351,43 +444,72 @@ module.exports = {
                     ]
                 }
             ],
-            "/architecture/" : [
+            "/linux/" : [
                 {
-                    title: '架构',
+                    title: 'Linux',
                     collapsable: false,
                     children: [
-                        ['/architecture/', 'architecture'],
+                        ['/linux/', 'Linux'],
+                        ['/linux/linux01', 'Linux 远程控制管理'],
+                        ['/linux/linux02', 'Linux 目录管理'],
+                        ['/linux/linux03', 'Linux 系统管理'],
+                        ['/linux/linux04', 'Linux Vim 编辑器'],
+                        ['/linux/linux05', 'Linux 用户和组管理'],
+                        ['/linux/linux06', 'Linux 文件权限管理'],
+                        ['/linux/linux07', 'Linux 软件包管理'],
+                        ['/linux/linux08', 'Linux 部署应用程序'],
                     ]
                 }
             ],
-            "/Spring/" : [
+            "/Log4j/" : [
                 {
-                    title: 'Spring',
+                    title: 'Log4j',
                     collapsable: false,
                     children: [
-                            ['/Spring/', '简介'],
-                            ['/Spring/spring01', '起步'],
-                            ['/Spring/spring-boot-annotation', 'Spring注解'],
-                            ['/Spring/spring-boot-validation', 'Spring注解校验'],
+                            ['/Log4j/', '简介'],
+                            ['/Log4j/Log4j01', '起步'],
                     ]
                 }
             ],
-            "/Vue/" : [
+            "/monomer/" : [
                 {
-                    title: '其他',
+                    title: '单体应用',
                     collapsable: false,
+                    sidebarDepth: 2,
                     children: [
-                            ['/vue/vuepress', 'VuePress'],
+                        ['/Spring/', 'Spring'],
+                        ['/Junit/', 'Junit'],
+                        ['/Log4j/', 'Log4j'],
+                        ['/springweb/', 'Spring Web'],
+                        ['/springmvc/', 'Spring MVC'],
+                        ['/MyBatis/', 'MyBatis'],
+                        ['/springtransation/', 'Spring事务管理'],
+                        ['/communication/', '解决模块间通信问题']
                     ]
                 }
             ],
-            "/frontother/" : [
+            "/MyBatis/" : [
                 {
-                    title: '其他',
+                    title: 'Spring MVC',
                     collapsable: false,
                     children: [
-                            ['/frontother/templateuse', '利用前端模板'],
-                            ['/frontother/', 'VuePress安装Katex插件'],
+                            ['/MyBatis/', 'MyBatis'],
+                            ['/MyBatis/mybatis01', 'Spring整合Druid'],
+                            ['/MyBatis/mybatis02', 'Spring 整合 MyBatis'],
+                            ['/MyBatis/mybatis03', '第一个MyBatis对象关系映射'],
+                            ['/MyBatis/mybatis04', 'MyBatis CRUD操作'],
+                    ]
+                }
+            ],
+            "/neural/" : [
+                {
+                    title: '神经网络',
+                    collapsable: false,
+                    sidebarDepth: 3,
+                    children: [
+                        ['/neural/', '神经网络编程入门'],
+                        ['/neural/neural01', '神经网络实现'],
+                        ['/neural/neural02', 'Matlab BP网络实例'],
                     ]
                 }
             ],
@@ -405,7 +527,18 @@ module.exports = {
                             ['/other/kaptcha', 'kaptcha'],
                             ['/other/highconcurrency', '如何应对高并发'],
                             ['/other/microservice', '微服务的实践'],
-
+                            
+                    ]
+                }
+            ],
+            "/plugins/" : [
+                {
+                    title: '插件',
+                    collapsable: false,
+                    children: [
+                            ['/plugins/', 'Lombok'],
+                            ['/plugins/plugins01', 'MyBatisCodeHelper'],
+                            ['/plugins/plugins02', 'generaterAllSetter'],
                     ]
                 }
             ],
@@ -421,134 +554,6 @@ module.exports = {
                     ]
                 }
             ],
-            "/solvedproblems/" : [
-                {
-                    title: '问题解决',
-                    collapsable: false,
-                    children: [
-                        ['/solvedproblems/spring-boot-static', '静态资源无法访问'],
-                        ['/solvedproblems/solve01', 'SQLyog导入sql数据文件报错'],
-                    ]
-                }
-            ],
-            "/springtransation/" : [
-                {
-                    title: 'Spring事务管理',
-                    collapsable: false,
-                    children: [
-                            ['/springtransation/', '简介'],
-                            ['/springtransation/springtransation01', '使用Spring注解管理事务'],
-                    ]
-                }
-            ],
-            "/communication/" : [
-                {
-                    title: '解决模块间通信问题',
-                    collapsable: false,
-                    children: [
-                            ['/communication/', 'Apache HttpClient'],
-                            ['/communication/communication01', 'Jackson'],
-                            ['/communication/communication02', 'RESTful风格api'],
-                            ['/communication/spring-boot-swagger2', 'Swagger2 接口文档引擎'],
-                    ]
-                }
-            ],
-            "/Junit/" : [
-                {
-                    title: 'Junit',
-                    collapsable: false,
-                    children: [
-                            ['/Junit/', '简介'],
-                            ['/Junit/Junit01', '起步'],
-                    ]
-                }
-            ],
-            "/collection/" : [
-                {
-                    title: '集合',
-                    collapsable: false,
-                    children: [
-                            ['/collection/', '概述'],
-                            ['/collection/collection01', 'Collection'],
-                            ['/collection/collection02', 'Map'],
-                            ['/collection/collection03', 'List'],
-                            ['/collection/collection04', 'Set'],
-                            ['/collection/collection05', 'ArrayList'],
-                            ['/collection/collection06', 'Collections工具类'],
-                    ]
-                }
-            ],
-            "/class/" : [
-                {
-                    title: '集合',
-                    collapsable: false,
-                    children: [
-                            ['/class/', 'Java Number类'],
-                            ['/class/class01', 'Java Character类'],
-                            ['/class/class02', 'Java String'],
-                            ['/class/class03', 'Java StringBuffer和StringBuilder'],
-                            ['/class/class04' , 'Java System类'],
-                            ['/class/class06', 'Java 日期时间'],
-                            ['/class/class05' , 'Java Object类'],
-                    ]
-                }
-            ],
-            "/Log4j/" : [
-                {
-                    title: 'Log4j',
-                    collapsable: false,
-                    children: [
-                            ['/Log4j/', '简介'],
-                            ['/Log4j/Log4j01', '起步'],
-                    ]
-                }
-            ],
-            "/springweb/" : [
-                {
-                    title: 'Spring web',
-                    collapsable: false,
-                    children: [
-                            ['/springweb/', 'Spring 整合 Web'],
-                            ['/springweb/springweb01', 'Bean的装配方式'],
-                    ]
-                }
-            ],
-            "/springmvc/" : [
-                {
-                    title: 'Spring MVC',
-                    collapsable: false,
-                    children: [
-                            ['/springmvc/', 'Spring 整合 MVC'],
-                            ['/springmvc/springmvc01', '起步'],
-                            ['/springmvc/springmvc02', 'Spring MVC 拦截器'],
-                            ['/springmvc/springmvc03', 'Maven模块化开发'],
-                    ]
-                }
-            ],
-            "/MyBatis/" : [
-                {
-                    title: 'Spring MVC',
-                    collapsable: false,
-                    children: [
-                            ['/MyBatis/', 'MyBatis'],
-                            ['/MyBatis/mybatis01', 'Spring整合Druid'],
-                            ['/MyBatis/mybatis02', 'Spring 整合 MyBatis'],
-                            ['/MyBatis/mybatis03', '第一个MyBatis对象关系映射'],
-                            ['/MyBatis/mybatis04', 'MyBatis CRUD操作'],
-                    ]
-                }
-            ],
-            "/plugins/" : [
-                {
-                    title: '插件',
-                    collapsable: false,
-                    children: [
-                            ['/plugins/', 'Lombok'],
-                            ['/plugins/plugins01', 'MyBatisCodeHelper'],
-                            ['/plugins/plugins02', 'generaterAllSetter'],
-                    ]
-                }
-            ],
             "/utils/" : [
                 {
                     title: '工具类',
@@ -560,6 +565,15 @@ module.exports = {
                     ]
                 }
             ],
+            "/Vue/" : [
+                {
+                    title: '其他',
+                    collapsable: false,
+                    children: [
+                            ['/vue/vuepress', 'VuePress'],
+                    ]
+                }
+            ],           
         }
     }
 };

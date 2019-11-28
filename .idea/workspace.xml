@@ -2,217 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74681051-9e3d-45f6-8b10-b0571e5e5500" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/dist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/chitose.model.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/chitose.physics.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/chitose.pose.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/exp/f01.exp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/exp/f02.exp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/exp/f03.exp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/exp/f04.exp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/exp/f05.exp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/exp/f06.exp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/exp/f07.exp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/moc/chitose.2048/texture_00.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/moc/chitose.moc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/mtn/chitose_handwave.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/mtn/chitose_idle.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/mtn/chitose_kime01.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/chitose/assets/mtn/chitose_kime02.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/Epsilon2.1.model.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/Epsilon2.1.physics.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/exp/f01.exp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/exp/f02.exp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/exp/f03.exp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/exp/f04.exp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/exp/f05.exp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/exp/f06.exp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/exp/f07.exp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/exp/f08.exp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/moc/Epsilon2.1.2048/texture_00.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/moc/Epsilon2.1.moc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_idle_01.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_m_01.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_m_02.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_m_03.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_m_04.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_m_05.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_m_06.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_m_07.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_m_08.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_m_sp_01.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_m_sp_02.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_m_sp_03.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_m_sp_04.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_m_sp_05.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/epsilon2_1/assets/mtn/Epsilon2.1_shake_01.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/exp/f01.exp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/exp/f02.exp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/exp/f03.exp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/exp/f04.exp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/exp/f05.exp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/exp/f06.exp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/exp/f07.exp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/izumi.model.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/izumi.physics.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/moc/izumi_illust.1024/texture_00.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/moc/izumi_illust.1024/texture_01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/moc/izumi_illust.1024/texture_02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/moc/izumi_illust.1024/texture_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/moc/izumi_illust.moc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/idle_01.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/idle_02.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/idle_03.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/idle_04.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/izumi_01.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/izumi_02.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/izumi_03.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/izumi_04.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/izumi_05.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/izumi_06.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/izumi_07.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/izumi_08.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/izumi_09.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/mtn/izumi_10.mtn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/snd/izumi_01.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/snd/izumi_02.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/snd/izumi_03.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/snd/izumi_04.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/snd/izumi_05.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/snd/izumi_06.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/snd/izumi_07.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/snd/izumi_08.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/snd/izumi_09.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2d/izumi/assets/snd/izumi_10.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/class/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/class/class01.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/class/class02.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/class/class03.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/class/class04.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/class/class05.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/class/class06.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/collection/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/collection/collection01.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/collection/collection02.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/collection/collection03.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/collection/collection04.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/collection/collection05.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/collection/collection06.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docker/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docker/docker01.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docker/docker02.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docker/docker03.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docker/docker04.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docker/docker05.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docker/docker06.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docker/docker07.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docker/docker08.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docker/docker09.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docker/docker10.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docker/docker11.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docker/docker12.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/docker/docker13.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/frontother/templateuse.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/frontpage/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/guide/essay01.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/guide/essay02.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/guide/essay03.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java/java01.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java/java21.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java/java31.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java/java33.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java/java34.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java00/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java00/data.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java00/iterator.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java00/java03.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java00/java04.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java00/java05.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java00/java06.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java00/java07.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java00/java08.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java00/java13.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java00/java16.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java00/java26.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java000/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java000/generic.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java000/java15.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java000/java18.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java000/java19.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java000/java20.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java000/java22.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java000/java24.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java000/java25.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/javadesign/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/javaio/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/javaio/java29.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/javaio/java32.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/javaio/java35.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/javaio/java36.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/javaio/java37.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/javaio/java38.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/javaio/java39.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/kubernetes/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes01.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes02.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes03.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes04.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes05.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes06.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes07.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes08.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes09.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes10.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes11.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes12.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes13.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes14.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes15.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/kubernetes/kubernetes16.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/leetcode/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/leetcode/leetcode01.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/leetcode/leetcode02.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/leetcode/leetcode03.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/leetcode/leetcode04.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/leetcode/leetcode05.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/leetcode/leetcode06.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/leetcode/leetcode07.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/leetcode/leetcode08.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/leetcode/leetcode09.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/leetcode/leetcode10.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/linux/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/linux/linux01.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/linux/linux02.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/linux/linux03.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/linux/linux04.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/linux/linux05.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/linux/linux06.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/linux/linux07.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/linux/linux08.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/monomer/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/other/dateformat.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/other/highconcurrency.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/other/kaptcha.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/other/microservice.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/other/nginx-cdn.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/other/project-build.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/other/refactor.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/other/rememberme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/other/utf-8.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/plugins&amp;utils/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/plugins&amp;utils/lombok.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/plugins&amp;utils/utils01.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/plugins&amp;utils/utils02.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/solvedproblems/solve01.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/solvedproblems/spring-boot-static.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/springboot/springboot02.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/springboot/springboot03.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/springboot/springboot04.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/springboot/springboot05.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/springcloud/springcloud02.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/vue/vuepress.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -224,7 +16,17 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/deploy.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -427,7 +229,9 @@
       <workItem from="1574833016847" duration="5066000" />
       <workItem from="1574838535409" duration="293000" />
       <workItem from="1574842200524" duration="22000" />
-      <workItem from="1574842228448" duration="769000" />
+      <workItem from="1574842228448" duration="2087000" />
+      <workItem from="1574858085811" duration="2000" />
+      <workItem from="1574908467812" duration="371000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1571540486894</created>
@@ -667,16 +471,24 @@
       <option name="project" value="LOCAL" />
       <updated>1574842478923</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="增加katex插件 2019年11月27日16:14:27">
+      <created>1574843018727</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1574843018727</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82239000" />
+    <option name="totallyTimeSpent" value="83930000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2580429" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2647453" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -691,9 +503,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.3297587" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3297587" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49865952" weight="0.36729223" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49865952" visible="true" weight="0.36729223" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5013405" side_tool="true" weight="0.24396783" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1071,13 +883,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore" />
-    <entry file="file://$PROJECT_DIR$/deploy.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yarn.lock" />
     <entry file="file://$PROJECT_DIR$/docs/.vuepress/dist/index.html" />
     <entry file="file://$PROJECT_DIR$/docs/docker/docker01.md">
@@ -1125,6 +930,13 @@
           <second_editor>
             <markdownNavigatorState />
           </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deploy.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
         </state>
       </provider>
     </entry>
