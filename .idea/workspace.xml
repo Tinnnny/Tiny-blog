@@ -4,7 +4,63 @@
     <list default="true" id="74681051-9e3d-45f6-8b10-b0571e5e5500" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/frontother/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/java/java21.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/java/java31.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/java/java33.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/java/java34.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/javaio/java29.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/javaio/java32.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/javaio/java35.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/javaio/java36.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/javaio/java37.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/javaio/java38.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/javaio/java39.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.recently_updates.txt" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.recently_updates.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_ansi-regex@2.1.1@ansi-regex/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_ansi-regex@2.1.1@ansi-regex/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_async-limiter@1.0.1@async-limiter/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_async-limiter@1.0.1@async-limiter/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_asynckit@0.4.0@asynckit/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_asynckit@0.4.0@asynckit/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_balanced-match@1.0.0@balanced-match/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_balanced-match@1.0.0@balanced-match/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_brace-expansion@1.1.11@brace-expansion/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_brace-expansion@1.1.11@brace-expansion/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_code-point-at@1.1.0@code-point-at/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_code-point-at@1.1.0@code-point-at/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_combined-stream@1.0.8@combined-stream/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_combined-stream@1.0.8@combined-stream/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_component-emitter@1.3.0@component-emitter/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_component-emitter@1.3.0@component-emitter/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_concat-map@0.0.1@concat-map/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_concat-map@0.0.1@concat-map/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_core-util-is@1.0.2@core-util-is/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_core-util-is@1.0.2@core-util-is/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_debug@3.2.6@debug/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_debug@3.2.6@debug/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_debug@4.1.1@debug/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_debug@4.1.1@debug/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_decamelize@1.2.0@decamelize/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_decamelize@1.2.0@decamelize/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_delayed-stream@1.0.0@delayed-stream/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_delayed-stream@1.0.0@delayed-stream/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_extend@3.0.2@extend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_extend@3.0.2@extend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_fs.realpath@1.0.0@fs.realpath/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_fs.realpath@1.0.0@fs.realpath/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_inflight@1.0.6@inflight/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_inflight@1.0.6@inflight/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_inherits@2.0.4@inherits/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_inherits@2.0.4@inherits/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_is-buffer@1.1.6@is-buffer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_is-buffer@1.1.6@is-buffer/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_is-fullwidth-code-point@1.0.0@is-fullwidth-code-point/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_is-fullwidth-code-point@1.0.0@is-fullwidth-code-point/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_isarray@1.0.0@isarray/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_isarray@1.0.0@isarray/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_lodash@4.17.15@lodash/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_lodash@4.17.15@lodash/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_methods@1.1.2@methods/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_methods@1.1.2@methods/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_mime@1.6.0@mime/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_mime@1.6.0@mime/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_mime@2.4.4@mime/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_mime@2.4.4@mime/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_minimatch@3.0.4@minimatch/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_minimatch@3.0.4@minimatch/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_ms@2.1.2@ms/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_ms@2.1.2@ms/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_number-is-nan@1.0.1@number-is-nan/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_number-is-nan@1.0.1@number-is-nan/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_once@1.4.0@once/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_once@1.4.0@once/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_path-is-absolute@1.0.1@path-is-absolute/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_path-is-absolute@1.0.1@path-is-absolute/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_process-nextick-args@2.0.1@process-nextick-args/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_process-nextick-args@2.0.1@process-nextick-args/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_readable-stream@2.3.6@readable-stream/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_readable-stream@2.3.6@readable-stream/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_readable-stream@3.4.0@readable-stream/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_readable-stream@3.4.0@readable-stream/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_regenerator-runtime@0.13.3@regenerator-runtime/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_regenerator-runtime@0.13.3@regenerator-runtime/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_safe-buffer@5.1.2@safe-buffer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_safe-buffer@5.1.2@safe-buffer/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_safe-buffer@5.2.0@safe-buffer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_safe-buffer@5.2.0@safe-buffer/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_string-width@1.0.2@string-width/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_string-width@1.0.2@string-width/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_string_decoder@1.1.1@string_decoder/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_string_decoder@1.1.1@string_decoder/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_string_decoder@1.3.0@string_decoder/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_string_decoder@1.3.0@string_decoder/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_strip-ansi@3.0.1@strip-ansi/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_strip-ansi@3.0.1@strip-ansi/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_util-deprecate@1.0.2@util-deprecate/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_util-deprecate@1.0.2@util-deprecate/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_uuid@3.3.3@uuid/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_uuid@3.3.3@uuid/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_wrap-ansi@2.1.0@wrap-ansi/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_wrap-ansi@2.1.0@wrap-ansi/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/_wrappy@1.0.2@wrappy/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/_wrappy@1.0.2@wrappy/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,11 +73,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/.vuepress/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/deploy.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+            <state relative-caret-position="342">
+              <caret line="18" column="64" selection-start-line="12" selection-end-line="18" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -92,7 +157,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-100" />
+    <option name="x" value="320" />
+    <option name="y" value="82" />
     <option name="width" value="1940" />
     <option name="height" value="1100" />
   </component>
@@ -104,7 +170,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -117,6 +182,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -232,6 +298,9 @@
       <workItem from="1574842228448" duration="2087000" />
       <workItem from="1574858085811" duration="2000" />
       <workItem from="1574908467812" duration="371000" />
+      <workItem from="1574922131678" duration="1616000" />
+      <workItem from="1574931042315" duration="31000" />
+      <workItem from="1575628753979" duration="568000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1571540486894</created>
@@ -478,17 +547,23 @@
       <option name="project" value="LOCAL" />
       <updated>1574843018727</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="增加神经网络内容 2019年11月28日14:26:06">
+      <created>1574922371455</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1574922371455</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83930000" />
+    <option name="totallyTimeSpent" value="86145000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2647453" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27479893" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -571,29 +646,10 @@
     <MESSAGE value="增加essay03 2019年11月22日09:45:22" />
     <MESSAGE value="改变java项内容 2019年11月26日11:17:18" />
     <MESSAGE value="增加katex插件 2019年11月27日16:14:27" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加katex插件 2019年11月27日16:14:27" />
+    <MESSAGE value="增加神经网络内容 2019年11月28日14:26:06" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加神经网络内容 2019年11月28日14:26:06" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/.vuepress/components/Valine.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/blog/README.md" />
-    <entry file="file://$PROJECT_DIR$/docs/Spring/spring-boot-validation.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="171">
-            <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/springboot.md" />
     <entry file="file://$PROJECT_DIR$/docs/springboot/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
@@ -895,25 +951,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="323">
-            <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/.vuepress/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -933,10 +970,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deploy.sh">
+    <entry file="file://$PROJECT_DIR$/docs/springweb/springweb01.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="190">
+            <caret line="25" selection-start-line="25" selection-end-line="25" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/springweb/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="323">
+            <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/javaosi/javaosi03.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="190">
+            <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/.vuepress/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
-          <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deploy.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="64" selection-start-line="12" selection-end-line="18" selection-end-column="64" />
         </state>
       </provider>
     </entry>
