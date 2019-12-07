@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74681051-9e3d-45f6-8b10-b0571e5e5500" name="Default Changelist" comment="增加网络编程 2019年12月6日18:49:02">
-      <change afterPath="$PROJECT_DIR$/docs/java/java02.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java/java03.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java/java04.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/javaio/javaio01.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/javaio/javaio02.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/javaio/javaio03.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/javaio/javaio04.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/javaio/javaio05.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/javaio/javaio06.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/javaio/javaio07.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/javaio/javaio08.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/javaosi/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/javaosi/javaosi01.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/javaosi/javaosi02.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/javaosi/javaosi03.md" afterDir="false" />
+    <list default="true" id="74681051-9e3d-45f6-8b10-b0571e5e5500" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/frontother/latexkatex.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/functionalinterface/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/functionalinterface/functionalinterface01.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/functionalinterface/functionalinterface02.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/javastream/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/javastream/javastream01.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/neural/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/neural/neural01.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/neural/neural02.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/vue/vuepress01.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist" afterDir="false" />
     </list>
@@ -34,7 +29,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/.vuepress/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
+            <state relative-caret-position="418">
               <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
             </state>
           </provider>
@@ -43,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/deploy.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+            <state relative-caret-position="209">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -116,7 +111,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="320" />
-    <option name="y" value="82" />
+    <option name="y" value="81" />
     <option name="width" value="1940" />
     <option name="height" value="1100" />
   </component>
@@ -128,6 +123,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -135,12 +131,16 @@
               <item name="Tiny-blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="Tiny-blog" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Tiny-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiny-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -258,7 +258,8 @@
       <workItem from="1574908467812" duration="371000" />
       <workItem from="1574922131678" duration="1616000" />
       <workItem from="1574931042315" duration="31000" />
-      <workItem from="1575628753979" duration="1649000" />
+      <workItem from="1575628753979" duration="1788000" />
+      <workItem from="1575705254457" duration="588000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1571540486894</created>
@@ -519,16 +520,24 @@
       <option name="project" value="LOCAL" />
       <updated>1575629359740</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="增加网络编程 2019年12月6日18:49:02">
+      <created>1575630417161</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1575630417161</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87226000" />
+    <option name="totallyTimeSpent" value="87953000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27479893" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27882037" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -924,18 +933,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/frontother/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="60">
-            <caret line="54" column="2" lean-forward="true" selection-start-line="54" selection-start-column="2" selection-end-line="54" selection-end-column="2" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/frontother/README.md" />
     <entry file="file://$PROJECT_DIR$/docs/springweb/springweb01.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -984,15 +982,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/.vuepress/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
+        <state relative-caret-position="418">
           <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/deploy.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+        <state relative-caret-position="209">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
