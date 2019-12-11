@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74681051-9e3d-45f6-8b10-b0571e5e5500" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/css/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/css/css01.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/css/css02.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/css/css03.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/css/css04.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/guide/essay04.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/html/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/html/html01.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/html/html02.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/html/html03.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/deploy.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="38">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -99,10 +110,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="320" />
-    <option name="y" value="80" />
-    <option name="width" value="1940" />
-    <option name="height" value="1100" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1098" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -128,8 +139,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -249,7 +260,8 @@
       <workItem from="1574931042315" duration="31000" />
       <workItem from="1575628753979" duration="1788000" />
       <workItem from="1575705254457" duration="1217000" />
-      <workItem from="1575969454685" duration="260000" />
+      <workItem from="1575969454685" duration="1546000" />
+      <workItem from="1576062631888" duration="360000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1571540486894</created>
@@ -524,17 +536,24 @@
       <option name="project" value="LOCAL" />
       <updated>1575705873886</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="增加mysql 2019年12月10日17:22:22">
+      <created>1575969748387</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1575969748387</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88842000" />
+    <option name="totallyTimeSpent" value="90488000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28284183" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28619304" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -551,7 +570,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3297587" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49865952" visible="true" weight="0.3686327" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49865952" visible="true" weight="0.28686327" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5013405" side_tool="true" weight="0.24396783" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -620,7 +639,8 @@
     <MESSAGE value="增加神经网络内容 2019年11月28日14:26:06" />
     <MESSAGE value="增加网络编程 2019年12月6日18:49:02" />
     <MESSAGE value="增加Stream流" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加Stream流" />
+    <MESSAGE value="增加mysql 2019年12月10日17:22:22" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加mysql 2019年12月10日17:22:22" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/docs/springboot.md" />
@@ -987,8 +1007,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/deploy.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="38">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
