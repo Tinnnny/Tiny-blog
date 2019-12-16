@@ -2,18 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74681051-9e3d-45f6-8b10-b0571e5e5500" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/css/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/css/css01.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/css/css02.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/css/css03.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/css/css04.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/guide/essay04.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/html/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/html/html01.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/html/html02.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/html/html03.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/bootstrap/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/bootstrap/bootstrap01.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/bootstrap/bootstrap02.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/javascript/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/javascript/javascript01.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/javascript/javascript02.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/javascript/javascript03.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/javascript/javascript04.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/javascript/javascript05.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/jquery/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/jquery/jquery01.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/jquery/jquery02.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/jquery/jquery03.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/guide/essay04.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guide/essay04.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,8 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/deploy.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="57">
+              <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -110,10 +113,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1098" />
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -123,6 +126,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -139,8 +144,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -261,7 +264,9 @@
       <workItem from="1575628753979" duration="1788000" />
       <workItem from="1575705254457" duration="1217000" />
       <workItem from="1575969454685" duration="1546000" />
-      <workItem from="1576062631888" duration="360000" />
+      <workItem from="1576062631888" duration="506000" />
+      <workItem from="1576136049939" duration="4000" />
+      <workItem from="1576457720414" duration="1443000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1571540486894</created>
@@ -543,17 +548,24 @@
       <option name="project" value="LOCAL" />
       <updated>1575969748387</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="增加html css 2019年12月11日19:16:58">
+      <created>1576063024006</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1576063024006</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90488000" />
+    <option name="totallyTimeSpent" value="92081000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28619304" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23400854" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -570,7 +582,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3297587" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49865952" visible="true" weight="0.28686327" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49865952" visible="true" weight="0.22245322" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5013405" side_tool="true" weight="0.24396783" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -640,7 +652,8 @@
     <MESSAGE value="增加网络编程 2019年12月6日18:49:02" />
     <MESSAGE value="增加Stream流" />
     <MESSAGE value="增加mysql 2019年12月10日17:22:22" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加mysql 2019年12月10日17:22:22" />
+    <MESSAGE value="增加html css 2019年12月11日19:16:58" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加html css 2019年12月11日19:16:58" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/docs/springboot.md" />
@@ -1007,8 +1020,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/deploy.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="57">
+          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
         </state>
       </provider>
     </entry>
