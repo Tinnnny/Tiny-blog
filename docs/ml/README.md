@@ -1,6 +1,8 @@
 # 数据预处理
 ## 概述
-通过6步完成数据预处理。
+<div align="center">
+<img src="http://ww1.sinaimg.cn/large/007Rnr4nly1ga0o0crq5cj30m81jk1kx.jpg">
+</div>
 
 | Country | Age   | Salary | Purchased |
 |---------|-------|--------|-----------|
