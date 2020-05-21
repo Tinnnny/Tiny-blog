@@ -21,6 +21,11 @@
 3. 如果真实设备宽度小于了设置栅格类属性的设备代码的最小值，会一个元素沾满一整行。
 :::
 
+::: warning 解决栅格系统失效
+1. 三个Meta不能少
+2. Css的rel="stylesheet" 不能少
+:::
+
 ## CSS样式和JS插件
 ### 全局CSS样式
 * 按钮：`class="btn btn-default"`

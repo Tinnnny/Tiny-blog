@@ -79,7 +79,7 @@ https://registry.docker-cn.com
 ```
 tee /etc/docker/daemon.json <<-'EOF'
 {
-  "registry-mirrors": ["https://xxxxxxxx.mirror.aliyuncs.com"]
+  "registry-mirrors": ["https://kk7wx24z.mirror.aliyuncs.com/"]
 }
 EOF
 # 重启 Docker
@@ -136,7 +136,7 @@ Insecure Registries:
  127.0.0.0/8
 ## 这里是你配置的镜像加速器
 Registry Mirrors:
- https://xxxxxxxx.mirror.aliyuncs.com/
+ https://kk7wx24z.mirror.aliyuncs.com/
 Live Restore Enabled: false
 Product License: Community Engine
 WARNING: No swap limit support
