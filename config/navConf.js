@@ -38,17 +38,17 @@ module.exports=[
             {text: 'Monomer application', link: '/monomer/'},
             {text: 'Spring Boot', link: '/springboot/'},
             {text: 'Spring Cloud', link: '/springcloud/'},
+            {text: '数据结构和算法', link: '/structure/'},
             {text: 'JVM', link: '/jvm/'},
             {text: 'Plugins&Utils', link: '/plugins&utils/'},
             {text: 'Solved problems', link: '/solvedproblems/spring-boot-static'},
-            {text: 'other', link: '/other/project-build'},
+            {text: 'other', link: '/other/other01'},
         ]
     },
     {
         text: 'Machine Learning',
         items: [
             { text: '100天', link: '/ml/' },
-            { text: 'Deplearning.Ai', link: '/wed/' },
             { text: '其他', link: '/neural/' },
         ]
     },
@@ -61,6 +61,28 @@ module.exports=[
         ]
     },
     {text: 'LeetCode', link: '/leetcode/'},
+    {
+        text: '面试',
+        items: [
+            { text: '未分类', link: '/interview/' },
+            { text: 'Java 基础', link: '/interview1/' },
+            { text: 'Java 集合', link: '/interview2/' },
+            { text: 'Java 线程', link: '/interview3/' },
+            { text: 'Java 锁机制', link: '/interview4/' },
+            { text: 'Spring', link: '/interview5/' },
+            { text: '分布式', link: '/interview6/' },
+            { text: '微服务', link: '/interview7/' },
+            { text: '数据存储', link: '/interview8/' },
+            { text: '缓存使用', link: '/interview9/' },
+            { text: '安全篇', link: '/interview10/' },
+            { text: '性能篇', link: '/interview11/' },
+            { text: '设计模式', link: '/interview12/' },
+            { text: '需求分析', link: '/interview13/' },
+            { text: '设计能力', link: '/interview14/' },
+            { text: '面试题补充', link: '/interview15/' },
+        ]
+    },
     {text: '日志', link: '/guide/'},
+    {text: 'mall开发日志', link: '/mall/'},
     {text: '关于我', link: '/aboutme/'},
 ];

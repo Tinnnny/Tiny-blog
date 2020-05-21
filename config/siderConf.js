@@ -58,7 +58,7 @@ module.exports={
                     ['/communication/', 'Apache HttpClient'],
                     ['/communication/communication01', 'Jackson'],
                     ['/communication/communication02', 'RESTful风格api'],
-                    ['/communication/spring-boot-swagger2', 'Swagger2 接口文档引擎'],
+                   
             ]
         }
     ],
@@ -129,6 +129,10 @@ module.exports={
                 // ['/guide/essay02', '华立课题问题'],
                 ['/guide/essay03', '华立电表质量管理系统原型图'],
                 // ['/guide/essay04', '课题思路'],
+                ['/guide/essay05', 'Comprehensive Quality Assessment Algorithm for Smart Meters'],
+                ['/guide/essay06', '参考文献'],
+                ['/guide/essay07', 'Matlab入门基础'],
+                ['/guide/essay08', 'Matlab进阶'],
             ]
         }
     ],
@@ -142,6 +146,219 @@ module.exports={
                 ['/html/html01', '标签学习'],
                 ['/html/html02', '旅游网站案例'],
                 ['/html/html03', '表单标签'],
+            ]
+        }
+    ],
+    "/interview/" : [
+        {
+            title: '未分类',
+            collapsable: false,
+            sidebarDepth:3,
+            children: [
+                ['/interview/', 'JDK8新特性'],
+                ['/interview/interview01', '双亲委派模型'],
+                ['/interview/interview02', '死信、延迟、重试队列'],
+                ['/interview/interview03', 'Zookeeper 假死脑裂'],
+                ['/interview/interview04', 'MySQL 优化'],
+                ['/interview/interview04', 'JavaScript this 关键字'],
+            ]
+        }
+    ],
+    "/interview1/" : [
+        {
+            title: 'Java 基础',
+            collapsable: false,
+            sidebarDepth:3,
+            children: [
+                ['/interview1/', '面向对象的特征'],
+                ['/interview1/interview101', 'final, finally, finalize 的区别'],
+                ['/interview1/interview102', 'int 和 Integer 有什么区别'],
+                ['/interview1/interview103', '重载和重写的区别'],
+                ['/interview1/interview104', '抽象类和接口有什么区别'],
+                ['/interview1/interview105', '说说反射的用途及实现'],
+                ['/interview1/interview106', '说说自定义注解的场景及实现'],
+                ['/interview1/interview107', 'HTTP 请求的 GET 与 POST 方式的区别'],
+                ['/interview1/interview108', 'session 与 cookie 区别'],
+                ['/interview1/interview109', 'session 分布式处理'],
+                ['/interview1/interview110', 'JDBC 流程'],
+                ['/interview1/interview111', 'MVC 设计思想'],
+                ['/interview1/interview112', 'equals 与 == 的区别'],
+            ]
+        }
+    ],
+    "/interview2/" : [
+        {
+            title: 'Java 集合',
+            collapsable: false,
+            sidebarDepth:3,
+            children: [
+                ['/interview2/', 'List 和 Set 区别'],
+                ['/interview2/interview201', 'List 和 Map 区别'],
+                ['/interview2/interview202', 'ArrayList 与 LinkedList 区别'],
+                ['/interview2/interview203', 'ArrayList 与 Vector 区别'],
+                ['/interview2/interview204', 'HashMap 和 HashTable 的区别'],
+                ['/interview2/interview205', 'HashSet 和 HashMap 区别'],
+                ['/interview2/interview206', 'HashMap 和 ConcurrentHashMap 的区别'],
+                ['/interview2/interview207', 'HashMap 的工作原理及代码实现'],
+                ['/interview2/interview208', 'ConcurrentHashMap 的工作原理及代码实现'],
+            ]
+        }
+    ],
+    "/interview3/" : [
+        {
+            title: 'Java 线程',
+            collapsable: false,
+            sidebarDepth:3,
+            children: [
+                ['/interview3/', '创建线程的方式及实现'],
+                ['/interview3/interview301', 'sleep()、join（）、yield（）有什么区别'],
+                ['/interview3/interview302', '说说 CountDownLatch 原理'],
+                ['/interview3/interview303', '说说 CyclicBarrier 原理'],
+                ['/interview3/interview304', '说说 Semaphore 原理'],
+                ['/interview3/interview305', '说说 Exchanger 原理'],
+                ['/interview3/interview306', '说说 CountDownLatch 与 CyclicBarrier 区别'],
+                ['/interview3/interview307', 'ThreadLocal 原理分析'],
+                ['/interview3/interview308', '讲讲线程池的实现原理'],
+                ['/interview3/interview309', '线程池的几种方式与使用场景'],
+                ['/interview3/interview310', '线程的生命周期'],
+            ]
+        }
+    ],
+    "/interview4/" : [
+        {
+            title: 'Java 锁机制',
+            collapsable: false,
+            sidebarDepth:3,
+            children: [
+                ['/interview4/', '说说线程安全问题'],
+                ['/interview4/interview401', 'volatile 实现原理'],
+                ['/interview4/interview402', 'synchronize 实现原理'],
+                ['/interview4/interview403', 'synchronized 与 lock 的区别'],
+                ['/interview4/interview404', 'CAS 乐观锁'],
+                ['/interview4/interview405', 'ABA 问题'],
+                ['/interview4/interview406', '乐观锁的业务场景及实现方式'],
+            ]
+        }
+    ],
+    "/interview5/" : [
+        {
+            title: 'Spring',
+            collapsable: false,
+            sidebarDepth:3,
+            children: [
+                ['/interview5/', 'BeanFactory 和 ApplicationContext 有什么区别'],
+                ['/interview5/interview501', '区别'],
+                ['/interview5/interview502', '区别'],
+                ['/interview5/interview503', '区别'],
+                ['/interview5/interview504', '区别'],
+                ['/interview5/interview505', '区别'],
+                ['/interview5/interview506', '区别'],
+                ['/interview5/interview507', '区别'],
+                ['/interview5/interview508', '区别'],
+                ['/interview5/interview509', '区别'],
+                ['/interview5/interview510', '区别'],
+                ['/interview5/interview511', '区别'],
+                ['/interview5/interview512', '区别'],               
+            ]
+        }
+    ],
+    "/interview6/" : [
+        {
+            title: '分布式',
+            collapsable: false,
+            sidebarDepth:3,
+            children: [
+                ['/interview6/', 'List 和 Set 区别'],
+            ]
+        }
+    ],
+    "/interview7/" : [
+        {
+            title: '微服务',
+            collapsable: false,
+            sidebarDepth:3,
+            children: [
+                ['/interview7/', 'List 和 Set 区别'],
+            ]
+        }
+    ],
+    "/interview8/" : [
+        {
+            title: '数据存储',
+            collapsable: false,
+            sidebarDepth:3,
+            children: [
+                ['/interview8/', 'List 和 Set 区别'],
+            ]
+        }
+    ],
+    "/interview9/" : [
+        {
+            title: 'Java 集合',
+            collapsable: false,
+            sidebarDepth:3,
+            children: [
+                ['/interview9/', 'List 和 Set 区别'],
+            ]
+        }
+    ],
+    "/interview10/" : [
+        {
+            title: 'Java 集合',
+            collapsable: false,
+            sidebarDepth:3,
+            children: [
+                ['/interview10/', 'List 和 Set 区别'],
+            ]
+        }
+    ],
+    "/interview11/" : [
+        {
+            title: 'Java 集合',
+            collapsable: false,
+            sidebarDepth:3,
+            children: [
+                ['/interview11/', 'List 和 Set 区别'],
+            ]
+        }
+    ],
+    "/interview12/" : [
+        {
+            title: 'Java 集合',
+            collapsable: false,
+            sidebarDepth:3,
+            children: [
+                ['/interview12/', 'List 和 Set 区别'],
+            ]
+        }
+    ],
+    "/interview13/" : [
+        {
+            title: 'Java 集合',
+            collapsable: false,
+            sidebarDepth:3,
+            children: [
+                ['/interview13/', 'List 和 Set 区别'],
+            ]
+        }
+    ],
+    "/interview14/" : [
+        {
+            title: 'Java 集合',
+            collapsable: false,
+            sidebarDepth:3,
+            children: [
+                ['/interview14/', 'List 和 Set 区别'],
+            ]
+        }
+    ],
+    "/interview15/" : [
+        {
+            title: 'Java 集合',
+            collapsable: false,
+            sidebarDepth:3,
+            children: [
+                ['/interview15/', 'List 和 Set 区别'],
             ]
         }
     ],
@@ -167,6 +384,7 @@ module.exports={
             children: [
                 ['/solvedproblems/spring-boot-static', '静态资源无法访问'],
                 ['/solvedproblems/solve01', 'SQLyog导入sql数据文件报错'],
+                ['/solvedproblems/solve02', '添加@RequestMapping注解后，访问不到静态资源'],
             ]
         }
     ],
@@ -189,15 +407,26 @@ module.exports={
             sidebarDepth:3,
             children: [
                 ['/springboot/', 'Spring 简介'],
+                ['/springboot/springboot05', '开启Spring Boot'],
+                ['/springboot/springboot06', 'Spring Boot一些基础配置'],
+                ['/springboot/springboot07', 'Spring Boot中使用MyBatis'],
                 ['/springboot/springboot01', 'Spring Boot常用配置'],
                 ['/springboot/springboot02', 'Thymeleaf'],
                 ['/springboot/springboot03', 'Spring Boot整合HikariCP'],
                 ['/springboot/springboot04', 'Pagehelper和Tk.mybatis'],
-                ['/springboot/springboot05', '开启Spring Boot'],
-                ['/springboot/springboot06', 'Spring Boot一些基础配置'],
-                ['/springboot/springboot07', 'Spring Boot中使用MyBatis'],
-                ['/springboot/springboot08', 'Spring Boot一些基础配置'],
-                ['/springboot/springboot09', 'Spring Boot一些基础配置'],
+                ['/springboot/springboot08', 'Swagger2接口文档引擎'],
+                ['/springboot/springboot09', 'Spring Boot异常处理'],
+                ['/springboot/springboot10', 'Spring Boot中使用过滤器和拦截器'],
+                ['/springboot/springboot11', 'Spring Boot AOP记录用户操作日志'],
+                ['/springboot/springboot12', '深入学习Spring组件注册(一)'],
+                ['/springboot/springboot13', '深入学习Spring组件注册(二)'],
+                ['/springboot/springboot14', '深入学习Spring Bean生命周期'],
+                ['/springboot/springboot15', '深入学习Spring Boot自动装配'],
+                ['/springboot/springboot16', '深入学习Spring Boot中的SpringApplication'],
+                ['/springboot/springboot17', '自定义Spring Boot 内容协商'],
+                ['/springboot/springboot18', 'Spring Boot 中处理跨域'],
+                ['/springboot/springboot19', 'Spring Boot 中的异步调用'],
+                ['/springboot/springboot20', 'Spring Sucurity与Oauth2梳理'],
             ]
         }
     ],
@@ -241,6 +470,20 @@ module.exports={
             children: [
                     ['/springweb/', 'Spring 整合 Web'],
                     ['/springweb/springweb01', 'Bean的装配方式'],
+            ]
+        }
+    ],
+    "/structure/" : [
+        {
+            title: '数据结构和算法',
+            collapsable: false,
+            children: [
+                    ['/structure/', '稀疏数组'],
+                    ['/structure/structure01', '队列'],
+                    ['/structure/structure02', '单链表'],
+                    ['/structure/structure03', '双向链表'],
+                    ['/structure/structure04', '约瑟夫问题'],
+                    ['/structure/structure05', '栈'],
             ]
         }
     ],
@@ -480,6 +723,23 @@ module.exports={
             ]
         }
     ],
+    "/mall/" : [
+        {
+            title: 'mall开发日志',
+            collapsable: false,
+            sidebarDepth: 3,
+            children: [
+                ['/mall/', 'mall项目介绍'],
+                ['/mall/mall01', '项目基础模块搭建'],
+                ['/mall/mall02', 'MybatisCodeHelperPro生成Mapper'],
+                ['/mall/mall03', 'mall-admin'],
+                ['/mall/mall04', 'mall-common'],
+                ['/mall/mall05', 'mall-security'],
+                ['/mall/mall06', '6'],
+                ['/mall/mall07', '7'],
+            ]
+        }
+    ],
     "/ml/" : [
         {
             title: '机器学习',
@@ -564,6 +824,7 @@ module.exports={
             title: '其他',
             collapsable: false,
             children: [
+                    ['/other/other01', 'windows下安装和启动redis服务'],
                     ['/other/project-build', 'Spring web骨架创建'],
                     ['/other/refactor', '重构代码'],
                     ['/other/nginx-cdn', 'nginx反向代理cdn'],
@@ -617,18 +878,10 @@ module.exports={
             title: '其他',
             collapsable: false,
             children: [
+                    ['https://mrbird.cc/Vue-Learn-Note.html', 'Vue学习'],
                     ['/vue/vuepress', 'VuePress'],
                     ['/vue/vuepress01', 'VuePress安装Katex插件'],
             ]
         }
-    ],
-    "/wed/" : [
-        {
-            title: 'Deplearning.Ai',
-            collapsable: false,
-            children: [
-                    ['/wed/', '深度学习引言'],
-            ]
-        }
-    ],
+    ]
 };
