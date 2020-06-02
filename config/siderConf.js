@@ -1,13 +1,4 @@
 module.exports={
-    "/architecture/" : [
-        {
-            title: '架构',
-            collapsable: false,
-            children: [
-                ['/architecture/', 'architecture'],
-            ]
-        }
-    ],
     "/bootstrap/" : [
         {
             title: 'Bootstrap',
@@ -24,6 +15,7 @@ module.exports={
         {
             title: '集合',
             collapsable: false,
+            sidebarDepth:3,
             children: [
                     ['/class/', 'Java Number类'],
                     ['/class/class01', 'Java Character类'],
@@ -39,6 +31,7 @@ module.exports={
         {
             title: '集合',
             collapsable: false,
+            sidebarDepth:3,
             children: [
                     ['/collection/', '概述'],
                     ['/collection/collection01', 'Collection'],
@@ -54,6 +47,7 @@ module.exports={
         {
             title: '解决模块间通信问题',
             collapsable: false,
+            sidebarDepth:3,
             children: [
                     ['/communication/', 'Apache HttpClient'],
                     ['/communication/communication01', 'Jackson'],
@@ -80,6 +74,7 @@ module.exports={
         {
             title: 'Docker',
             collapsable: false,
+            sidebarDepth:3,
             children: [
                 ['/docker/', 'Docker简介'],
                 ['/docker/docker01', '安装 Docker'],
@@ -102,37 +97,10 @@ module.exports={
         {
             title: '其他',
             collapsable: false,
+            sidebarDepth:3,
             children: [
                     ['/frontother/templateuse', '利用前端模板'],
                     ['/frontother/latexkatex', 'KaTex/LaTex 用法'],
-            ]
-        }
-    ],
-    "/functionalinterface/" : [
-        {
-            title: '函数式接口',
-            collapsable: false,
-            children: [
-                    ['/functionalinterface/', '概述'],
-                    ['/functionalinterface/functionalinterface01', '函数式编程'],
-                    ['/functionalinterface/functionalinterface02', '常用的函数式接口'],
-            ]
-        }
-    ],
-    "/guide/" : [
-        {
-            title: '日志',
-            collapsable: false,
-            children: [
-                // ['/guide/', '2019年和接下来安排'],
-                // ['/guide/essay01', '记和师兄师姐的一次交流'],
-                // ['/guide/essay02', '华立课题问题'],
-                ['/guide/essay03', '华立电表质量管理系统原型图'],
-                // ['/guide/essay04', '课题思路'],
-                ['/guide/essay05', 'Comprehensive Quality Assessment Algorithm for Smart Meters'],
-                ['/guide/essay06', '参考文献'],
-                ['/guide/essay07', 'Matlab入门基础'],
-                ['/guide/essay08', 'Matlab进阶'],
             ]
         }
     ],
@@ -149,223 +117,11 @@ module.exports={
             ]
         }
     ],
-    "/interview/" : [
-        {
-            title: '未分类',
-            collapsable: false,
-            sidebarDepth:3,
-            children: [
-                ['/interview/', 'JDK8新特性'],
-                ['/interview/interview01', '双亲委派模型'],
-                ['/interview/interview02', '死信、延迟、重试队列'],
-                ['/interview/interview03', 'Zookeeper 假死脑裂'],
-                ['/interview/interview04', 'MySQL 优化'],
-                ['/interview/interview04', 'JavaScript this 关键字'],
-            ]
-        }
-    ],
-    "/interview1/" : [
-        {
-            title: 'Java 基础',
-            collapsable: false,
-            sidebarDepth:3,
-            children: [
-                ['/interview1/', '面向对象的特征'],
-                ['/interview1/interview101', 'final, finally, finalize 的区别'],
-                ['/interview1/interview102', 'int 和 Integer 有什么区别'],
-                ['/interview1/interview103', '重载和重写的区别'],
-                ['/interview1/interview104', '抽象类和接口有什么区别'],
-                ['/interview1/interview105', '说说反射的用途及实现'],
-                ['/interview1/interview106', '说说自定义注解的场景及实现'],
-                ['/interview1/interview107', 'HTTP 请求的 GET 与 POST 方式的区别'],
-                ['/interview1/interview108', 'session 与 cookie 区别'],
-                ['/interview1/interview109', 'session 分布式处理'],
-                ['/interview1/interview110', 'JDBC 流程'],
-                ['/interview1/interview111', 'MVC 设计思想'],
-                ['/interview1/interview112', 'equals 与 == 的区别'],
-            ]
-        }
-    ],
-    "/interview2/" : [
-        {
-            title: 'Java 集合',
-            collapsable: false,
-            sidebarDepth:3,
-            children: [
-                ['/interview2/', 'List 和 Set 区别'],
-                ['/interview2/interview201', 'List 和 Map 区别'],
-                ['/interview2/interview202', 'ArrayList 与 LinkedList 区别'],
-                ['/interview2/interview203', 'ArrayList 与 Vector 区别'],
-                ['/interview2/interview204', 'HashMap 和 HashTable 的区别'],
-                ['/interview2/interview205', 'HashSet 和 HashMap 区别'],
-                ['/interview2/interview206', 'HashMap 和 ConcurrentHashMap 的区别'],
-                ['/interview2/interview207', 'HashMap 的工作原理及代码实现'],
-                ['/interview2/interview208', 'ConcurrentHashMap 的工作原理及代码实现'],
-            ]
-        }
-    ],
-    "/interview3/" : [
-        {
-            title: 'Java 线程',
-            collapsable: false,
-            sidebarDepth:3,
-            children: [
-                ['/interview3/', '创建线程的方式及实现'],
-                ['/interview3/interview301', 'sleep()、join（）、yield（）有什么区别'],
-                ['/interview3/interview302', '说说 CountDownLatch 原理'],
-                ['/interview3/interview303', '说说 CyclicBarrier 原理'],
-                ['/interview3/interview304', '说说 Semaphore 原理'],
-                ['/interview3/interview305', '说说 Exchanger 原理'],
-                ['/interview3/interview306', '说说 CountDownLatch 与 CyclicBarrier 区别'],
-                ['/interview3/interview307', 'ThreadLocal 原理分析'],
-                ['/interview3/interview308', '讲讲线程池的实现原理'],
-                ['/interview3/interview309', '线程池的几种方式与使用场景'],
-                ['/interview3/interview310', '线程的生命周期'],
-            ]
-        }
-    ],
-    "/interview4/" : [
-        {
-            title: 'Java 锁机制',
-            collapsable: false,
-            sidebarDepth:3,
-            children: [
-                ['/interview4/', '说说线程安全问题'],
-                ['/interview4/interview401', 'volatile 实现原理'],
-                ['/interview4/interview402', 'synchronize 实现原理'],
-                ['/interview4/interview403', 'synchronized 与 lock 的区别'],
-                ['/interview4/interview404', 'CAS 乐观锁'],
-                ['/interview4/interview405', 'ABA 问题'],
-                ['/interview4/interview406', '乐观锁的业务场景及实现方式'],
-            ]
-        }
-    ],
-    "/interview5/" : [
-        {
-            title: 'Spring',
-            collapsable: false,
-            sidebarDepth:3,
-            children: [
-                ['/interview5/', 'BeanFactory 和 ApplicationContext 有什么区别'],
-                ['/interview5/interview501', '区别'],
-                ['/interview5/interview502', '区别'],
-                ['/interview5/interview503', '区别'],
-                ['/interview5/interview504', '区别'],
-                ['/interview5/interview505', '区别'],
-                ['/interview5/interview506', '区别'],
-                ['/interview5/interview507', '区别'],
-                ['/interview5/interview508', '区别'],
-                ['/interview5/interview509', '区别'],
-                ['/interview5/interview510', '区别'],
-                ['/interview5/interview511', '区别'],
-                ['/interview5/interview512', '区别'],               
-            ]
-        }
-    ],
-    "/interview6/" : [
-        {
-            title: '分布式',
-            collapsable: false,
-            sidebarDepth:3,
-            children: [
-                ['/interview6/', 'List 和 Set 区别'],
-            ]
-        }
-    ],
-    "/interview7/" : [
-        {
-            title: '微服务',
-            collapsable: false,
-            sidebarDepth:3,
-            children: [
-                ['/interview7/', 'List 和 Set 区别'],
-            ]
-        }
-    ],
-    "/interview8/" : [
-        {
-            title: '数据存储',
-            collapsable: false,
-            sidebarDepth:3,
-            children: [
-                ['/interview8/', 'List 和 Set 区别'],
-            ]
-        }
-    ],
-    "/interview9/" : [
-        {
-            title: 'Java 集合',
-            collapsable: false,
-            sidebarDepth:3,
-            children: [
-                ['/interview9/', 'List 和 Set 区别'],
-            ]
-        }
-    ],
-    "/interview10/" : [
-        {
-            title: 'Java 集合',
-            collapsable: false,
-            sidebarDepth:3,
-            children: [
-                ['/interview10/', 'List 和 Set 区别'],
-            ]
-        }
-    ],
-    "/interview11/" : [
-        {
-            title: 'Java 集合',
-            collapsable: false,
-            sidebarDepth:3,
-            children: [
-                ['/interview11/', 'List 和 Set 区别'],
-            ]
-        }
-    ],
-    "/interview12/" : [
-        {
-            title: 'Java 集合',
-            collapsable: false,
-            sidebarDepth:3,
-            children: [
-                ['/interview12/', 'List 和 Set 区别'],
-            ]
-        }
-    ],
-    "/interview13/" : [
-        {
-            title: 'Java 集合',
-            collapsable: false,
-            sidebarDepth:3,
-            children: [
-                ['/interview13/', 'List 和 Set 区别'],
-            ]
-        }
-    ],
-    "/interview14/" : [
-        {
-            title: 'Java 集合',
-            collapsable: false,
-            sidebarDepth:3,
-            children: [
-                ['/interview14/', 'List 和 Set 区别'],
-            ]
-        }
-    ],
-    "/interview15/" : [
-        {
-            title: 'Java 集合',
-            collapsable: false,
-            sidebarDepth:3,
-            children: [
-                ['/interview15/', 'List 和 Set 区别'],
-            ]
-        }
-    ],
     "/leetcode/" : [
         {
-            title: '日志',
+            title: '力扣',
             collapsable: false,
+            sidebarDepth:3,
             children: [
                 ['/leetcode/', '1.两数之和'],
                 ['/leetcode/leetcode01', '2.两数相加'],
@@ -381,6 +137,7 @@ module.exports={
         {
             title: '问题解决',
             collapsable: false,
+            sidebarDepth:3,
             children: [
                 ['/solvedproblems/spring-boot-static', '静态资源无法访问'],
                 ['/solvedproblems/solve01', 'SQLyog导入sql数据文件报错'],
@@ -392,6 +149,7 @@ module.exports={
         {
             title: 'Spring',
             collapsable: false,
+            sidebarDepth:3,
             children: [
                     ['/Spring/', '简介'],
                     ['/Spring/spring01', '起步'],
@@ -434,6 +192,7 @@ module.exports={
         {
             title: 'Spring Cloud',
             collapsable: false,
+            sidebarDepth:3,
             children: [
                     ['/springcloud/', 'spring-cloud-alibaba'],
                     ['/springcloud/springcloud01', 'Spring Cloud Alibaba项目实践'],
@@ -445,6 +204,7 @@ module.exports={
         {
             title: 'Spring MVC',
             collapsable: false,
+            sidebarDepth:3,
             children: [
                     ['/springmvc/', 'Spring 整合 MVC'],
                     ['/springmvc/springmvc01', '起步'],
@@ -457,6 +217,7 @@ module.exports={
         {
             title: 'Spring事务管理',
             collapsable: false,
+            sidebarDepth:3,
             children: [
                     ['/springtransation/', '简介'],
                     ['/springtransation/springtransation01', '使用Spring注解管理事务'],
@@ -467,6 +228,7 @@ module.exports={
         {
             title: 'Spring web',
             collapsable: false,
+            sidebarDepth:3,
             children: [
                     ['/springweb/', 'Spring 整合 Web'],
                     ['/springweb/springweb01', 'Bean的装配方式'],
@@ -477,6 +239,7 @@ module.exports={
         {
             title: '数据结构和算法',
             collapsable: false,
+            sidebarDepth:3,
             children: [
                     ['/structure/', '稀疏数组'],
                     ['/structure/structure01', '队列'],
@@ -484,38 +247,38 @@ module.exports={
                     ['/structure/structure03', '双向链表'],
                     ['/structure/structure04', '约瑟夫问题'],
                     ['/structure/structure05', '栈'],
-            ]
-        }
-    ],
-    "/java/" : [
-        {
-            title: 'Java',
-            collapsable: false,
-            sidebarDepth: 2,
-            children: [
-                ['/java/java01', 'Java 概述'],
-                ['/java00/', 'Java 基础'],
-                ['/java000/', 'Java 高级'],
-                ['/class/', 'Java 常用工具类'],
-                ['/javaio/', 'Java IO'],
-                ['/collection/', 'Java 集合'],
-                ['/java/java02', 'Java Lambda表达式'],
-                ['/javaosi/', 'Java 网络编程'],
-                ['/functionalinterface/', 'Java 函数式接口'],
-                ['/javastream/', 'Java Stream流'],
-                ['/javathread/', 'Java 多线程'],
-                ['/javareflect/', 'Java 反射'],
-                ['/java/java03', 'Java 注解'],
-                ['/javadesign/', 'Java 设计模式'],
+                    ['/structure/structure06', '迷宫回溯问题'],
+                    ['/structure/structure07', '八皇后问题'],
+                    ['/structure/structure08', '排序算法与时间复杂度'],
+                    ['/structure/structure09', '冒泡排序'],
+                    ['/structure/structure10', '选择排序'],
+                    ['/structure/structure11', '插入排序'],
+                    ['/structure/structure12', '希尔排序'],
+                    ['/structure/structure13', '快速排序'],
+                    ['/structure/structure14', '归并排序'],
+                    ['/structure/structure15', '基数排序'],
+                    ['/structure/structure16', '常用排序算法总结和对比'],
+                    ['/structure/structure17', '查找算法'],
+                    ['/structure/structure18', '哈希表'],
+                    ['/structure/structure19', '树'],
+                    ['/structure/structure20', '顺序存储二叉树'],
+                    ['/structure/structure21', '线索化二叉树'],
+                    ['/structure/structure22', '堆'],
+                    ['/structure/structure23', '优先队列'],
+                    ['/structure/structure24', '2-3查找树'],
+                    ['/structure/structure25', '红黑树'],
+                    ['/structure/structure26', 'B树'],
             ]
         }
     ],
     "/java00/" : [
         {
-            title: 'Java 基础',
+            title: 'Java 快速入门',
             collapsable: false,
+            sidebarDepth:3,
             children: [
-                ['/java00/', 'Java 对象和类'],
+                ['/java00/', 'Java 概述'],
+                ['/java00/java01', 'Java 对象和类'],
                 ['/java00/java16', 'Java 方法'],
                 ['/java00/java26', 'Java 包(package)'],
                 ['/java00/java03', 'Java 基本数据类型'],
@@ -527,35 +290,104 @@ module.exports={
                 ['/java00/java08', 'Java 分支结构'],
                 ['/java00/java13', 'Java 数组'],
                 ['/java00/iterator' , 'Java Iterator迭代器'],
-
             ]
         }
     ],
-    "/java000/" : [
+    "/java01/" : [
         {
-            title: 'Java 高级',
+            title: 'Java面向对象编程',
             collapsable: false,
+            sidebarDepth:3,
             children: [
-                ['/java000/', 'Java 内部类'],
-
-                ['/java000/java15', 'Java 正则表达式'],
-                ['/java000/generic' , 'Java 泛型'],
-                ['/java000/java18', 'Java Scanner 类'],
-                ['/java000/java19', 'Java 异常处理'],
-                ['/java000/java20', 'Java 继承'],
-                ['/java000/java22', 'Java 多态'],
-                ['/java000/java24', 'Java 封装'],
-                ['/java000/java25', 'Java 接口'],
+                ['/java01/', '继承'],
+                ['/java01/java01', '多态'],
+                ['/java01/java01', '封装'],
             ]
         }
     ],
-    "/javadesign/" : [
+    "/java02/" : [
         {
-            title: 'Java 设计模式',
+            title: 'Java异常处理',
             collapsable: false,
+            sidebarDepth:3,
             children: [
-                ['/javadesign/', 'Java 设计模式'],
-
+                ['/java02/', 'Java 异常处理'],
+            ]
+        }
+    ],
+    "/java03/" : [
+        {
+            title: 'Java注解',
+            collapsable: false,
+            sidebarDepth:3,
+            children: [
+                ['/java03/', 'Java 注解'],
+            ]
+        }
+    ],
+    "/java04/" : [
+        {
+            title: 'Java泛型',
+            collapsable: false,
+            sidebarDepth:3,
+            children: [
+                ['/java04/', 'Java 注解'],
+            ]
+        }
+    ],
+    "/java05/" : [
+        {
+            title: 'Java异常处理',
+            collapsable: false,
+            sidebarDepth:3,
+            children: [
+                ['/java05/', 'Java 正则表达式'],
+            ]
+        }
+    ],
+    "/java06/" : [
+        {
+            title: '函数式编程',
+            collapsable: false,
+            sidebarDepth:3,
+            children: [
+                ['/java06/', 'Lambda表达式'],
+                ['/java06/java01', 'Stream流'],
+                ['/java06/java02', '常用方法及操作'],
+                ['/java06/java03', 'Stream流方法引用'],
+                ['/java06/java04', '函数式接口'],
+                ['/java06/java05', '函数式编程'],
+                ['/java06/java06', '常用的函数式接口'],
+            ]
+        }
+    ],
+    "/java07/" : [
+        {
+            title: 'Java 接口',
+            collapsable: false,
+            sidebarDepth:3,
+            children: [
+                ['/java07/', 'Java 接口'],
+            ]
+        }
+    ],
+    "/java08/" : [
+        {
+            title: 'Java 内部类',
+            collapsable: false,
+            sidebarDepth:3,
+            children: [
+                ['/java08/', 'Java 内部类'],
+            ]
+        }
+    ],
+    "/java09/" : [
+        {
+            title: 'Java Scanner 类',
+            collapsable: false,
+            sidebarDepth:3,
+            children: [
+                ['/java09/', 'Java Scanner 类'],
             ]
         }
     ],
@@ -563,10 +395,11 @@ module.exports={
         {
             title: 'Java IO',
             collapsable: false,
+            sidebarDepth:3,
             children: [
-                ['/javaio/javaio01', 'Java File类'],
-                ['/javaio/javaio02', 'Java 递归'],
                 ['/javaio/', 'IO概述'],
+                ['/javaio/javaio01', 'Java File类'],
+                ['/javaio/javaio02', 'Java 递归'],                
                 ['/javaio/javaio03', '字节流'],
                 ['/javaio/javaio04', '字符流'],
                 ['/javaio/javaio05', '缓冲流'],
@@ -580,6 +413,7 @@ module.exports={
         {
             title: 'Java 网络编程',
             collapsable: false,
+            sidebarDepth:3,
             children: [
                 ['/javaosi/', '网络编程入门'],
                 ['/javaosi/javaosi01', 'TCP通信程序'],
@@ -592,6 +426,7 @@ module.exports={
         {
             title: 'Java 反射',
             collapsable: false,
+            sidebarDepth:3,
             children: [
                 ['/javareflect/', '概述'],
                 ['/javareflect/javareflect01', 'Class对象功能'],
@@ -611,18 +446,6 @@ module.exports={
                 ['/javascript/javascript03', 'DOM、事件 简单学习'],
                 ['/javascript/javascript04', 'BOM'],
                 ['/javascript/javascript05', 'DOM和事件监听机制'],
-            ]
-        }
-    ],
-    "/javastream/" : [
-        {
-            title: 'Java Stream流',
-            collapsable: false,
-            sidebarDepth: 3,
-            children: [
-                ['/javastream/', '概述'],
-                ['/javastream/javastream01', 'Stream流常用方法'],
-                ['/javastream/javastream02', 'Stream流方法引用'],
             ]
         }
     ],
@@ -656,6 +479,7 @@ module.exports={
         {
             title: 'Junit',
             collapsable: false,
+            sidebarDepth:3,
             children: [
                     ['/Junit/', '简介'],
                     ['/Junit/Junit01', '起步'],
@@ -666,6 +490,7 @@ module.exports={
         {
             title: 'JVM',
             collapsable: false,
+            sidebarDepth:3,
             children: [
                 ['/jvm/', 'JVM有必要学吗?'],
             ]
@@ -675,6 +500,7 @@ module.exports={
         {
             title: 'Kubernetes',
             collapsable: false,
+            sidebarDepth:3,
             children: [
                 ['/kubernetes/', 'Kubernetes简介'],
                 ['/kubernetes/kubernetes01', 'Kubernetes安装前的准备'],
@@ -700,6 +526,7 @@ module.exports={
         {
             title: 'Linux',
             collapsable: false,
+            sidebarDepth:3,
             children: [
                 ['/linux/', 'Linux'],
                 ['/linux/linux01', 'Linux 远程控制管理'],
@@ -717,6 +544,7 @@ module.exports={
         {
             title: 'Log4j',
             collapsable: false,
+            sidebarDepth:3,
             children: [
                     ['/Log4j/', '简介'],
                     ['/Log4j/Log4j01', '起步'],
@@ -779,6 +607,7 @@ module.exports={
         {
             title: 'Spring MVC',
             collapsable: false,
+            sidebarDepth:3,
             children: [
                     ['/MyBatis/', 'MyBatis'],
                     ['/MyBatis/mybatis01', 'Spring整合Druid'],
@@ -815,7 +644,9 @@ module.exports={
                 ['/neural/', '神经网络编程入门'],
                 ['/neural/neural01', '神经网络实现'],
                 ['/neural/neural02', 'Matlab BP网络实例'],
-                ['/neural/neural04', '独热编码和标签编码'],
+                ['/neural/neural03', '独热编码和标签编码'],
+                ['/neural/neural04', 'Matlab入门基础'],
+                ['/neural/neural05', 'Matlab进阶'],
             ]
         }
     ],
@@ -823,6 +654,7 @@ module.exports={
         {
             title: '其他',
             collapsable: false,
+            sidebarDepth:3,
             children: [
                     ['/other/other01', 'windows下安装和启动redis服务'],
                     ['/other/project-build', 'Spring web骨架创建'],
@@ -843,6 +675,7 @@ module.exports={
         {
             title: '插件',
             collapsable: false,
+            sidebarDepth:3,
             children: [
                     ['/plugins/', 'Lombok'],
                     ['/plugins/plugins01', 'MyBatisCodeHelper'],
@@ -854,6 +687,7 @@ module.exports={
         {
             title: '插件和工具类',
             collapsable: false,
+            sidebarDepth:3,
             children: [
                     ['/plugins&utils/', 'CookieUtils'],
                     ['/plugins&utils/utils01', 'MapperUtils'],
@@ -866,6 +700,7 @@ module.exports={
         {
             title: '工具类',
             collapsable: false,
+            sidebarDepth:3,
             children: [
                     ['/utils/', 'CookieUtils'],
                     ['/utils/utils01', 'MapperUtils'],
@@ -877,6 +712,7 @@ module.exports={
         {
             title: '其他',
             collapsable: false,
+            sidebarDepth:3,
             children: [
                     ['https://mrbird.cc/Vue-Learn-Note.html', 'Vue学习'],
                     ['/vue/vuepress', 'VuePress'],

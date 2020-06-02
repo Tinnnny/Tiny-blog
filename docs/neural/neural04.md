@@ -1,71 +1,240 @@
-# 独热编码和标签编码
-以上两个都是为了给数据进行归一化。
-## OneHotEncoder独热编码
-## 概念
-独热码，在英文文献中称做 one-hot code, 直观来说就是有多少个状态就有多少比特，而且只有一个比特为1，其他全为0的一种码制。举例如下：
-
-> 假如有三种颜色特征：红、黄、蓝。 在利用机器学习的算法时一般需要进行向量化或者数字化。那么你可能想令 红=1，黄=2，蓝=3. 那么这样其实实现了标签编> 码，即给不同类别以标签。然而这意味着机器可能会学习到“红<黄<蓝”，但这并不是我们的让机器学习的本意，只是想让机器区分它们，并无大小比较之意。所以> 这时标签编码是不够的，需要进一步转换。因为有三种颜色状态，所以就有3个比特。即红色：1 0 0 ，黄色: 0 1 0，蓝色：0 0 1 。如此一来每两个向量之间> 的距离都是根号2，在向量空间距离都相等，所以这样不会出现偏序性，基本不会影响基于向量空间度量算法的效果。
-
-自然状态码为：000,001,010,011,100,101
-
-独热编码为：000001,000010,000100,001000,010000,100000
-
-```python
-from sklearn import preprocessing
-enc = preprocessing.OneHotEncoder()
-enc.fit([[0, 0, 3], [1, 1, 0], [0, 2, 1], [1, 0, 2]])    # fit来学习编码
-enc.transform([[0, 1, 3]]).toarray()    # 进行编码
-```
-输出：array([ 1,  0,  0,  1,  0,  0,  0,  0,  1])
-
-数据矩阵是4*3，即4个数据，3个特征维度。
-
-$$
-\begin{bmatrix}
-0&0&3 \\
-1&1&0 \\
-0&2&1 \\
-1&0&2
-\end{bmatrix}
-$$
-
-第一列为第一个特征维度，有两种取值0\1. 所以对应编码方式为10 、01
-
-第二列为第二个特征维度，有三种取值0\1\2，所以对应编码方式为100、010、001
-
-第三列为第三个特征维度，有四中取值0\1\2\3，所以对应编码方式为1000、0100、0010、0001
-
-
-再来看要进行编码的参数[0 , 1,  3]， 0作为第一个特征编码为10,1作为第二个特征编码为010,3作为第三个特征编码为0001.故此编码结果为1 0 0 1 0 0 0 0 1
-
-## 为什么使用独热编码
- 正如上文所言，独热编码（哑变量 dummy variable）是因为大部分算法是基于向量空间中的度量来进行计算的，为了使非偏序关系的变量取值不具有偏序性，并且到圆点是等距的。使用one-hot编码，将离散特征的取值扩展到了欧式空间，离散特征的某个取值就对应欧式空间的某个点。将离散型特征使用one-hot编码，会让特征之间的距离计算更加合理。离散特征进行one-hot编码后，编码后的特征，其实每一维度的特征都可以看做是连续的特征。就可以跟对连续型特征的归一化方法一样，对每一维特征进行归一化。比如归一化到`[-1,1]`或归一化到均值为0,方差为1。       
-
-将离散特征通过one-hot编码映射到欧式空间，是因为，在回归，分类，聚类等机器学习算法中，特征之间距离的计算或相似度的计算是非常重要的，而我们常用的距离或相似度的计算都是在欧式空间的相似度计算，计算余弦相似性，基于的就是欧式空间。
-
-::: tip 三 .独热编码优缺点
-- 优点：独热编码解决了分类器不好处理属性数据的问题，在一定程度上也起到了扩充特征的作用。它的值只有0和1，不同的类型存储在垂直的空间。
-- 缺点：当类别的数量很多时，特征空间会变得非常大。在这种情况下，一般可以用PCA来减少维度。而且one hot encoding+PCA这种组合在实际中也非常有用。
-:::
-
-## 标签编码LabelEncoder
-利用LabelEncoder() 将数据转换成连续的数值型变量。即对不连续的数字或者文本进行编号
-```python
-from sklearn.preprocessing import LabelEncoder
-le = LabelEncoder()
-le.fit([1,5,67,100])
-le.transform([1,1,100,67,5])
-```
-输出：` array([0,0,3,2,1])`
+# Matlab入门基础
+## Matlab数据类型
+- 数字
+- 字符和字符串
+- 矩阵
+- 元胞数组
+- 结构体
 
 ```
->>> le = preprocessing.LabelEncoder()
->>> le.fit(["paris", "paris", "tokyo", "amsterdam"])
-LabelEncoder()
->>> list(le.classes_)
-['amsterdam', 'paris', 'tokyo']     # 三个类别分别为0 1 2
->>> le.transform(["tokyo", "tokyo", "paris"]) 
-array([2, 2, 1]...)    
->>> list(le.inverse_transform([2, 2, 1]))   # 逆过程
-['tokyo', 'tokyo', 'paris']
+//矩阵,分号表示换行，在连续的一行里可以用逗号或者空格分隔字符。
+A = [1 2 3; 4 5 2; 3 2 7]
+//矩阵右上角'表示转置
+B = A'
+//(:)将矩阵转换成列向量，按照第一列、第二列..的顺序叠加
+C = A(:)
+C =
+     1
+     4
+     3
+     2
+     5
+     2
+     3
+     2
+     7
+//inv(A)表示求A的逆矩阵
+D = inv(A)
+A * D
+//定义三个10*5的全零的数组
+E = zeros(10,5,3)
+//分别给数组赋值
+E(:,:,1) = rand(10,5)
+E(:,:,2) = randi(5, 10,5)
+E(:,:,3) = randn(10,5)
+```
+
+```
+//元胞数组
+A = cell(1, 6)
+A{2} = eye(3)
+A{5} = magic(5)
+B = A{5}
+A =1×6 cell 数组
+    {0×0 double}    {3×3 double}    {0×0 double}    {0×0 double}    {5×5 double}    {0×0 double}
+```
+
+## 常用命令及解释
+在matlab中，`%`表示注释，`%%`表示代码段，可以划分功能模块。`ctrl+r`注释选中行，`ctrl+t`取消选中注释。
+### 清空环境变量及命令
+```
+%% 清空环境变量及命令
+clear all   % 清除Workspace中的所有变量
+clc         % 清除Command Window中的所有命令
+```
+### MATLAB矩阵操作
+#### 矩阵的定义与构造
+```
+A = [1 2 3 5 8 5 4 6]
+//定义以1开始，没两个数字间隔2，直到9的矩阵
+B = 1:2:9
+  B = 1     3     5     7     9
+//copyB 矩阵3行1列
+C = repmat(B, 3, 1)
+  C =
+     1     3     5     7     9
+     1     3     5     7     9
+     1     3     5     7     9
+//创建全是1的2*4矩阵
+D = ones(2, 4)
+  D =
+     1     1     1     1
+     1     1     1     1
+```
+#### 矩阵的下标
+```
+A = magic(5)
+  A =
+    17    24     1     8    15
+    23     5     7    14    16
+     4     6    13    20    22
+    10    12    19    21     3
+    11    18    25     2     9
+B = A(2,3)
+  B =7
+C = A(3,:)
+  C = 4 6 13 20 22
+D = A(:,4)
+//找到元素大于20的下标
+[m, n] = find(A > 20)
+```
+### MATLAB逻辑与流程控制
+#### if ... else ... end
+```
+A = rand(1,10)
+limit = 0.75;
+
+B = (A > limit);   % B is a vector of logical values
+if any(B)
+  fprintf('Indices of values > %4.2f: \n', limit);
+  disp(find(B))
+else
+  disp('All values are below the limit.')
+end
+```
+```
+A =
+0.1576    0.9706    0.9572    0.4854    0.8003    0.1419    0.4218    0.9157    0.7922    0.9595
+Indices of values > 0.75: 
+2     3     5     8     9    10
+//B是一个矩阵，满足条件的就是1，否则为0
+```
+
+#### for ... end
+```
+k = 10;
+hilbert = zeros(k,k);      % Preallocate matrix
+
+for m = 1:k
+    for n = 1:k
+        hilbert(m,n) = 1/(m+n -1);
+    end
+end
+hilbert
+```
+
+#### while ... end
+```
+寻找阶乘大于10的100次方的数
+n = 1;
+nFactorial = 1;
+//1e100表示10的100次方
+while nFactorial < 1e100
+    n = n + 1;
+    nFactorial = nFactorial * n;
+end
+n
+
+factorial(69)
+factorial(70)
+
+//prod表示连乘
+prod(1:69)
+prod(1:70)
+```
+#### switch ... case ... end
+```
+mynumber = input('Enter a number:');
+
+switch mynumber
+    case -1
+        disp('negative one');
+    case 0
+        disp('zero');
+    case 1
+        disp('positive one');
+    otherwise
+        disp('other value');
+end
+```
+
+## MATLAB脚本与函数文件
+脚本文件能够直接运行，函数文件类似java封装的方法。
+
+## MATLAB基本绘图操作
+### 二维平面绘图
+```
+x = 0:0.01:2*pi;
+y = sin(x);
+figure
+plot(x, y)
+title('y = sin(x)')
+xlabel('x')
+ylabel('sin(x)')
+xlim([0 2*pi])
+
+x = 0:0.01:20;
+y1 = 200*exp(-0.05*x).*sin(x);
+y2 = 0.8*exp(-0.5*x).*sin(10*x);
+figure
+[AX,H1,H2] = plotyy(x,y1,x,y2,'plot');
+set(get(AX(1),'Ylabel'),'String','Slow Decay') 
+set(get(AX(2),'Ylabel'),'String','Fast Decay') 
+xlabel('Time (\musec)') 
+title('Multiple Decay Rates') 
+set(H1,'LineStyle','--')
+set(H2,'LineStyle',':')
+```
+
+### 三维立体绘图
+```
+t = 0:pi/50:10*pi;
+plot3(sin(t),cos(t),t)
+xlabel('sin(t)')
+ylabel('cos(t)')
+zlabel('t')
+grid on
+axis square
+```
+
+### 图形的保存与导出
+1. Edit → Copy Figure
+2. Toolbar → Save
+3. print('-depsc','-tiff','-r300','picture1')
+4. File → Export Setup
+
+## MATLAB文件导入
+### mat格式
+保存工作空间的数据
+```
+save data.mat x y1 y2
+clear all
+load data.mat
+```
+### txt格式
+```
+M = importdata('myfile.txt');
+S = M.data;
+save 'data.txt' S -ascii
+T = load('data.txt');
+
+isequal(S, T)
+```
+
+### xls格式
+```
+xlswrite('data.xls',S)
+W = xlsread('data.xls');
+isequal(S, W)
+
+xlswrite('data.xlsx',S)
+U = xlsread('data.xlsx');
+isequal(S, U)
+```
+
+### csv格式
+```
+csvwrite('data.csv',S)
+V = csvread('data.csv');
+isequal(S, V)
 ```

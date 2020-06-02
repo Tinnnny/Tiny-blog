@@ -2,10 +2,10 @@
 home: true
 heroImage: /4.png
 heroText: 
-heroTextLink: /monomer/
+heroTextLink: /java/
 tagline: Easy Come, Easy Go.
 actionText: 
-actionLink: /monomer/
+actionLink: /java/
 # features:
 # - title: 初衷
 #   details: 希望通过写博客的方式激励自己学习编程，也通过收集技术笔记帮助开发。
@@ -14,7 +14,7 @@ actionLink: /monomer/
 # footer: Copyright © 2019-present Tinnnny
 ---
 <div style="height:500px;margin-top: 0px;text-align: center">
-    <a style="font-size: 35px;color: #2d2d2d;font-family: 'Adobe 宋体 Std L'" href="frontpage/index.html">Hello,World.</a>
+    <a style="font-size: 35px;color: #2d2d2d;font-family: 'Adobe 宋体 Std L'" href="java00/index.html">Hello,World.</a>
 </div>
 
 

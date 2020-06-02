@@ -1,5 +1,4 @@
 module.exports=[
-    // {text: '指南', link: '/blog/'},
     {
         text: 'api online',
         items: [
@@ -32,10 +31,30 @@ module.exports=[
         ]
     },
     {
+        text: 'Java',
+        items: [
+            { text: 'Java快速入门', link: '/java00/' },
+            { text: 'Java面向对象编程', link: '/java01/' },
+            { text: 'Java反射', link: '/javareflect/' },
+            { text: 'Java异常处理', link: '/java02/' },
+            { text: 'Java注解', link: '/java03/' },
+            { text: 'Java泛型', link: '/java04/' },
+            { text: 'Java集合', link: '/collection/' },
+            { text: 'Java IO', link: '/javaio/' },
+            { text: 'Java 常用类', link: '/class/' },
+            { text: 'Java 正则表达式', link: '/java05/' },
+            { text: 'Java 多线程', link: '/javathread/' },
+            { text: '函数式编程', link: '/java06/' },
+            { text: 'Java 接口', link: '/java07/' },
+            { text: 'Java 内部类', link: '/java08/' },
+            { text: 'Java Scanner 类', link: '/java09/' },
+            { text: 'Java 网络编程', link: '/javaosi/' },
+        ]
+    },
+    {
         text: 'backEnd',
         items: [
-            {text: 'Java', link: '/java/java01'},
-            {text: 'Monomer application', link: '/monomer/'},
+            {text: 'Monomer', link: '/monomer/'},
             {text: 'Spring Boot', link: '/springboot/'},
             {text: 'Spring Cloud', link: '/springcloud/'},
             {text: '数据结构和算法', link: '/structure/'},
@@ -48,10 +67,12 @@ module.exports=[
     {
         text: 'Machine Learning',
         items: [
-            { text: '100天', link: '/ml/' },
+            { text: '机器学习', link: '/ml/' },
             { text: '其他', link: '/neural/' },
         ]
     },
+    {text: 'mall学习', link: '/mall/'},
+    {text: 'LeetCode', link: '/leetcode/'},
     {
         text: '容器化部署',
         items: [
@@ -60,29 +81,4 @@ module.exports=[
             { text: 'Kubernetes', link: '/kubernetes/' },
         ]
     },
-    {text: 'LeetCode', link: '/leetcode/'},
-    {
-        text: '面试',
-        items: [
-            { text: '未分类', link: '/interview/' },
-            { text: 'Java 基础', link: '/interview1/' },
-            { text: 'Java 集合', link: '/interview2/' },
-            { text: 'Java 线程', link: '/interview3/' },
-            { text: 'Java 锁机制', link: '/interview4/' },
-            { text: 'Spring', link: '/interview5/' },
-            { text: '分布式', link: '/interview6/' },
-            { text: '微服务', link: '/interview7/' },
-            { text: '数据存储', link: '/interview8/' },
-            { text: '缓存使用', link: '/interview9/' },
-            { text: '安全篇', link: '/interview10/' },
-            { text: '性能篇', link: '/interview11/' },
-            { text: '设计模式', link: '/interview12/' },
-            { text: '需求分析', link: '/interview13/' },
-            { text: '设计能力', link: '/interview14/' },
-            { text: '面试题补充', link: '/interview15/' },
-        ]
-    },
-    {text: '日志', link: '/guide/'},
-    {text: 'mall开发日志', link: '/mall/'},
-    {text: '关于我', link: '/aboutme/'},
 ];

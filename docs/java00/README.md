@@ -1,127 +1,85 @@
 ---
-title: "Java 对象和类" 
+title: "Java 基础语法" 
 date: 2019年11月12日20:27:04
+collapsable: true
 ---
-# Java 对象和类
-
-Java作为一种面向对象语言。支持以下基本概念：
-- 多态
-- 继承
-- 封装
-- 抽象
-- 类
-- 对象
-- 实例
-- 方法
-- 消息解析
-
-## Java中的对象
-现在让我们深入了解什么是对象。看看周围真实的世界，会发现身边有很多对象，车，狗，人等等。所有这些对象都有自己的状态和行为。
-
-拿一条狗来举例，它的状态有：名字、品种、颜色，行为有：叫、摇尾巴和跑。
-
-对比现实对象和软件对象，它们之间十分相似。
-
-软件对象也有状态和行为。软件对象的状态就是属性，行为通过方法体现。
-
-在软件开发中，方法操作对象内部状态的改变，对象的相互调用也是通过方法来完成。
-
-## Java中的类
-类可以看成是创建Java对象的模板。
-
-通过下面一个简单的类来理解下Java中类的定义：
+# Java 基础语法
+## 第一个Java程序
 ```java
-public class Dog{
-   String breed;
-   int age;
-   String color;
-   void barking(){
-   }
-   
-   void hungry(){
-   }
-   
-   void sleeping(){
-   }
-}
+public class MyFirstJavaProgram {
+   /* 第一个Java程序.  
+    * 它将打印字符串 Hello World
+    */
+    public static void main(String []args) {
+       System.out.println("Hello World"); // 打印 Hello World
+    }
+} 
 ```
-::: tip 一个类可以包含以下类型变量：
-- 局部变量：在方法、构造方法或者语句块中定义的变量被称为局部变量。变量声明和初始化都是在方法中，方法结束后，变量就会自动销毁。
-- 成员变量：成员变量是定义在类中，方法体之外的变量。这种变量在创建对象的时候实例化。成员变量可以被类中方法、构造方法和特定类的语句块访问。
-- 类变量：类变量也声明在类中，方法体之外，但必须声明为static类型。
+::: tip 如何保存、编译以及运行这个程序：
+1. 打开Notepad，把上面的代码添加进去；
+2. 把文件名保存为：`MyFirstJavaProgram.java`；
+3. 打开cmd命令窗口，进入目标文件所在的位置，假设是C:\
+4. 在命令行窗口键入 `javac MyFirstJavaProgram.java`  按下`enter`键编译代码。如果代码没有错误，cmd命令提示符会进入下一行。（假设环境变量都设置好了）。
+5. 再键入`java MyFirstJavaProgram` 按下`Enter`键就可以运行程序了
 :::
 
-一个类可以拥有多个方法，在上面的例子中：`barking()`、`hungry()`和`sleeping()`都是Dog类的方法。
+你将会在窗口看到 Hello World
+```
+C : > javac MyFirstJavaProgram.java
+C : > java MyFirstJavaProgram 
+Hello World
+```
 
-## 构造方法
-每个类都有构造方法。如果没有显式地为类定义构造方法，Java编译器将会为该类提供一个默认构造方法。
+## 基本语法
+::: tip 编写Java程序时，应注意以下几点：
+1. 大小写敏感：Java是大小写敏感的，这就意味着标识符Hello与hello是不同的。
+2. 类名：对于所有的类来说，类名的首字母应该大写。如果类名由若干单词组成，那么每个单词的首字母应该大写，例如 `MyFirstJavaClass` 。
+3. 方法名：所有的方法名都应该以小写字母开头。如果方法名含有若干单词，则后面的每个单词首字母大写。
+4. 源文件名：源文件名必须和类名相同。当保存文件的时候，你应该使用类名作为文件名保存（切记Java是大小写敏感的），文件名的后缀为.java。（如果文件名和类名不相同则会导致编译错误）。
+5. 主方法入口：所有的Java 程序由`public static void main(String args[])`方法开始执行。
+:::
 
-在创建一个对象的时候，至少要调用一个构造方法。构造方法的名称必须与类同名，一个类可以有多个构造方法。
+## Java标识符
+Java所有的组成部分都需要名字。类名、变量名以及方法名都被称为标识符。
 
-下面是一个构造方法示例：
+::: tip 关于Java标识符，有以下几点需要注意：
+1. 所有的标识符都应该以字母（A-Z或者a-z）,美元符（$）、或者下划线（_）开始
+2. 首字符之后可以是任何字符的组合
+3. 关键字不能用作标识符
+4. 标识符是大小写敏感的
+- 合法标识符举例：age、$salary、_value、__1_value
+- 非法标识符举例：123abc、-salary
+:::
+
+## Java修饰符
+像其他语言一样，Java可以使用修饰符来修饰类中方法和属性。主要有两类修饰符：
+- 访问控制修饰符 : default, public , protected, private
+- 非访问控制修饰符 : final, abstract, static，synchronized 和 volatile
+
+## Java变量
+::: tip Java中主要有如下几种类型的变量
+- 局部变量
+- 类变量（静态变量）
+- 成员变量（非静态变量）
+:::
+
+
+## Java枚举
+Java 5.0引入了枚举，枚举限制变量只能是预先设定好的值。使用枚举可以减少代码中的bug。
+
+例如，我们为果汁店设计一个程序，它将限制果汁为小杯、中杯、大杯。这就意味着它不允许顾客点除了这三种尺寸外的果汁。
 ```java
-public class Puppy{
-   public Puppy(){
-   }
+class FreshJuice {
+   enum FreshJuiceSize{ SMALL, MEDIUM, LARGE }
+   FreshJuiceSize size;
+}
 
-   public Puppy(String name){
-      // 这个构造器仅有一个参数：name
+public class FreshJuiceTest {
+   public static void main(String args[]){
+      FreshJuice juice = new FreshJuice();
+      juice.size = FreshJuice. FreshJuiceSize.MEDIUM ;
    }
 }
 ```
+> 注意：枚举可以单独声明或者声明在类里面。方法、变量、构造函数也可以在枚举中定义。
 
-## 创建对象
-对象是根据类创建的。在Java中，使用关键字new来创建一个新的对象。创建对象需要以下三步：
-- 声明：声明一个对象，包括对象名称和对象类型。
-- 实例化：使用关键字new来创建一个对象。
-- 初始化：使用new创建对象时，会调用构造方法初始化对象。
-下面是一个创建对象的例子：
-```java
-public class Puppy{
-   public Puppy(String name){
-      //这个构造器仅有一个参数：name
-      System.out.println("Passed Name is :" + name ); 
-   }
-   public static void main(String []args){
-      // 下面的语句将创建一个Puppy对象
-      Puppy myPuppy = new Puppy( "tommy" );
-   }
-}
-```
-编译并运行上面的程序，会打印出下面的结果：
-```
-Passed Name is :tommy
-```
-
-## 访问实例变量和方法
-通过已创建的对象来访问成员变量和成员方法，如下所示：
-```
-/* 实例化对象 */
-ObjectReference = new Constructor();
-/* 访问其中的变量 */
-ObjectReference.variableName;
-/* 访问类中的方法 */
-ObjectReference.MethodName();
-```
-
-## 源文件声明规则
-当在一个源文件中定义多个类，并且还有import语句和package语句时，要特别注意这些规则。
-
-- 一个源文件中只能有一个public类
-- 一个源文件可以有多个非public类
-- 源文件的名称应该和public类的类名保持一致。例如：源文件中public类的类名是Employee，那么源文件应该命名为Employee.java。
-- 如果一个类定义在某个包中，那么package语句应该在源文件的首行。
-- 如果源文件包含import语句，那么应该放在package语句和类定义之间。如果没有package语句，那么import语句应该在源文件中最前面。
-- import语句和package语句对源文件中定义的所有类都有效。在同一源文件中，不能给不同的类不同的包声明。
-- 类有若干种访问级别，并且类也分不同的类型：抽象类和final类等。
-
-除了上面提到的几种类型，Java还有一些特殊的类，如：内部类、匿名类。
-
-
-## Import语句
-在Java中，如果给出一个完整的限定名，包括包名、类名，那么Java编译器就可以很容易地定位到源代码或者类。Import语句就是用来提供一个合理的路径，使得编译器可以找到某个类。
-
-例如，下面的命令行将会命令编译器载入`java_installation/java/io`路径下的所有类
-```
-import java.io.*;
-```
