@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74681051-9e3d-45f6-8b10-b0571e5e5500" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java00/java01.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java01/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java01/java01.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java01/java02.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java02/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java03/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java04/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java05/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java06/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java06/java01.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java06/java02.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java06/java03.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java06/java04.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java06/java05.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java06/java06.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java07/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java08/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java09/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,13 +185,7 @@
       <workItem from="1590051996340" duration="465000" />
       <workItem from="1590055563623" duration="63000" />
       <workItem from="1590296083409" duration="672000" />
-    </task>
-    <task id="LOCAL-00001" summary="init">
-      <created>1571540486894</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1571540486894</updated>
+      <workItem from="1591086912868" duration="450000" />
     </task>
     <task id="LOCAL-00002" summary="init">
       <created>1571548752539</created>
@@ -512,7 +523,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590052278849</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="2020年6月2日16:36:04">
+      <created>1591086976117</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1591086976118</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -524,7 +542,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/docs/.vuepress/dist" />
     </ignored-roots>
-    <MESSAGE value="改版博客排版" />
     <MESSAGE value="改变博客目录结构" />
     <MESSAGE value="增加评论组件" />
     <MESSAGE value="再次改版" />
@@ -549,16 +566,17 @@
     <MESSAGE value="2020年5月21日" />
     <MESSAGE value="2020年5月21日17:09:22" />
     <MESSAGE value="2020年5月21日17:11:14" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020年5月21日17:11:14" />
+    <MESSAGE value="2020年6月2日16:36:04" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020年6月2日16:36:04" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="372" y="24" key="CommitChangelistDialog2" timestamp="1590052277774">
+    <state x="372" y="24" key="CommitChangelistDialog2" timestamp="1591086971926">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="372" y="24" key="CommitChangelistDialog2/0.0.1536.864/1920.0.1920.1080@0.0.1536.864" timestamp="1590052277774" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1590052282147">
+    <state x="372" y="24" key="CommitChangelistDialog2/0.0.1536.864/1920.0.1920.1080@0.0.1536.864" timestamp="1591086971926" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1591087033635">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864/1920.0.1920.1080@0.0.1536.864" timestamp="1590052282147" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864/1920.0.1920.1080@0.0.1536.864" timestamp="1591087033635" />
   </component>
 </project>
