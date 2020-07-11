@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MATLAB进阶 | Tiny-blog</title>
+    <meta name="generator" content="VuePress 1.5.1">
+    <link rel="icon" href="/Tiny-blog/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+    <meta name="description" content="Tiny-blog,Vuepress文档，Vuepress博客">
+    <link rel="preload" href="/Tiny-blog/assets/css/0.styles.366936ce.css" as="style"><link rel="preload" href="/Tiny-blog/assets/js/app.2c5aab52.js" as="script"><link rel="preload" href="/Tiny-blog/assets/js/2.88f50141.js" as="script"><link rel="preload" href="/Tiny-blog/assets/js/283.42fb5ba6.js" as="script"><link rel="prefetch" href="/Tiny-blog/assets/js/10.da42f03d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/100.4782b170.js"><link rel="prefetch" href="/Tiny-blog/assets/js/101.2a9e1948.js"><link rel="prefetch" href="/Tiny-blog/assets/js/102.b1011980.js"><link rel="prefetch" href="/Tiny-blog/assets/js/103.dc5deec1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/104.425c5e2b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/105.082066c4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/106.4ccdfe93.js"><link rel="prefetch" href="/Tiny-blog/assets/js/107.1459568a.js"><link rel="prefetch" href="/Tiny-blog/assets/js/108.9a1b26e6.js"><link rel="prefetch" href="/Tiny-blog/assets/js/109.29059245.js"><link rel="prefetch" href="/Tiny-blog/assets/js/11.72229ab9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/110.9d5e59a3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/111.8a145631.js"><link rel="prefetch" href="/Tiny-blog/assets/js/112.c11643b9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/113.944edcd9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/114.85dbb06d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/115.2f269bf3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/116.0f9888bd.js"><link rel="prefetch" href="/Tiny-blog/assets/js/117.adc4f5cc.js"><link rel="prefetch" href="/Tiny-blog/assets/js/118.6f14fabd.js"><link rel="prefetch" href="/Tiny-blog/assets/js/119.c7f63aba.js"><link rel="prefetch" href="/Tiny-blog/assets/js/12.1598abdb.js"><link rel="prefetch" href="/Tiny-blog/assets/js/120.a2e5ee6a.js"><link rel="prefetch" href="/Tiny-blog/assets/js/121.07a52021.js"><link rel="prefetch" href="/Tiny-blog/assets/js/122.79c53b41.js"><link rel="prefetch" href="/Tiny-blog/assets/js/123.7c5c9da8.js"><link rel="prefetch" href="/Tiny-blog/assets/js/124.12bcf0ac.js"><link rel="prefetch" href="/Tiny-blog/assets/js/125.689cb79f.js"><link rel="prefetch" href="/Tiny-blog/assets/js/126.4471b2cd.js"><link rel="prefetch" href="/Tiny-blog/assets/js/127.2eff27c4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/128.f9673a64.js"><link rel="prefetch" href="/Tiny-blog/assets/js/129.0293c452.js"><link rel="prefetch" href="/Tiny-blog/assets/js/13.36df1c25.js"><link rel="prefetch" href="/Tiny-blog/assets/js/130.3d906aec.js"><link rel="prefetch" href="/Tiny-blog/assets/js/131.58a2e30a.js"><link rel="prefetch" href="/Tiny-blog/assets/js/132.b30682b4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/133.b2a755e1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/134.11fad7d2.js"><link rel="prefetch" href="/Tiny-blog/assets/js/135.ffa4a80b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/136.e88a13e5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/137.fda1fc28.js"><link rel="prefetch" href="/Tiny-blog/assets/js/138.f030fe82.js"><link rel="prefetch" href="/Tiny-blog/assets/js/139.6178c4d4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/14.8a0b5bdd.js"><link rel="prefetch" href="/Tiny-blog/assets/js/140.4153f1b3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/141.e5c5e788.js"><link rel="prefetch" href="/Tiny-blog/assets/js/142.dff12636.js"><link rel="prefetch" href="/Tiny-blog/assets/js/143.08b32275.js"><link rel="prefetch" href="/Tiny-blog/assets/js/144.dce05fc3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/145.3bede62f.js"><link rel="prefetch" href="/Tiny-blog/assets/js/146.e68535f4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/147.70083cd3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/148.bbe37500.js"><link rel="prefetch" href="/Tiny-blog/assets/js/149.e46b14d8.js"><link rel="prefetch" href="/Tiny-blog/assets/js/15.f6660f81.js"><link rel="prefetch" href="/Tiny-blog/assets/js/150.a45685fe.js"><link rel="prefetch" href="/Tiny-blog/assets/js/151.704ab362.js"><link rel="prefetch" href="/Tiny-blog/assets/js/152.e7c471f0.js"><link rel="prefetch" href="/Tiny-blog/assets/js/153.2db5b861.js"><link rel="prefetch" href="/Tiny-blog/assets/js/154.68dfe56e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/155.f983e780.js"><link rel="prefetch" href="/Tiny-blog/assets/js/156.5260fb27.js"><link rel="prefetch" href="/Tiny-blog/assets/js/157.ab02a116.js"><link rel="prefetch" href="/Tiny-blog/assets/js/158.ca33dbfc.js"><link rel="prefetch" href="/Tiny-blog/assets/js/159.5f5bc4bb.js"><link rel="prefetch" href="/Tiny-blog/assets/js/16.1b4c6a5c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/160.1a95ba8c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/161.6401b2b2.js"><link rel="prefetch" href="/Tiny-blog/assets/js/162.ee59bc40.js"><link rel="prefetch" href="/Tiny-blog/assets/js/163.05ee232f.js"><link rel="prefetch" href="/Tiny-blog/assets/js/164.9b9f50c9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/165.efe96f9a.js"><link rel="prefetch" href="/Tiny-blog/assets/js/166.ba4eb620.js"><link rel="prefetch" href="/Tiny-blog/assets/js/167.337ad619.js"><link rel="prefetch" href="/Tiny-blog/assets/js/168.9d75d31e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/169.dfaa3e10.js"><link rel="prefetch" href="/Tiny-blog/assets/js/17.1b657f2f.js"><link rel="prefetch" href="/Tiny-blog/assets/js/170.f1f14a12.js"><link rel="prefetch" href="/Tiny-blog/assets/js/171.9efd1343.js"><link rel="prefetch" href="/Tiny-blog/assets/js/172.c60f05f4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/173.704b06d3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/174.0c670db7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/175.9a0585af.js"><link rel="prefetch" href="/Tiny-blog/assets/js/176.cd892702.js"><link rel="prefetch" href="/Tiny-blog/assets/js/177.2402d7d3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/178.43aac8a1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/179.bbaf8de1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/18.52e1c926.js"><link rel="prefetch" href="/Tiny-blog/assets/js/180.e7cd13d0.js"><link rel="prefetch" href="/Tiny-blog/assets/js/181.65b2dae4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/182.714da3b6.js"><link rel="prefetch" href="/Tiny-blog/assets/js/183.ef6d9768.js"><link rel="prefetch" href="/Tiny-blog/assets/js/184.ff1a6402.js"><link rel="prefetch" href="/Tiny-blog/assets/js/185.48dd7132.js"><link rel="prefetch" href="/Tiny-blog/assets/js/186.13bdbbce.js"><link rel="prefetch" href="/Tiny-blog/assets/js/187.d2778f3a.js"><link rel="prefetch" href="/Tiny-blog/assets/js/188.df0f2b27.js"><link rel="prefetch" href="/Tiny-blog/assets/js/189.045dd303.js"><link rel="prefetch" href="/Tiny-blog/assets/js/19.94ffb7a4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/190.01cb8a7c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/191.6ed6b5da.js"><link rel="prefetch" href="/Tiny-blog/assets/js/192.f6adce85.js"><link rel="prefetch" href="/Tiny-blog/assets/js/193.f32e90a5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/194.d9d01ccc.js"><link rel="prefetch" href="/Tiny-blog/assets/js/195.3f37df13.js"><link rel="prefetch" href="/Tiny-blog/assets/js/196.5ac39da5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/197.7b80d742.js"><link rel="prefetch" href="/Tiny-blog/assets/js/198.ab7e17de.js"><link rel="prefetch" href="/Tiny-blog/assets/js/199.e2067d92.js"><link rel="prefetch" href="/Tiny-blog/assets/js/20.e9e94350.js"><link rel="prefetch" href="/Tiny-blog/assets/js/200.15aa2373.js"><link rel="prefetch" href="/Tiny-blog/assets/js/201.f74b3f62.js"><link rel="prefetch" href="/Tiny-blog/assets/js/202.fe653528.js"><link rel="prefetch" href="/Tiny-blog/assets/js/203.8efc3f63.js"><link rel="prefetch" href="/Tiny-blog/assets/js/204.9ce06a30.js"><link rel="prefetch" href="/Tiny-blog/assets/js/205.9c9f2d0c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/206.b3314268.js"><link rel="prefetch" href="/Tiny-blog/assets/js/207.db093363.js"><link rel="prefetch" href="/Tiny-blog/assets/js/208.7b68b87d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/209.f0655b2c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/21.83960581.js"><link rel="prefetch" href="/Tiny-blog/assets/js/210.9f16aad1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/211.70412bbf.js"><link rel="prefetch" href="/Tiny-blog/assets/js/212.1ae66c89.js"><link rel="prefetch" href="/Tiny-blog/assets/js/213.b75a3df9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/214.80d785d4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/215.eb5a1e61.js"><link rel="prefetch" href="/Tiny-blog/assets/js/216.95615e20.js"><link rel="prefetch" href="/Tiny-blog/assets/js/217.6edf39be.js"><link rel="prefetch" href="/Tiny-blog/assets/js/218.22a1beb9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/219.04ce9b33.js"><link rel="prefetch" href="/Tiny-blog/assets/js/22.5be07e4b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/220.b9f1b6b3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/221.a73bce03.js"><link rel="prefetch" href="/Tiny-blog/assets/js/222.42a68841.js"><link rel="prefetch" href="/Tiny-blog/assets/js/223.5cf94f63.js"><link rel="prefetch" href="/Tiny-blog/assets/js/224.69e2cd13.js"><link rel="prefetch" href="/Tiny-blog/assets/js/225.b5441919.js"><link rel="prefetch" href="/Tiny-blog/assets/js/226.883dac42.js"><link rel="prefetch" href="/Tiny-blog/assets/js/227.b571ee39.js"><link rel="prefetch" href="/Tiny-blog/assets/js/228.95e9ad9c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/229.ca7dd037.js"><link rel="prefetch" href="/Tiny-blog/assets/js/23.859ad8e5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/230.a5760ca1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/231.57b5a043.js"><link rel="prefetch" href="/Tiny-blog/assets/js/232.796e81ec.js"><link rel="prefetch" href="/Tiny-blog/assets/js/233.af2ae687.js"><link rel="prefetch" href="/Tiny-blog/assets/js/234.e7ef77d2.js"><link rel="prefetch" href="/Tiny-blog/assets/js/235.11a983e7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/236.c211f977.js"><link rel="prefetch" href="/Tiny-blog/assets/js/237.73910c09.js"><link rel="prefetch" href="/Tiny-blog/assets/js/238.dde5859c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/239.8ea8cde4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/24.dd243e60.js"><link rel="prefetch" href="/Tiny-blog/assets/js/240.6535a9ae.js"><link rel="prefetch" href="/Tiny-blog/assets/js/241.41de9bf6.js"><link rel="prefetch" href="/Tiny-blog/assets/js/242.84ea299b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/243.53bd0ff9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/244.319b011e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/245.f305a111.js"><link rel="prefetch" href="/Tiny-blog/assets/js/246.97c996cc.js"><link rel="prefetch" href="/Tiny-blog/assets/js/247.98fc6cea.js"><link rel="prefetch" href="/Tiny-blog/assets/js/248.5bd39d92.js"><link rel="prefetch" href="/Tiny-blog/assets/js/249.43d11c2d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/25.1ece1443.js"><link rel="prefetch" href="/Tiny-blog/assets/js/250.d925826e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/251.cbd07be0.js"><link rel="prefetch" href="/Tiny-blog/assets/js/252.d477bd4e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/253.d8c62f9a.js"><link rel="prefetch" href="/Tiny-blog/assets/js/254.2b8ca994.js"><link rel="prefetch" href="/Tiny-blog/assets/js/255.85e384f5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/256.3570615e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/257.719f5031.js"><link rel="prefetch" href="/Tiny-blog/assets/js/258.42ce8a25.js"><link rel="prefetch" href="/Tiny-blog/assets/js/259.feb8ceb0.js"><link rel="prefetch" href="/Tiny-blog/assets/js/26.152602e3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/260.583e09cb.js"><link rel="prefetch" href="/Tiny-blog/assets/js/261.c7a5f4ca.js"><link rel="prefetch" href="/Tiny-blog/assets/js/262.b794f1dc.js"><link rel="prefetch" href="/Tiny-blog/assets/js/263.a8988fa4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/264.55b775a1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/265.35d4bc27.js"><link rel="prefetch" href="/Tiny-blog/assets/js/266.9174869d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/267.4ba8c18b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/268.8bfe6c62.js"><link rel="prefetch" href="/Tiny-blog/assets/js/269.465423e7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/27.58a1d23e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/270.60501088.js"><link rel="prefetch" href="/Tiny-blog/assets/js/271.f428a1eb.js"><link rel="prefetch" href="/Tiny-blog/assets/js/272.5d929001.js"><link rel="prefetch" href="/Tiny-blog/assets/js/273.4e3faef6.js"><link rel="prefetch" href="/Tiny-blog/assets/js/274.e4a78fe2.js"><link rel="prefetch" href="/Tiny-blog/assets/js/275.fb32e581.js"><link rel="prefetch" href="/Tiny-blog/assets/js/276.84df0c6f.js"><link rel="prefetch" href="/Tiny-blog/assets/js/277.6da745ac.js"><link rel="prefetch" href="/Tiny-blog/assets/js/278.65f5d4a0.js"><link rel="prefetch" href="/Tiny-blog/assets/js/279.f54bc912.js"><link rel="prefetch" href="/Tiny-blog/assets/js/28.1d39b5ad.js"><link rel="prefetch" href="/Tiny-blog/assets/js/280.5549f516.js"><link rel="prefetch" href="/Tiny-blog/assets/js/281.8412ef56.js"><link rel="prefetch" href="/Tiny-blog/assets/js/282.6f235d9d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/284.ac4c8529.js"><link rel="prefetch" href="/Tiny-blog/assets/js/285.7592b12c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/286.0bdff754.js"><link rel="prefetch" href="/Tiny-blog/assets/js/287.0767e41f.js"><link rel="prefetch" href="/Tiny-blog/assets/js/288.41cdb10b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/289.75a52277.js"><link rel="prefetch" href="/Tiny-blog/assets/js/29.d5d6edb5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/290.ad288561.js"><link rel="prefetch" href="/Tiny-blog/assets/js/291.251d17cc.js"><link rel="prefetch" href="/Tiny-blog/assets/js/292.096d901d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/293.1757bf4c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/294.57ebf10e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/295.7097f6af.js"><link rel="prefetch" href="/Tiny-blog/assets/js/296.c581b5a3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/297.9b7a964c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/298.844926eb.js"><link rel="prefetch" href="/Tiny-blog/assets/js/299.14681a8d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/3.54983402.js"><link rel="prefetch" href="/Tiny-blog/assets/js/30.7205700f.js"><link rel="prefetch" href="/Tiny-blog/assets/js/300.a0b426cc.js"><link rel="prefetch" href="/Tiny-blog/assets/js/301.e9a4acd0.js"><link rel="prefetch" href="/Tiny-blog/assets/js/302.386122c1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/303.ce161494.js"><link rel="prefetch" href="/Tiny-blog/assets/js/304.10a1bd43.js"><link rel="prefetch" href="/Tiny-blog/assets/js/305.dfea512d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/306.725f56d0.js"><link rel="prefetch" href="/Tiny-blog/assets/js/307.154d6422.js"><link rel="prefetch" href="/Tiny-blog/assets/js/308.1412696b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/309.9b028d4b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/31.43c65150.js"><link rel="prefetch" href="/Tiny-blog/assets/js/310.c4c8501e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/311.ded37570.js"><link rel="prefetch" href="/Tiny-blog/assets/js/312.9849887c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/313.e67538fb.js"><link rel="prefetch" href="/Tiny-blog/assets/js/314.d7be933e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/315.8672c686.js"><link rel="prefetch" href="/Tiny-blog/assets/js/316.196c4f7e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/317.1f6a2c22.js"><link rel="prefetch" href="/Tiny-blog/assets/js/318.c1e7ebc4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/319.1e5d3a19.js"><link rel="prefetch" href="/Tiny-blog/assets/js/32.6d2459ee.js"><link rel="prefetch" href="/Tiny-blog/assets/js/320.7f3c10a7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/321.28920ce5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/322.73b6bc5d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/323.ae21c01e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/324.4a5361a9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/325.0e056ef7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/326.1cfcd582.js"><link rel="prefetch" href="/Tiny-blog/assets/js/327.ed7fd4b8.js"><link rel="prefetch" href="/Tiny-blog/assets/js/328.075f99b7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/329.2be1735b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/33.0ff61a14.js"><link rel="prefetch" href="/Tiny-blog/assets/js/330.27405d2f.js"><link rel="prefetch" href="/Tiny-blog/assets/js/331.3e8a8520.js"><link rel="prefetch" href="/Tiny-blog/assets/js/332.406e5225.js"><link rel="prefetch" href="/Tiny-blog/assets/js/333.261b98c0.js"><link rel="prefetch" href="/Tiny-blog/assets/js/334.3d3397b4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/335.4b21bd1b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/336.006b1982.js"><link rel="prefetch" href="/Tiny-blog/assets/js/337.47ae23c1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/338.8bd3a869.js"><link rel="prefetch" href="/Tiny-blog/assets/js/339.518b845b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/34.6188b173.js"><link rel="prefetch" href="/Tiny-blog/assets/js/340.5b869649.js"><link rel="prefetch" href="/Tiny-blog/assets/js/341.56131077.js"><link rel="prefetch" href="/Tiny-blog/assets/js/342.9f6e10e5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/343.825f7f3e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/344.1771eaa7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/345.afc7a778.js"><link rel="prefetch" href="/Tiny-blog/assets/js/346.ec637c8c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/347.9bf9a1c7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/348.3fc0368d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/349.065b9faa.js"><link rel="prefetch" href="/Tiny-blog/assets/js/35.66d76bed.js"><link rel="prefetch" href="/Tiny-blog/assets/js/350.e06cbed7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/351.73e50c04.js"><link rel="prefetch" href="/Tiny-blog/assets/js/352.b24a624e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/353.627159ad.js"><link rel="prefetch" href="/Tiny-blog/assets/js/354.ad3ee54c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/355.c4e57306.js"><link rel="prefetch" href="/Tiny-blog/assets/js/356.9a4767db.js"><link rel="prefetch" href="/Tiny-blog/assets/js/357.d9cab216.js"><link rel="prefetch" href="/Tiny-blog/assets/js/358.51eefca1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/359.a07e6288.js"><link rel="prefetch" href="/Tiny-blog/assets/js/36.9478612a.js"><link rel="prefetch" href="/Tiny-blog/assets/js/360.adbcdc1d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/37.566ece89.js"><link rel="prefetch" href="/Tiny-blog/assets/js/38.4807d8dc.js"><link rel="prefetch" href="/Tiny-blog/assets/js/39.1a7610ce.js"><link rel="prefetch" href="/Tiny-blog/assets/js/4.3ec949b2.js"><link rel="prefetch" href="/Tiny-blog/assets/js/40.89941262.js"><link rel="prefetch" href="/Tiny-blog/assets/js/41.9c5c6d7e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/42.2791a561.js"><link rel="prefetch" href="/Tiny-blog/assets/js/43.e390471b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/44.aa653784.js"><link rel="prefetch" href="/Tiny-blog/assets/js/45.a204f356.js"><link rel="prefetch" href="/Tiny-blog/assets/js/46.d3a58751.js"><link rel="prefetch" href="/Tiny-blog/assets/js/47.547a71eb.js"><link rel="prefetch" href="/Tiny-blog/assets/js/48.0ed2d500.js"><link rel="prefetch" href="/Tiny-blog/assets/js/49.7ada8d03.js"><link rel="prefetch" href="/Tiny-blog/assets/js/5.45bb1db2.js"><link rel="prefetch" href="/Tiny-blog/assets/js/50.e9f59a9c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/51.a848e49d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/52.b1f59256.js"><link rel="prefetch" href="/Tiny-blog/assets/js/53.b68773cf.js"><link rel="prefetch" href="/Tiny-blog/assets/js/54.a6a956f7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/55.2668634c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/56.fc9a40d5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/57.64515059.js"><link rel="prefetch" href="/Tiny-blog/assets/js/58.141b1563.js"><link rel="prefetch" href="/Tiny-blog/assets/js/59.f4123844.js"><link rel="prefetch" href="/Tiny-blog/assets/js/6.d7e7a719.js"><link rel="prefetch" href="/Tiny-blog/assets/js/60.03d8976e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/61.e2e0cc3c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/62.5f5e3fc9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/63.ff9747f5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/64.c52a74f3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/65.bc239ea8.js"><link rel="prefetch" href="/Tiny-blog/assets/js/66.38ada3c7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/67.e83d8716.js"><link rel="prefetch" href="/Tiny-blog/assets/js/68.6a45e3bd.js"><link rel="prefetch" href="/Tiny-blog/assets/js/69.e71ce288.js"><link rel="prefetch" href="/Tiny-blog/assets/js/7.b7386b35.js"><link rel="prefetch" href="/Tiny-blog/assets/js/70.c117cec0.js"><link rel="prefetch" href="/Tiny-blog/assets/js/71.10b9bc47.js"><link rel="prefetch" href="/Tiny-blog/assets/js/72.6908fcff.js"><link rel="prefetch" href="/Tiny-blog/assets/js/73.ad7c7e12.js"><link rel="prefetch" href="/Tiny-blog/assets/js/74.58ec3ed9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/75.c46c52c2.js"><link rel="prefetch" href="/Tiny-blog/assets/js/76.5498a573.js"><link rel="prefetch" href="/Tiny-blog/assets/js/77.1a137a54.js"><link rel="prefetch" href="/Tiny-blog/assets/js/78.ab1343e5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/79.2f63af0f.js"><link rel="prefetch" href="/Tiny-blog/assets/js/8.ab44931b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/80.afeb1180.js"><link rel="prefetch" href="/Tiny-blog/assets/js/81.4b994b30.js"><link rel="prefetch" href="/Tiny-blog/assets/js/82.ae3a05a5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/83.55ea3e17.js"><link rel="prefetch" href="/Tiny-blog/assets/js/84.6801c2ce.js"><link rel="prefetch" href="/Tiny-blog/assets/js/85.5f7f1977.js"><link rel="prefetch" href="/Tiny-blog/assets/js/86.42a3e0a7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/87.fcc22118.js"><link rel="prefetch" href="/Tiny-blog/assets/js/88.30b1ed0a.js"><link rel="prefetch" href="/Tiny-blog/assets/js/89.22b5b85e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/9.2f1806f3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/90.4e1cd660.js"><link rel="prefetch" href="/Tiny-blog/assets/js/91.e5d3fd7b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/92.1e1a3e1e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/93.b10a164d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/94.212e65b8.js"><link rel="prefetch" href="/Tiny-blog/assets/js/95.2ff99752.js"><link rel="prefetch" href="/Tiny-blog/assets/js/96.7bfa5898.js"><link rel="prefetch" href="/Tiny-blog/assets/js/97.9867e9b3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/98.a737b61e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/99.93ce9e3b.js">
+    <link rel="stylesheet" href="/Tiny-blog/assets/css/0.styles.366936ce.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Tiny-blog/" class="home-link router-link-active"><!----> <span class="site-name">Tiny-blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="api online" class="dropdown-title"><span class="title">api online</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.kancloud.cn/yunye/axios/234845" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Axios
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.w3cschool.cn/axurezwjc/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Axure
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.runoob.com/bootstrap/bootstrap-tutorial.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Bootstrap
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://helm.sh/docs/intro/quickstart/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Helm
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jhipster.tech/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Jhipster
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jquery123.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  jQuery
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leetcode-cn.com/problemset/algorithms/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  LeetCode
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://morrisjs.github.io/morris.js/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Morris.js
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://nacos.io/zh-cn/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Nacos
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://spring.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Spring
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/alibaba/spring-cloud-alibaba" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Spring Cloud Alibaba GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://pingcap.com/docs-cn/stable/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  TiDB
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://cn.vuejs.org/v2/api/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://vuex.vuejs.org/zh/api/#vuex-store" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vuex
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="frontEnd" class="dropdown-title"><span class="title">frontEnd</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tiny-blog/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/jquery/" class="nav-link">
+  Jquery
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/vue/vuepress.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/frontother/templateuse.html" class="nav-link">
+  other
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tiny-blog/java00/" class="nav-link">
+  快速入门
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java01/" class="nav-link">
+  面向对象编程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java02/" class="nav-link">
+  异常
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javareflect/" class="nav-link">
+  反射
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java03/" class="nav-link">
+  注解
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java04/" class="nav-link">
+  泛型
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/collection/" class="nav-link">
+  集合
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/structure/" class="nav-link">
+  数据结构和算法
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javaio/" class="nav-link">
+  IO
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/time/" class="nav-link">
+  日期时间
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/class/" class="nav-link">
+  常用类
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java05/" class="nav-link">
+  正则表达式
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/encryption/" class="nav-link">
+  加密与安全
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javathread/" class="nav-link">
+  多线程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java06/" class="nav-link">
+  函数式编程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java07/" class="nav-link">
+  接口
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java08/" class="nav-link">
+  内部类
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java09/" class="nav-link">
+  Scanner 类
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javaosi/" class="nav-link">
+  网络编程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/jdbc/" class="nav-link">
+  JDBC编程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/design/" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="backEnd" class="dropdown-title"><span class="title">backEnd</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tiny-blog/Spring/" class="nav-link">
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/Log4j/" class="nav-link">
+  Log4j
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springweb/" class="nav-link">
+  Spring Web
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springmvc/" class="nav-link">
+  Spring MVC
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/MyBatis/" class="nav-link">
+  MyBatis
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springtransation/" class="nav-link">
+  Spring事务管理
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/communication/" class="nav-link">
+  解决模块间通信问题
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springboot/" class="nav-link">
+  Spring Boot
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springcloud/" class="nav-link">
+  Spring Cloud
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/jvm/" class="nav-link">
+  JVM
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/plugins&amp;utils/" class="nav-link">
+  Plugins&amp;Utils
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/solvedproblems/spring-boot-static.html" class="nav-link">
+  Solved problems
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/other/other01.html" class="nav-link">
+  other
+</a></li></ul></div></div><div class="nav-item"><a href="/Tiny-blog/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/Tiny-blog/leetcode/" class="nav-link">
+  LeetCode
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="容器化部署" class="dropdown-title"><span class="title">容器化部署</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tiny-blog/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/kubernetes/" class="nav-link">
+  Kubernetes
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="api online" class="dropdown-title"><span class="title">api online</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.kancloud.cn/yunye/axios/234845" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Axios
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.w3cschool.cn/axurezwjc/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Axure
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.runoob.com/bootstrap/bootstrap-tutorial.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Bootstrap
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://helm.sh/docs/intro/quickstart/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Helm
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jhipster.tech/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Jhipster
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jquery123.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  jQuery
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leetcode-cn.com/problemset/algorithms/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  LeetCode
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://morrisjs.github.io/morris.js/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Morris.js
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://nacos.io/zh-cn/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Nacos
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://spring.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Spring
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/alibaba/spring-cloud-alibaba" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Spring Cloud Alibaba GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://pingcap.com/docs-cn/stable/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  TiDB
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://cn.vuejs.org/v2/api/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://vuex.vuejs.org/zh/api/#vuex-store" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vuex
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="frontEnd" class="dropdown-title"><span class="title">frontEnd</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tiny-blog/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/jquery/" class="nav-link">
+  Jquery
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/vue/vuepress.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/frontother/templateuse.html" class="nav-link">
+  other
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tiny-blog/java00/" class="nav-link">
+  快速入门
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java01/" class="nav-link">
+  面向对象编程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java02/" class="nav-link">
+  异常
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javareflect/" class="nav-link">
+  反射
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java03/" class="nav-link">
+  注解
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java04/" class="nav-link">
+  泛型
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/collection/" class="nav-link">
+  集合
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/structure/" class="nav-link">
+  数据结构和算法
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javaio/" class="nav-link">
+  IO
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/time/" class="nav-link">
+  日期时间
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/class/" class="nav-link">
+  常用类
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java05/" class="nav-link">
+  正则表达式
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/encryption/" class="nav-link">
+  加密与安全
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javathread/" class="nav-link">
+  多线程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java06/" class="nav-link">
+  函数式编程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java07/" class="nav-link">
+  接口
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java08/" class="nav-link">
+  内部类
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java09/" class="nav-link">
+  Scanner 类
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javaosi/" class="nav-link">
+  网络编程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/jdbc/" class="nav-link">
+  JDBC编程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/design/" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="backEnd" class="dropdown-title"><span class="title">backEnd</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tiny-blog/Spring/" class="nav-link">
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/Log4j/" class="nav-link">
+  Log4j
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springweb/" class="nav-link">
+  Spring Web
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springmvc/" class="nav-link">
+  Spring MVC
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/MyBatis/" class="nav-link">
+  MyBatis
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springtransation/" class="nav-link">
+  Spring事务管理
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/communication/" class="nav-link">
+  解决模块间通信问题
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springboot/" class="nav-link">
+  Spring Boot
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springcloud/" class="nav-link">
+  Spring Cloud
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/jvm/" class="nav-link">
+  JVM
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/plugins&amp;utils/" class="nav-link">
+  Plugins&amp;Utils
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/solvedproblems/spring-boot-static.html" class="nav-link">
+  Solved problems
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/other/other01.html" class="nav-link">
+  other
+</a></li></ul></div></div><div class="nav-item"><a href="/Tiny-blog/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/Tiny-blog/leetcode/" class="nav-link">
+  LeetCode
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="容器化部署" class="dropdown-title"><span class="title">容器化部署</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tiny-blog/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/kubernetes/" class="nav-link">
+  Kubernetes
+</a></li></ul></div></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="matlab进阶"><a href="#matlab进阶" class="header-anchor">#</a> MATLAB进阶</h1> <h2 id="matlab程序调试"><a href="#matlab程序调试" class="header-anchor">#</a> MATLAB程序调试</h2> <ol><li>Index must be a positive integer or logical.</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>MATLAB下标是从1开始的
+ A = [1 2 3 4 5];
+ A(0)
+ A(3.5)
+ A(-2)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ol start="2"><li><p>Undefined function or variable 'B'.
+B未定义</p></li> <li><p>Inner matrix dimensions must agree.
+矩阵维度一定要相符合。</p></li> <li><p>Function definitions are not permitted at the prompt or in scripts.</p></li> <li><p>Index out of bounds because numel(A)=5.
+数组越界</p></li> <li><p>In an assignment  A(I) = B, the number of elements in B and I must be the same.
+赋值时维度必须相同</p></li> <li><p>Expression or statement is incorrect--possibly unbalanced (, {, or [.
+括号使用出错。</p></li> <li><p>Too many input arguments.
+输入参数太多</p></li></ol> <h2 id="断点调试"><a href="#断点调试" class="header-anchor">#</a> 断点调试</h2> <p>matlab的调试和Java差不多。</p> <h2 id="向量化编程"><a href="#向量化编程" class="header-anchor">#</a> 向量化编程</h2> <h3 id="及时清除不用的变量"><a href="#及时清除不用的变量" class="header-anchor">#</a> 及时清除不用的变量</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>a = rand(10000);
+b = rand(10000);
+clear a
+b = rand(10000);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="使用变量前，预分配内存空间"><a href="#使用变量前，预分配内存空间" class="header-anchor">#</a> 使用变量前，预分配内存空间</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>clear all
+clc
+n = 30000;
+tic;
+for k = 1:n
+    a(k) = 1;
+end
+time = toc;
+disp(['未预分配内存下动态赋值长为',num2str(n),'的数组时间是:',num2str(time),'秒！'])
+
+tic
+b = zeros(1,n);
+for k = 1:n
+    b(k) = 1;
+end
+time = toc;
+disp(['预分配内存下动态赋值长为',num2str(n),'的数组时间是:',num2str(time),'秒！'])
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h3 id="选择恰当的数据类型"><a href="#选择恰当的数据类型" class="header-anchor">#</a> 选择恰当的数据类型</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>clear all
+clc
+n = 300000;
+a = 8;
+b{1} = 8;
+c.data = 8;
+
+tic
+for k = 1:n;
+    a;
+end
+time = toc;
+disp(['访问',num2str(n),'次double型数组时间是:',num2str(time),'秒！'])
+
+tic
+for k = 1:n;
+    b{1};
+end
+time = toc;
+disp(['访问',num2str(n),'次cell型数组时间是:',num2str(time),'秒！'])
+
+tic
+for k = 1:n;
+    c.data;
+end
+time = toc;
+disp(['访问',num2str(n),'次struct型数组时间是:',num2str(time),'秒！'])
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><h2 id="图像对象和句柄"><a href="#图像对象和句柄" class="header-anchor">#</a> 图像对象和句柄</h2> <ol><li>如何设置线条的属性呢？</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>x = 0:0.01:2*pi;
+y = sin(x);
+h = plot(x,y);
+grid on
+get(h)
+set(h,'linestyle','-','linewidth',2,'color','k')
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><ol start="2"><li>如何修改网格的间隔呢？</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>set(gca,'xtick',0:0.5:7)
+set(gca,'ytick',-1:0.1:1)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ol start="3"><li>如何设置图例的字体及大小呢？</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>x = 0:0.01:2*pi;
+y1 = sin(x);
+y2 = cos(x);
+plot(x,y1,'r')
+hold on
+plot(x,y2,'-.b')
+h = legend('sin(x)','cos(x)');
+set(h,'fontsize',16,'color','k','edgecolor','r','textcolor','w')
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><ol start="4"><li>如何拆分图例呢？</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>x = 0:0.01:2*pi;
+y1 = sin(x);
+y2 = cos(x);
+h1 = plot(x,y1,'r');
+hold on
+h2 = plot(x,y2,'-.b');
+ax1 = axes('position',get(gca,'position'),'visible','off');
+legend(ax1,h1,'sin(x)','location','northwest')
+ax2 = axes('position',get(gca,'position'),'visible','off');
+legend(ax2,h2,'cos(x)','location','northeast')
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h2 id="bp神经网络"><a href="#bp神经网络" class="header-anchor">#</a> Bp神经网络</h2> <h3 id="训练集-测试集产生"><a href="#训练集-测试集产生" class="header-anchor">#</a> 训练集/测试集产生</h3> <ol><li>导入数据</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>load spectra_data.mat
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="2"><li>随机产生训练集和测试集</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>temp = randperm(size(NIR,1));
+% 训练集——50个样本
+P_train = NIR(temp(1:50),:)';
+T_train = octane(temp(1:50),:)';
+% 测试集——10个样本
+P_test = NIR(temp(51:end),:)';
+T_test = octane(temp(51:end),:)';
+N = size(P_test,2);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h3 id="数据归一化"><a href="#数据归一化" class="header-anchor">#</a> 数据归一化</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>[p_train, ps_input] = mapminmax(P_train,0,1);
+p_test = mapminmax('apply',P_test,ps_input);
+
+[t_train, ps_output] = mapminmax(T_train,0,1);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="bp神经网络创建、训练及仿真测试"><a href="#bp神经网络创建、训练及仿真测试" class="header-anchor">#</a> BP神经网络创建、训练及仿真测试</h3> <ol><li>创建网络</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>net = newff(p_train,t_train,9);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="2"><li>设置训练参数</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>net.trainParam.epochs = 1000;
+net.trainParam.goal = 1e-3;
+net.trainParam.lr = 0.01;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ol start="3"><li>训练网络</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>net = train(net,p_train,t_train);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="4"><li>仿真测试</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>t_sim = sim(net,p_test);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="5"><li>数据反归一化</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>T_sim = mapminmax('reverse',t_sim,ps_output);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="性能评价"><a href="#性能评价" class="header-anchor">#</a> 性能评价</h3> <ol><li>相对误差error</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>error = abs(T_sim - T_test)./T_test;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="2"><li>决定系数R^2</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>R2 = (N * sum(T_sim .* T_test) - sum(T_sim) * sum(T_test))^2 / ((N * sum((T_sim).^2) - (sum(T_sim))^2) * (N * sum((T_test).^2) - (sum(T_test))^2)); 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="3"><li>结果对比</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>result = [T_test' T_sim' error']
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="绘图"><a href="#绘图" class="header-anchor">#</a> 绘图</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>figure
+plot(1:N,T_test,'b:*',1:N,T_sim,'r-o')
+legend('真实值','预测值')
+xlabel('预测样本')
+ylabel('辛烷值')
+string = {'测试集辛烷值含量预测结果对比';['R^2=' num2str(R2)]};
+title(string)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>//size(wineTargets,2)表示返回第二个变量的列数
+for i=1:1:size(wineTargets,2)
+    output1(i)=find(wineTargets(:,i)==max(wineTargets(:,i)));
+end
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>max函数
+A=[0 0 1]
+[a b]=max(A)
+a=1 b=3
+其中a代表最大值，b代表最大值的索引，这样就可以进行分类。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>代码</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>%% 此程序matlab编程实现的BP神经网络
+% 清空环境变量
+clear all
+clc
+
+%%第一步 读取数据
+input=xlsread('input.xlsx');
+output=xlsread('output.xlsx');
+
+% 将二进制转为10进制分类
+for i=1:1:size(output,2)
+    output1(i)=find(output(:,i)==max(output(:,i)));
+end
+%% 第二步 设置训练数据和预测数据
+input_train = input(:,[1:160]);
+output_train =output(:,[1:160]);
+input_test = input(:,[161:200]);
+output_test =output(:,[161:200]);
+
+train_output1=output1([1:160]);
+test_output1=output1([161:200]);
+%节点个数
+inputnum=size(input_train,1); % size(X,1)返回的是矩阵X的行数
+hiddennum=10;%隐含层节点数量经验公式p=sqrt(m+n)+a ，故分别取2~13进行试验
+outputnum=size(output_train,1);
+%% 第三本 训练样本数据归一化
+[inputn,inputps]=mapminmax(input_train);%归一化到[-1,1]之间，inputps用来作下一次同样的归一化
+[outputn,outputps]=mapminmax(output_train);
+%% 第四步 构建BP神经网络
+net=newff(inputn,outputn,hiddennum,{'tansig','purelin'},'trainlm');% 建立模型，传递函数使用purelin，采用梯度下降法训练
+
+W1= net.iw{1,1};%输入层到中间层的权值
+B1 = net.b{1};%中间各层神经元阈值
+
+W2 = net.lw{2,1};%中间层到输出层的权值
+B2 = net.b{2};%输出层各神经元阈值
+
+%% 第五步 网络参数配置（ 训练次数，学习速率，训练目标最小误差等）
+net.trainParam.epochs=500;         % 训练次数，这里设置为1000次
+net.trainParam.lr=0.01;                   % 学习速率，这里设置为0.01
+net.trainParam.goal=0.01;                    % 训练目标最小误差，这里设置为0.00001
+net.trainParam.show=50;
+net.trainParam.mc=0.01;
+net.trainParam.max_fail=6;
+%% 第六步 BP神经网络训练
+[net,tr]=train(net,inputn,outputn);%开始训练，其中inputn,outputn分别为输入输出样本
+figure(1),plotperform(tr) %误差MSE下降线
+
+%训练集的输出
+an0=sim(net,inputn); % 仿真得到预测的输出
+aaa=size(an0,2);
+train_simu=mapminmax('reverse',an0,outputps); % 返归一化
+
+%% 计算训练集分类结果和误差
+for i=1:1:aaa
+    train_output(i)=find(train_simu(:,i)==max(train_simu(:,i)));
+end
+
+error0=train_output-train_output1;
+%% 第七步 测试样本归一化
+inputn_test=mapminmax('apply',input_test,inputps);% 对样本数据进行归一化
+
+%% 第八步 BP神经网络预测
+an1=sim(net,inputn_test); %用训练好的模型进行仿真
+bbb=size(an1,2);
+test_simu=mapminmax('reverse',an1,outputps); % 把仿真得到的数据还原为原始的数量级
+
+%% 计算测试集分类结果和误差
+for i=1:1:bbb
+    test_output(i)=find(test_simu(:,i)==max(test_simu(:,i)));
+end
+
+error=test_output-test_output1; % 计算测试集分类的误差
+
+%% 网络预测图形
+% 找出判断错误的分类属于哪一类
+k=zeros(1,5);
+for i=1:bbb
+    if error(i)~=0
+        [b c]=max(output_test(:,i));
+        switch c
+            case 1
+                k(1)= k(1)+1;
+            case 2
+                k(2)= k(2)+1;
+            case 3
+                k(3)= k(3)+1;
+            case 4
+                k(4)= k(4)+1;
+            case 5
+                k(5)= k(5)+1;
+        end
+    end
+end
+disp(k)
+% 找出每类的个体和
+kk=zeros(1,5);
+for i=1:bbb
+    [b c]=max(output_test(:,i));
+    switch c
+        case 1
+            kk(1)= kk(1)+1;
+        case 2
+            kk(2)= kk(2)+1;
+        case 3
+            kk(3)= kk(3)+1;
+        case 4
+            kk(4)= kk(4)+1;
+        case 5
+            kk(5)= kk(5)+1;
+    end
+end
+disp(kk)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br></div></div><p>现在可能出现的问题梳理：</p> <ol><li>数据有问题</li> <li>学习率和激活函数有问题</li></ol> <p>矩阵化代码</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>% 清空环境变量
+clear all
+clc
+data=xlsread('8分类.xlsx');
+input=data(1,:);  %载入输入数据
+c=zeros(5,size(input,2));%初始化存储矩阵
+
+for i=1:1:size(input,2)
+    c(input(1,i),i)=1;
+end
+xlswrite('data1.xlsx',c)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><ol><li>不吃外卖，不喝饮料</li> <li>每天学习，每天运动</li></ol></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最近更新:</span> <span class="time">2020-6-2 4:36:15 ├F10: PM┤</span></div></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/Tiny-blog/assets/js/app.2c5aab52.js" defer></script><script src="/Tiny-blog/assets/js/2.88f50141.js" defer></script><script src="/Tiny-blog/assets/js/283.42fb5ba6.js" defer></script>
+  </body>
+</html>

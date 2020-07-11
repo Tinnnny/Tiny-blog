@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>K近邻法 (K-NN) | Tiny-blog</title>
+    <meta name="generator" content="VuePress 1.5.1">
+    <link rel="icon" href="/Tiny-blog/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+    <meta name="description" content="Tiny-blog,Vuepress文档，Vuepress博客">
+    <link rel="preload" href="/Tiny-blog/assets/css/0.styles.366936ce.css" as="style"><link rel="preload" href="/Tiny-blog/assets/js/app.2c5aab52.js" as="script"><link rel="preload" href="/Tiny-blog/assets/js/2.88f50141.js" as="script"><link rel="preload" href="/Tiny-blog/assets/js/265.35d4bc27.js" as="script"><link rel="prefetch" href="/Tiny-blog/assets/js/10.da42f03d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/100.4782b170.js"><link rel="prefetch" href="/Tiny-blog/assets/js/101.2a9e1948.js"><link rel="prefetch" href="/Tiny-blog/assets/js/102.b1011980.js"><link rel="prefetch" href="/Tiny-blog/assets/js/103.dc5deec1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/104.425c5e2b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/105.082066c4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/106.4ccdfe93.js"><link rel="prefetch" href="/Tiny-blog/assets/js/107.1459568a.js"><link rel="prefetch" href="/Tiny-blog/assets/js/108.9a1b26e6.js"><link rel="prefetch" href="/Tiny-blog/assets/js/109.29059245.js"><link rel="prefetch" href="/Tiny-blog/assets/js/11.72229ab9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/110.9d5e59a3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/111.8a145631.js"><link rel="prefetch" href="/Tiny-blog/assets/js/112.c11643b9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/113.944edcd9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/114.85dbb06d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/115.2f269bf3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/116.0f9888bd.js"><link rel="prefetch" href="/Tiny-blog/assets/js/117.adc4f5cc.js"><link rel="prefetch" href="/Tiny-blog/assets/js/118.6f14fabd.js"><link rel="prefetch" href="/Tiny-blog/assets/js/119.c7f63aba.js"><link rel="prefetch" href="/Tiny-blog/assets/js/12.1598abdb.js"><link rel="prefetch" href="/Tiny-blog/assets/js/120.a2e5ee6a.js"><link rel="prefetch" href="/Tiny-blog/assets/js/121.07a52021.js"><link rel="prefetch" href="/Tiny-blog/assets/js/122.79c53b41.js"><link rel="prefetch" href="/Tiny-blog/assets/js/123.7c5c9da8.js"><link rel="prefetch" href="/Tiny-blog/assets/js/124.12bcf0ac.js"><link rel="prefetch" href="/Tiny-blog/assets/js/125.689cb79f.js"><link rel="prefetch" href="/Tiny-blog/assets/js/126.4471b2cd.js"><link rel="prefetch" href="/Tiny-blog/assets/js/127.2eff27c4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/128.f9673a64.js"><link rel="prefetch" href="/Tiny-blog/assets/js/129.0293c452.js"><link rel="prefetch" href="/Tiny-blog/assets/js/13.36df1c25.js"><link rel="prefetch" href="/Tiny-blog/assets/js/130.3d906aec.js"><link rel="prefetch" href="/Tiny-blog/assets/js/131.58a2e30a.js"><link rel="prefetch" href="/Tiny-blog/assets/js/132.b30682b4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/133.b2a755e1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/134.11fad7d2.js"><link rel="prefetch" href="/Tiny-blog/assets/js/135.ffa4a80b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/136.e88a13e5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/137.fda1fc28.js"><link rel="prefetch" href="/Tiny-blog/assets/js/138.f030fe82.js"><link rel="prefetch" href="/Tiny-blog/assets/js/139.6178c4d4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/14.8a0b5bdd.js"><link rel="prefetch" href="/Tiny-blog/assets/js/140.4153f1b3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/141.e5c5e788.js"><link rel="prefetch" href="/Tiny-blog/assets/js/142.dff12636.js"><link rel="prefetch" href="/Tiny-blog/assets/js/143.08b32275.js"><link rel="prefetch" href="/Tiny-blog/assets/js/144.dce05fc3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/145.3bede62f.js"><link rel="prefetch" href="/Tiny-blog/assets/js/146.e68535f4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/147.70083cd3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/148.bbe37500.js"><link rel="prefetch" href="/Tiny-blog/assets/js/149.e46b14d8.js"><link rel="prefetch" href="/Tiny-blog/assets/js/15.f6660f81.js"><link rel="prefetch" href="/Tiny-blog/assets/js/150.a45685fe.js"><link rel="prefetch" href="/Tiny-blog/assets/js/151.704ab362.js"><link rel="prefetch" href="/Tiny-blog/assets/js/152.e7c471f0.js"><link rel="prefetch" href="/Tiny-blog/assets/js/153.2db5b861.js"><link rel="prefetch" href="/Tiny-blog/assets/js/154.68dfe56e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/155.f983e780.js"><link rel="prefetch" href="/Tiny-blog/assets/js/156.5260fb27.js"><link rel="prefetch" href="/Tiny-blog/assets/js/157.ab02a116.js"><link rel="prefetch" href="/Tiny-blog/assets/js/158.ca33dbfc.js"><link rel="prefetch" href="/Tiny-blog/assets/js/159.5f5bc4bb.js"><link rel="prefetch" href="/Tiny-blog/assets/js/16.1b4c6a5c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/160.1a95ba8c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/161.6401b2b2.js"><link rel="prefetch" href="/Tiny-blog/assets/js/162.ee59bc40.js"><link rel="prefetch" href="/Tiny-blog/assets/js/163.05ee232f.js"><link rel="prefetch" href="/Tiny-blog/assets/js/164.9b9f50c9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/165.efe96f9a.js"><link rel="prefetch" href="/Tiny-blog/assets/js/166.ba4eb620.js"><link rel="prefetch" href="/Tiny-blog/assets/js/167.337ad619.js"><link rel="prefetch" href="/Tiny-blog/assets/js/168.9d75d31e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/169.dfaa3e10.js"><link rel="prefetch" href="/Tiny-blog/assets/js/17.1b657f2f.js"><link rel="prefetch" href="/Tiny-blog/assets/js/170.f1f14a12.js"><link rel="prefetch" href="/Tiny-blog/assets/js/171.9efd1343.js"><link rel="prefetch" href="/Tiny-blog/assets/js/172.c60f05f4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/173.704b06d3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/174.0c670db7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/175.9a0585af.js"><link rel="prefetch" href="/Tiny-blog/assets/js/176.cd892702.js"><link rel="prefetch" href="/Tiny-blog/assets/js/177.2402d7d3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/178.43aac8a1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/179.bbaf8de1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/18.52e1c926.js"><link rel="prefetch" href="/Tiny-blog/assets/js/180.e7cd13d0.js"><link rel="prefetch" href="/Tiny-blog/assets/js/181.65b2dae4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/182.714da3b6.js"><link rel="prefetch" href="/Tiny-blog/assets/js/183.ef6d9768.js"><link rel="prefetch" href="/Tiny-blog/assets/js/184.ff1a6402.js"><link rel="prefetch" href="/Tiny-blog/assets/js/185.48dd7132.js"><link rel="prefetch" href="/Tiny-blog/assets/js/186.13bdbbce.js"><link rel="prefetch" href="/Tiny-blog/assets/js/187.d2778f3a.js"><link rel="prefetch" href="/Tiny-blog/assets/js/188.df0f2b27.js"><link rel="prefetch" href="/Tiny-blog/assets/js/189.045dd303.js"><link rel="prefetch" href="/Tiny-blog/assets/js/19.94ffb7a4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/190.01cb8a7c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/191.6ed6b5da.js"><link rel="prefetch" href="/Tiny-blog/assets/js/192.f6adce85.js"><link rel="prefetch" href="/Tiny-blog/assets/js/193.f32e90a5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/194.d9d01ccc.js"><link rel="prefetch" href="/Tiny-blog/assets/js/195.3f37df13.js"><link rel="prefetch" href="/Tiny-blog/assets/js/196.5ac39da5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/197.7b80d742.js"><link rel="prefetch" href="/Tiny-blog/assets/js/198.ab7e17de.js"><link rel="prefetch" href="/Tiny-blog/assets/js/199.e2067d92.js"><link rel="prefetch" href="/Tiny-blog/assets/js/20.e9e94350.js"><link rel="prefetch" href="/Tiny-blog/assets/js/200.15aa2373.js"><link rel="prefetch" href="/Tiny-blog/assets/js/201.f74b3f62.js"><link rel="prefetch" href="/Tiny-blog/assets/js/202.fe653528.js"><link rel="prefetch" href="/Tiny-blog/assets/js/203.8efc3f63.js"><link rel="prefetch" href="/Tiny-blog/assets/js/204.9ce06a30.js"><link rel="prefetch" href="/Tiny-blog/assets/js/205.9c9f2d0c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/206.b3314268.js"><link rel="prefetch" href="/Tiny-blog/assets/js/207.db093363.js"><link rel="prefetch" href="/Tiny-blog/assets/js/208.7b68b87d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/209.f0655b2c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/21.83960581.js"><link rel="prefetch" href="/Tiny-blog/assets/js/210.9f16aad1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/211.70412bbf.js"><link rel="prefetch" href="/Tiny-blog/assets/js/212.1ae66c89.js"><link rel="prefetch" href="/Tiny-blog/assets/js/213.b75a3df9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/214.80d785d4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/215.eb5a1e61.js"><link rel="prefetch" href="/Tiny-blog/assets/js/216.95615e20.js"><link rel="prefetch" href="/Tiny-blog/assets/js/217.6edf39be.js"><link rel="prefetch" href="/Tiny-blog/assets/js/218.22a1beb9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/219.04ce9b33.js"><link rel="prefetch" href="/Tiny-blog/assets/js/22.5be07e4b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/220.b9f1b6b3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/221.a73bce03.js"><link rel="prefetch" href="/Tiny-blog/assets/js/222.42a68841.js"><link rel="prefetch" href="/Tiny-blog/assets/js/223.5cf94f63.js"><link rel="prefetch" href="/Tiny-blog/assets/js/224.69e2cd13.js"><link rel="prefetch" href="/Tiny-blog/assets/js/225.b5441919.js"><link rel="prefetch" href="/Tiny-blog/assets/js/226.883dac42.js"><link rel="prefetch" href="/Tiny-blog/assets/js/227.b571ee39.js"><link rel="prefetch" href="/Tiny-blog/assets/js/228.95e9ad9c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/229.ca7dd037.js"><link rel="prefetch" href="/Tiny-blog/assets/js/23.859ad8e5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/230.a5760ca1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/231.57b5a043.js"><link rel="prefetch" href="/Tiny-blog/assets/js/232.796e81ec.js"><link rel="prefetch" href="/Tiny-blog/assets/js/233.af2ae687.js"><link rel="prefetch" href="/Tiny-blog/assets/js/234.e7ef77d2.js"><link rel="prefetch" href="/Tiny-blog/assets/js/235.11a983e7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/236.c211f977.js"><link rel="prefetch" href="/Tiny-blog/assets/js/237.73910c09.js"><link rel="prefetch" href="/Tiny-blog/assets/js/238.dde5859c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/239.8ea8cde4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/24.dd243e60.js"><link rel="prefetch" href="/Tiny-blog/assets/js/240.6535a9ae.js"><link rel="prefetch" href="/Tiny-blog/assets/js/241.41de9bf6.js"><link rel="prefetch" href="/Tiny-blog/assets/js/242.84ea299b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/243.53bd0ff9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/244.319b011e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/245.f305a111.js"><link rel="prefetch" href="/Tiny-blog/assets/js/246.97c996cc.js"><link rel="prefetch" href="/Tiny-blog/assets/js/247.98fc6cea.js"><link rel="prefetch" href="/Tiny-blog/assets/js/248.5bd39d92.js"><link rel="prefetch" href="/Tiny-blog/assets/js/249.43d11c2d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/25.1ece1443.js"><link rel="prefetch" href="/Tiny-blog/assets/js/250.d925826e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/251.cbd07be0.js"><link rel="prefetch" href="/Tiny-blog/assets/js/252.d477bd4e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/253.d8c62f9a.js"><link rel="prefetch" href="/Tiny-blog/assets/js/254.2b8ca994.js"><link rel="prefetch" href="/Tiny-blog/assets/js/255.85e384f5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/256.3570615e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/257.719f5031.js"><link rel="prefetch" href="/Tiny-blog/assets/js/258.42ce8a25.js"><link rel="prefetch" href="/Tiny-blog/assets/js/259.feb8ceb0.js"><link rel="prefetch" href="/Tiny-blog/assets/js/26.152602e3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/260.583e09cb.js"><link rel="prefetch" href="/Tiny-blog/assets/js/261.c7a5f4ca.js"><link rel="prefetch" href="/Tiny-blog/assets/js/262.b794f1dc.js"><link rel="prefetch" href="/Tiny-blog/assets/js/263.a8988fa4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/264.55b775a1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/266.9174869d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/267.4ba8c18b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/268.8bfe6c62.js"><link rel="prefetch" href="/Tiny-blog/assets/js/269.465423e7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/27.58a1d23e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/270.60501088.js"><link rel="prefetch" href="/Tiny-blog/assets/js/271.f428a1eb.js"><link rel="prefetch" href="/Tiny-blog/assets/js/272.5d929001.js"><link rel="prefetch" href="/Tiny-blog/assets/js/273.4e3faef6.js"><link rel="prefetch" href="/Tiny-blog/assets/js/274.e4a78fe2.js"><link rel="prefetch" href="/Tiny-blog/assets/js/275.fb32e581.js"><link rel="prefetch" href="/Tiny-blog/assets/js/276.84df0c6f.js"><link rel="prefetch" href="/Tiny-blog/assets/js/277.6da745ac.js"><link rel="prefetch" href="/Tiny-blog/assets/js/278.65f5d4a0.js"><link rel="prefetch" href="/Tiny-blog/assets/js/279.f54bc912.js"><link rel="prefetch" href="/Tiny-blog/assets/js/28.1d39b5ad.js"><link rel="prefetch" href="/Tiny-blog/assets/js/280.5549f516.js"><link rel="prefetch" href="/Tiny-blog/assets/js/281.8412ef56.js"><link rel="prefetch" href="/Tiny-blog/assets/js/282.6f235d9d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/283.42fb5ba6.js"><link rel="prefetch" href="/Tiny-blog/assets/js/284.ac4c8529.js"><link rel="prefetch" href="/Tiny-blog/assets/js/285.7592b12c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/286.0bdff754.js"><link rel="prefetch" href="/Tiny-blog/assets/js/287.0767e41f.js"><link rel="prefetch" href="/Tiny-blog/assets/js/288.41cdb10b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/289.75a52277.js"><link rel="prefetch" href="/Tiny-blog/assets/js/29.d5d6edb5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/290.ad288561.js"><link rel="prefetch" href="/Tiny-blog/assets/js/291.251d17cc.js"><link rel="prefetch" href="/Tiny-blog/assets/js/292.096d901d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/293.1757bf4c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/294.57ebf10e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/295.7097f6af.js"><link rel="prefetch" href="/Tiny-blog/assets/js/296.c581b5a3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/297.9b7a964c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/298.844926eb.js"><link rel="prefetch" href="/Tiny-blog/assets/js/299.14681a8d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/3.54983402.js"><link rel="prefetch" href="/Tiny-blog/assets/js/30.7205700f.js"><link rel="prefetch" href="/Tiny-blog/assets/js/300.a0b426cc.js"><link rel="prefetch" href="/Tiny-blog/assets/js/301.e9a4acd0.js"><link rel="prefetch" href="/Tiny-blog/assets/js/302.386122c1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/303.ce161494.js"><link rel="prefetch" href="/Tiny-blog/assets/js/304.10a1bd43.js"><link rel="prefetch" href="/Tiny-blog/assets/js/305.dfea512d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/306.725f56d0.js"><link rel="prefetch" href="/Tiny-blog/assets/js/307.154d6422.js"><link rel="prefetch" href="/Tiny-blog/assets/js/308.1412696b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/309.9b028d4b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/31.43c65150.js"><link rel="prefetch" href="/Tiny-blog/assets/js/310.c4c8501e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/311.ded37570.js"><link rel="prefetch" href="/Tiny-blog/assets/js/312.9849887c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/313.e67538fb.js"><link rel="prefetch" href="/Tiny-blog/assets/js/314.d7be933e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/315.8672c686.js"><link rel="prefetch" href="/Tiny-blog/assets/js/316.196c4f7e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/317.1f6a2c22.js"><link rel="prefetch" href="/Tiny-blog/assets/js/318.c1e7ebc4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/319.1e5d3a19.js"><link rel="prefetch" href="/Tiny-blog/assets/js/32.6d2459ee.js"><link rel="prefetch" href="/Tiny-blog/assets/js/320.7f3c10a7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/321.28920ce5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/322.73b6bc5d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/323.ae21c01e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/324.4a5361a9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/325.0e056ef7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/326.1cfcd582.js"><link rel="prefetch" href="/Tiny-blog/assets/js/327.ed7fd4b8.js"><link rel="prefetch" href="/Tiny-blog/assets/js/328.075f99b7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/329.2be1735b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/33.0ff61a14.js"><link rel="prefetch" href="/Tiny-blog/assets/js/330.27405d2f.js"><link rel="prefetch" href="/Tiny-blog/assets/js/331.3e8a8520.js"><link rel="prefetch" href="/Tiny-blog/assets/js/332.406e5225.js"><link rel="prefetch" href="/Tiny-blog/assets/js/333.261b98c0.js"><link rel="prefetch" href="/Tiny-blog/assets/js/334.3d3397b4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/335.4b21bd1b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/336.006b1982.js"><link rel="prefetch" href="/Tiny-blog/assets/js/337.47ae23c1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/338.8bd3a869.js"><link rel="prefetch" href="/Tiny-blog/assets/js/339.518b845b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/34.6188b173.js"><link rel="prefetch" href="/Tiny-blog/assets/js/340.5b869649.js"><link rel="prefetch" href="/Tiny-blog/assets/js/341.56131077.js"><link rel="prefetch" href="/Tiny-blog/assets/js/342.9f6e10e5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/343.825f7f3e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/344.1771eaa7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/345.afc7a778.js"><link rel="prefetch" href="/Tiny-blog/assets/js/346.ec637c8c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/347.9bf9a1c7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/348.3fc0368d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/349.065b9faa.js"><link rel="prefetch" href="/Tiny-blog/assets/js/35.66d76bed.js"><link rel="prefetch" href="/Tiny-blog/assets/js/350.e06cbed7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/351.73e50c04.js"><link rel="prefetch" href="/Tiny-blog/assets/js/352.b24a624e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/353.627159ad.js"><link rel="prefetch" href="/Tiny-blog/assets/js/354.ad3ee54c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/355.c4e57306.js"><link rel="prefetch" href="/Tiny-blog/assets/js/356.9a4767db.js"><link rel="prefetch" href="/Tiny-blog/assets/js/357.d9cab216.js"><link rel="prefetch" href="/Tiny-blog/assets/js/358.51eefca1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/359.a07e6288.js"><link rel="prefetch" href="/Tiny-blog/assets/js/36.9478612a.js"><link rel="prefetch" href="/Tiny-blog/assets/js/360.adbcdc1d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/37.566ece89.js"><link rel="prefetch" href="/Tiny-blog/assets/js/38.4807d8dc.js"><link rel="prefetch" href="/Tiny-blog/assets/js/39.1a7610ce.js"><link rel="prefetch" href="/Tiny-blog/assets/js/4.3ec949b2.js"><link rel="prefetch" href="/Tiny-blog/assets/js/40.89941262.js"><link rel="prefetch" href="/Tiny-blog/assets/js/41.9c5c6d7e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/42.2791a561.js"><link rel="prefetch" href="/Tiny-blog/assets/js/43.e390471b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/44.aa653784.js"><link rel="prefetch" href="/Tiny-blog/assets/js/45.a204f356.js"><link rel="prefetch" href="/Tiny-blog/assets/js/46.d3a58751.js"><link rel="prefetch" href="/Tiny-blog/assets/js/47.547a71eb.js"><link rel="prefetch" href="/Tiny-blog/assets/js/48.0ed2d500.js"><link rel="prefetch" href="/Tiny-blog/assets/js/49.7ada8d03.js"><link rel="prefetch" href="/Tiny-blog/assets/js/5.45bb1db2.js"><link rel="prefetch" href="/Tiny-blog/assets/js/50.e9f59a9c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/51.a848e49d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/52.b1f59256.js"><link rel="prefetch" href="/Tiny-blog/assets/js/53.b68773cf.js"><link rel="prefetch" href="/Tiny-blog/assets/js/54.a6a956f7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/55.2668634c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/56.fc9a40d5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/57.64515059.js"><link rel="prefetch" href="/Tiny-blog/assets/js/58.141b1563.js"><link rel="prefetch" href="/Tiny-blog/assets/js/59.f4123844.js"><link rel="prefetch" href="/Tiny-blog/assets/js/6.d7e7a719.js"><link rel="prefetch" href="/Tiny-blog/assets/js/60.03d8976e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/61.e2e0cc3c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/62.5f5e3fc9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/63.ff9747f5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/64.c52a74f3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/65.bc239ea8.js"><link rel="prefetch" href="/Tiny-blog/assets/js/66.38ada3c7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/67.e83d8716.js"><link rel="prefetch" href="/Tiny-blog/assets/js/68.6a45e3bd.js"><link rel="prefetch" href="/Tiny-blog/assets/js/69.e71ce288.js"><link rel="prefetch" href="/Tiny-blog/assets/js/7.b7386b35.js"><link rel="prefetch" href="/Tiny-blog/assets/js/70.c117cec0.js"><link rel="prefetch" href="/Tiny-blog/assets/js/71.10b9bc47.js"><link rel="prefetch" href="/Tiny-blog/assets/js/72.6908fcff.js"><link rel="prefetch" href="/Tiny-blog/assets/js/73.ad7c7e12.js"><link rel="prefetch" href="/Tiny-blog/assets/js/74.58ec3ed9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/75.c46c52c2.js"><link rel="prefetch" href="/Tiny-blog/assets/js/76.5498a573.js"><link rel="prefetch" href="/Tiny-blog/assets/js/77.1a137a54.js"><link rel="prefetch" href="/Tiny-blog/assets/js/78.ab1343e5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/79.2f63af0f.js"><link rel="prefetch" href="/Tiny-blog/assets/js/8.ab44931b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/80.afeb1180.js"><link rel="prefetch" href="/Tiny-blog/assets/js/81.4b994b30.js"><link rel="prefetch" href="/Tiny-blog/assets/js/82.ae3a05a5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/83.55ea3e17.js"><link rel="prefetch" href="/Tiny-blog/assets/js/84.6801c2ce.js"><link rel="prefetch" href="/Tiny-blog/assets/js/85.5f7f1977.js"><link rel="prefetch" href="/Tiny-blog/assets/js/86.42a3e0a7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/87.fcc22118.js"><link rel="prefetch" href="/Tiny-blog/assets/js/88.30b1ed0a.js"><link rel="prefetch" href="/Tiny-blog/assets/js/89.22b5b85e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/9.2f1806f3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/90.4e1cd660.js"><link rel="prefetch" href="/Tiny-blog/assets/js/91.e5d3fd7b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/92.1e1a3e1e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/93.b10a164d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/94.212e65b8.js"><link rel="prefetch" href="/Tiny-blog/assets/js/95.2ff99752.js"><link rel="prefetch" href="/Tiny-blog/assets/js/96.7bfa5898.js"><link rel="prefetch" href="/Tiny-blog/assets/js/97.9867e9b3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/98.a737b61e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/99.93ce9e3b.js">
+    <link rel="stylesheet" href="/Tiny-blog/assets/css/0.styles.366936ce.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Tiny-blog/" class="home-link router-link-active"><!----> <span class="site-name">Tiny-blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="api online" class="dropdown-title"><span class="title">api online</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.kancloud.cn/yunye/axios/234845" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Axios
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.w3cschool.cn/axurezwjc/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Axure
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.runoob.com/bootstrap/bootstrap-tutorial.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Bootstrap
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://helm.sh/docs/intro/quickstart/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Helm
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jhipster.tech/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Jhipster
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jquery123.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  jQuery
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leetcode-cn.com/problemset/algorithms/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  LeetCode
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://morrisjs.github.io/morris.js/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Morris.js
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://nacos.io/zh-cn/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Nacos
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://spring.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Spring
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/alibaba/spring-cloud-alibaba" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Spring Cloud Alibaba GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://pingcap.com/docs-cn/stable/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  TiDB
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://cn.vuejs.org/v2/api/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://vuex.vuejs.org/zh/api/#vuex-store" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vuex
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="frontEnd" class="dropdown-title"><span class="title">frontEnd</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tiny-blog/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/jquery/" class="nav-link">
+  Jquery
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/vue/vuepress.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/frontother/templateuse.html" class="nav-link">
+  other
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tiny-blog/java00/" class="nav-link">
+  快速入门
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java01/" class="nav-link">
+  面向对象编程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java02/" class="nav-link">
+  异常
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javareflect/" class="nav-link">
+  反射
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java03/" class="nav-link">
+  注解
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java04/" class="nav-link">
+  泛型
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/collection/" class="nav-link">
+  集合
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/structure/" class="nav-link">
+  数据结构和算法
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javaio/" class="nav-link">
+  IO
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/time/" class="nav-link">
+  日期时间
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/class/" class="nav-link">
+  常用类
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java05/" class="nav-link">
+  正则表达式
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/encryption/" class="nav-link">
+  加密与安全
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javathread/" class="nav-link">
+  多线程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java06/" class="nav-link">
+  函数式编程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java07/" class="nav-link">
+  接口
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java08/" class="nav-link">
+  内部类
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java09/" class="nav-link">
+  Scanner 类
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javaosi/" class="nav-link">
+  网络编程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/jdbc/" class="nav-link">
+  JDBC编程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/design/" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="backEnd" class="dropdown-title"><span class="title">backEnd</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tiny-blog/Spring/" class="nav-link">
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/Log4j/" class="nav-link">
+  Log4j
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springweb/" class="nav-link">
+  Spring Web
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springmvc/" class="nav-link">
+  Spring MVC
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/MyBatis/" class="nav-link">
+  MyBatis
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springtransation/" class="nav-link">
+  Spring事务管理
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/communication/" class="nav-link">
+  解决模块间通信问题
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springboot/" class="nav-link">
+  Spring Boot
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springcloud/" class="nav-link">
+  Spring Cloud
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/jvm/" class="nav-link">
+  JVM
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/plugins&amp;utils/" class="nav-link">
+  Plugins&amp;Utils
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/solvedproblems/spring-boot-static.html" class="nav-link">
+  Solved problems
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/other/other01.html" class="nav-link">
+  other
+</a></li></ul></div></div><div class="nav-item"><a href="/Tiny-blog/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/Tiny-blog/leetcode/" class="nav-link">
+  LeetCode
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="容器化部署" class="dropdown-title"><span class="title">容器化部署</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tiny-blog/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/kubernetes/" class="nav-link">
+  Kubernetes
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="api online" class="dropdown-title"><span class="title">api online</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.kancloud.cn/yunye/axios/234845" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Axios
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.w3cschool.cn/axurezwjc/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Axure
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.runoob.com/bootstrap/bootstrap-tutorial.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Bootstrap
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://helm.sh/docs/intro/quickstart/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Helm
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jhipster.tech/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Jhipster
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jquery123.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  jQuery
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leetcode-cn.com/problemset/algorithms/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  LeetCode
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://morrisjs.github.io/morris.js/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Morris.js
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://nacos.io/zh-cn/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Nacos
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://spring.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Spring
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/alibaba/spring-cloud-alibaba" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Spring Cloud Alibaba GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://pingcap.com/docs-cn/stable/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  TiDB
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://cn.vuejs.org/v2/api/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://vuex.vuejs.org/zh/api/#vuex-store" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vuex
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="frontEnd" class="dropdown-title"><span class="title">frontEnd</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tiny-blog/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/jquery/" class="nav-link">
+  Jquery
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/vue/vuepress.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/frontother/templateuse.html" class="nav-link">
+  other
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tiny-blog/java00/" class="nav-link">
+  快速入门
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java01/" class="nav-link">
+  面向对象编程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java02/" class="nav-link">
+  异常
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javareflect/" class="nav-link">
+  反射
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java03/" class="nav-link">
+  注解
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java04/" class="nav-link">
+  泛型
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/collection/" class="nav-link">
+  集合
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/structure/" class="nav-link">
+  数据结构和算法
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javaio/" class="nav-link">
+  IO
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/time/" class="nav-link">
+  日期时间
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/class/" class="nav-link">
+  常用类
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java05/" class="nav-link">
+  正则表达式
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/encryption/" class="nav-link">
+  加密与安全
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javathread/" class="nav-link">
+  多线程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java06/" class="nav-link">
+  函数式编程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java07/" class="nav-link">
+  接口
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java08/" class="nav-link">
+  内部类
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java09/" class="nav-link">
+  Scanner 类
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javaosi/" class="nav-link">
+  网络编程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/jdbc/" class="nav-link">
+  JDBC编程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/design/" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="backEnd" class="dropdown-title"><span class="title">backEnd</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tiny-blog/Spring/" class="nav-link">
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/Log4j/" class="nav-link">
+  Log4j
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springweb/" class="nav-link">
+  Spring Web
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springmvc/" class="nav-link">
+  Spring MVC
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/MyBatis/" class="nav-link">
+  MyBatis
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springtransation/" class="nav-link">
+  Spring事务管理
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/communication/" class="nav-link">
+  解决模块间通信问题
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springboot/" class="nav-link">
+  Spring Boot
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springcloud/" class="nav-link">
+  Spring Cloud
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/jvm/" class="nav-link">
+  JVM
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/plugins&amp;utils/" class="nav-link">
+  Plugins&amp;Utils
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/solvedproblems/spring-boot-static.html" class="nav-link">
+  Solved problems
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/other/other01.html" class="nav-link">
+  other
+</a></li></ul></div></div><div class="nav-item"><a href="/Tiny-blog/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/Tiny-blog/leetcode/" class="nav-link">
+  LeetCode
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="容器化部署" class="dropdown-title"><span class="title">容器化部署</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tiny-blog/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/kubernetes/" class="nav-link">
+  Kubernetes
+</a></li></ul></div></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="k近邻法-k-nn"><a href="#k近邻法-k-nn" class="header-anchor">#</a> K近邻法 (K-NN)</h1> <div align="center"><img src="http://ww1.sinaimg.cn/large/007Rnr4nly1ga0ox91qpoj30m81hwkfu.jpg"></div> <h2 id="导入相关库"><a href="#导入相关库" class="header-anchor">#</a> 导入相关库</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="导入数据集"><a href="#导入数据集" class="header-anchor">#</a> 导入数据集</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code>dataset <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">'Social_Network_Ads.csv'</span><span class="token punctuation">)</span>
+<span class="token comment"># 为了方便理解，这里我们只取Age年龄和EstimatedSalary估计工资作为特征</span>
+X <span class="token operator">=</span> dataset<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span>values
+y <span class="token operator">=</span> dataset<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">.</span>values
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="将数据划分成训练集和测试集"><a href="#将数据划分成训练集和测试集" class="header-anchor">#</a> 将数据划分成训练集和测试集</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>model_selection <span class="token keyword">import</span> train_test_split
+X_train<span class="token punctuation">,</span> X_test<span class="token punctuation">,</span> y_train<span class="token punctuation">,</span> y_test <span class="token operator">=</span> train_test_split<span class="token punctuation">(</span>X<span class="token punctuation">,</span> y<span class="token punctuation">,</span> test_size <span class="token operator">=</span> <span class="token number">0.25</span><span class="token punctuation">,</span> random_state <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="特征缩放"><a href="#特征缩放" class="header-anchor">#</a> 特征缩放</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>preprocessing <span class="token keyword">import</span> StandardScaler
+sc <span class="token operator">=</span> StandardScaler<span class="token punctuation">(</span><span class="token punctuation">)</span>
+X_train <span class="token operator">=</span> sc<span class="token punctuation">.</span>fit_transform<span class="token punctuation">(</span>X_train<span class="token punctuation">)</span>
+X_test <span class="token operator">=</span> sc<span class="token punctuation">.</span>transform<span class="token punctuation">(</span>X_test<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="使用k-nn对训练集数据进行训练"><a href="#使用k-nn对训练集数据进行训练" class="header-anchor">#</a> 使用K-NN对训练集数据进行训练</h2> <p>从sklearn的neighbors类中导入KNeighborsClassifier学习器，设置好相关的参数 n_neighbors = 5(K值的选择，默认选择5)、 metric = 'minkowski'(距离度量的选择，这里选择的是闵氏距离(默认参数))、 p = 2 (距离度量metric的附属参数，只用于闵氏距离和带权重闵氏距离中p值的选择，p=1为曼哈顿距离， p=2为欧式距离。默认为2)</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>neighbors <span class="token keyword">import</span> KNeighborsClassifier
+classifier <span class="token operator">=</span> KNeighborsClassifier<span class="token punctuation">(</span>n_neighbors <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">,</span> metric <span class="token operator">=</span> <span class="token string">'minkowski'</span><span class="token punctuation">,</span> p <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">)</span>
+classifier<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="对测试集进行预测"><a href="#对测试集进行预测" class="header-anchor">#</a> 对测试集进行预测</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code>y_pred <span class="token operator">=</span> classifier<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_test<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>[0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 1 0 0 1 0 0 1 0 1 0 1 0 0 0 0 0 0 1 0 0 0 0
+ 0 0 1 0 0 0 0 1 0 0 1 0 1 1 0 0 1 1 1 0 0 1 0 0 1 0 1 0 1 0 0 0 0 1 0 0 1
+ 0 0 0 0 1 1 1 1 0 0 1 0 0 1 1 0 0 1 0 0 0 0 0 1 1 1]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="生成混淆矩阵"><a href="#生成混淆矩阵" class="header-anchor">#</a> 生成混淆矩阵</h2> <p>混淆矩阵可以对一个分类器性能进行分析，由此可以计算出许多指标，例如：ROC曲线、正确率等</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> confusion_matrix
+cm <span class="token operator">=</span> confusion_matrix<span class="token punctuation">(</span>y_test<span class="token punctuation">,</span> y_pred<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>[[64  4]
+ [ 3 29]]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>    预测值
+    0   1
+实0 64  4   
+际1 3   29
+值
+预测集中的0总共有68个，1总共有32个。 在这个混淆矩阵中，实际有68个0，但K-NN预测出有67(64+3)个0，其中有3个实际上是1。 同时K-NN预测出有33(4+29)个1，其中4个实际上是0。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h2 id="代码"><a href="#代码" class="header-anchor">#</a> 代码</h2> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># Importing the libraries</span>
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+
+<span class="token comment"># Importing the dataset</span>
+dataset <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">'../datasets/Social_Network_Ads.csv'</span><span class="token punctuation">)</span>
+X <span class="token operator">=</span> dataset<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span>values
+y <span class="token operator">=</span> dataset<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">.</span>values
+
+<span class="token comment"># Splitting the dataset into the Training set and Test set</span>
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>model_selection <span class="token keyword">import</span> train_test_split
+X_train<span class="token punctuation">,</span> X_test<span class="token punctuation">,</span> y_train<span class="token punctuation">,</span> y_test <span class="token operator">=</span> train_test_split<span class="token punctuation">(</span>X<span class="token punctuation">,</span> y<span class="token punctuation">,</span> test_size <span class="token operator">=</span> <span class="token number">0.25</span><span class="token punctuation">,</span> random_state <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Feature Scaling</span>
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>preprocessing <span class="token keyword">import</span> StandardScaler
+sc <span class="token operator">=</span> StandardScaler<span class="token punctuation">(</span><span class="token punctuation">)</span>
+X_train <span class="token operator">=</span> sc<span class="token punctuation">.</span>fit_transform<span class="token punctuation">(</span>X_train<span class="token punctuation">)</span>
+X_test <span class="token operator">=</span> sc<span class="token punctuation">.</span>transform<span class="token punctuation">(</span>X_test<span class="token punctuation">)</span>
+
+<span class="token comment"># Fitting K-NN to the Training set</span>
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>neighbors <span class="token keyword">import</span> KNeighborsClassifier
+classifier <span class="token operator">=</span> KNeighborsClassifier<span class="token punctuation">(</span>n_neighbors <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">,</span> metric <span class="token operator">=</span> <span class="token string">'minkowski'</span><span class="token punctuation">,</span> p <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">)</span>
+classifier<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span>
+
+<span class="token comment"># Predicting the Test set results</span>
+y_pred <span class="token operator">=</span> classifier<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_test<span class="token punctuation">)</span>
+
+<span class="token comment"># Making the Confusion Matrix</span>
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> confusion_matrix
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> classification_report
+cm <span class="token operator">=</span> confusion_matrix<span class="token punctuation">(</span>y_test<span class="token punctuation">,</span> y_pred<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>cm<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>classification_report<span class="token punctuation">(</span>y_test<span class="token punctuation">,</span> y_pred<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br></div></div><h2 id="数据"><a href="#数据" class="header-anchor">#</a> 数据</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>User ID,Gender,Age,EstimatedSalary,Purchased
+15624510,Male,19,19000,0
+15810944,Male,35,20000,0
+15668575,Female,26,43000,0
+15603246,Female,27,57000,0
+15804002,Male,19,76000,0
+15728773,Male,27,58000,0
+15598044,Female,27,84000,0
+15694829,Female,32,150000,1
+15600575,Male,25,33000,0
+15727311,Female,35,65000,0
+15570769,Female,26,80000,0
+15606274,Female,26,52000,0
+15746139,Male,20,86000,0
+15704987,Male,32,18000,0
+15628972,Male,18,82000,0
+15697686,Male,29,80000,0
+15733883,Male,47,25000,1
+15617482,Male,45,26000,1
+15704583,Male,46,28000,1
+15621083,Female,48,29000,1
+15649487,Male,45,22000,1
+15736760,Female,47,49000,1
+15714658,Male,48,41000,1
+15599081,Female,45,22000,1
+15705113,Male,46,23000,1
+15631159,Male,47,20000,1
+15792818,Male,49,28000,1
+15633531,Female,47,30000,1
+15744529,Male,29,43000,0
+15669656,Male,31,18000,0
+15581198,Male,31,74000,0
+15729054,Female,27,137000,1
+15573452,Female,21,16000,0
+15776733,Female,28,44000,0
+15724858,Male,27,90000,0
+15713144,Male,35,27000,0
+15690188,Female,33,28000,0
+15689425,Male,30,49000,0
+15671766,Female,26,72000,0
+15782806,Female,27,31000,0
+15764419,Female,27,17000,0
+15591915,Female,33,51000,0
+15772798,Male,35,108000,0
+15792008,Male,30,15000,0
+15715541,Female,28,84000,0
+15639277,Male,23,20000,0
+15798850,Male,25,79000,0
+15776348,Female,27,54000,0
+15727696,Male,30,135000,1
+15793813,Female,31,89000,0
+15694395,Female,24,32000,0
+15764195,Female,18,44000,0
+15744919,Female,29,83000,0
+15671655,Female,35,23000,0
+15654901,Female,27,58000,0
+15649136,Female,24,55000,0
+15775562,Female,23,48000,0
+15807481,Male,28,79000,0
+15642885,Male,22,18000,0
+15789109,Female,32,117000,0
+15814004,Male,27,20000,0
+15673619,Male,25,87000,0
+15595135,Female,23,66000,0
+15583681,Male,32,120000,1
+15605000,Female,59,83000,0
+15718071,Male,24,58000,0
+15679760,Male,24,19000,0
+15654574,Female,23,82000,0
+15577178,Female,22,63000,0
+15595324,Female,31,68000,0
+15756932,Male,25,80000,0
+15726358,Female,24,27000,0
+15595228,Female,20,23000,0
+15782530,Female,33,113000,0
+15592877,Male,32,18000,0
+15651983,Male,34,112000,1
+15746737,Male,18,52000,0
+15774179,Female,22,27000,0
+15667265,Female,28,87000,0
+15655123,Female,26,17000,0
+15595917,Male,30,80000,0
+15668385,Male,39,42000,0
+15709476,Male,20,49000,0
+15711218,Male,35,88000,0
+15798659,Female,30,62000,0
+15663939,Female,31,118000,1
+15694946,Male,24,55000,0
+15631912,Female,28,85000,0
+15768816,Male,26,81000,0
+15682268,Male,35,50000,0
+15684801,Male,22,81000,0
+15636428,Female,30,116000,0
+15809823,Male,26,15000,0
+15699284,Female,29,28000,0
+15786993,Female,29,83000,0
+15709441,Female,35,44000,0
+15710257,Female,35,25000,0
+15582492,Male,28,123000,1
+15575694,Male,35,73000,0
+15756820,Female,28,37000,0
+15766289,Male,27,88000,0
+15593014,Male,28,59000,0
+15584545,Female,32,86000,0
+15675949,Female,33,149000,1
+15672091,Female,19,21000,0
+15801658,Male,21,72000,0
+15706185,Female,26,35000,0
+15789863,Male,27,89000,0
+15720943,Male,26,86000,0
+15697997,Female,38,80000,0
+15665416,Female,39,71000,0
+15660200,Female,37,71000,0
+15619653,Male,38,61000,0
+15773447,Male,37,55000,0
+15739160,Male,42,80000,0
+15689237,Male,40,57000,0
+15679297,Male,35,75000,0
+15591433,Male,36,52000,0
+15642725,Male,40,59000,0
+15701962,Male,41,59000,0
+15811613,Female,36,75000,0
+15741049,Male,37,72000,0
+15724423,Female,40,75000,0
+15574305,Male,35,53000,0
+15678168,Female,41,51000,0
+15697020,Female,39,61000,0
+15610801,Male,42,65000,0
+15745232,Male,26,32000,0
+15722758,Male,30,17000,0
+15792102,Female,26,84000,0
+15675185,Male,31,58000,0
+15801247,Male,33,31000,0
+15725660,Male,30,87000,0
+15638963,Female,21,68000,0
+15800061,Female,28,55000,0
+15578006,Male,23,63000,0
+15668504,Female,20,82000,0
+15687491,Male,30,107000,1
+15610403,Female,28,59000,0
+15741094,Male,19,25000,0
+15807909,Male,19,85000,0
+15666141,Female,18,68000,0
+15617134,Male,35,59000,0
+15783029,Male,30,89000,0
+15622833,Female,34,25000,0
+15746422,Female,24,89000,0
+15750839,Female,27,96000,1
+15749130,Female,41,30000,0
+15779862,Male,29,61000,0
+15767871,Male,20,74000,0
+15679651,Female,26,15000,0
+15576219,Male,41,45000,0
+15699247,Male,31,76000,0
+15619087,Female,36,50000,0
+15605327,Male,40,47000,0
+15610140,Female,31,15000,0
+15791174,Male,46,59000,0
+15602373,Male,29,75000,0
+15762605,Male,26,30000,0
+15598840,Female,32,135000,1
+15744279,Male,32,100000,1
+15670619,Male,25,90000,0
+15599533,Female,37,33000,0
+15757837,Male,35,38000,0
+15697574,Female,33,69000,0
+15578738,Female,18,86000,0
+15762228,Female,22,55000,0
+15614827,Female,35,71000,0
+15789815,Male,29,148000,1
+15579781,Female,29,47000,0
+15587013,Male,21,88000,0
+15570932,Male,34,115000,0
+15794661,Female,26,118000,0
+15581654,Female,34,43000,0
+15644296,Female,34,72000,0
+15614420,Female,23,28000,0
+15609653,Female,35,47000,0
+15594577,Male,25,22000,0
+15584114,Male,24,23000,0
+15673367,Female,31,34000,0
+15685576,Male,26,16000,0
+15774727,Female,31,71000,0
+15694288,Female,32,117000,1
+15603319,Male,33,43000,0
+15759066,Female,33,60000,0
+15814816,Male,31,66000,0
+15724402,Female,20,82000,0
+15571059,Female,33,41000,0
+15674206,Male,35,72000,0
+15715160,Male,28,32000,0
+15730448,Male,24,84000,0
+15662067,Female,19,26000,0
+15779581,Male,29,43000,0
+15662901,Male,19,70000,0
+15689751,Male,28,89000,0
+15667742,Male,34,43000,0
+15738448,Female,30,79000,0
+15680243,Female,20,36000,0
+15745083,Male,26,80000,0
+15708228,Male,35,22000,0
+15628523,Male,35,39000,0
+15708196,Male,49,74000,0
+15735549,Female,39,134000,1
+15809347,Female,41,71000,0
+15660866,Female,58,101000,1
+15766609,Female,47,47000,0
+15654230,Female,55,130000,1
+15794566,Female,52,114000,0
+15800890,Female,40,142000,1
+15697424,Female,46,22000,0
+15724536,Female,48,96000,1
+15735878,Male,52,150000,1
+15707596,Female,59,42000,0
+15657163,Male,35,58000,0
+15622478,Male,47,43000,0
+15779529,Female,60,108000,1
+15636023,Male,49,65000,0
+15582066,Male,40,78000,0
+15666675,Female,46,96000,0
+15732987,Male,59,143000,1
+15789432,Female,41,80000,0
+15663161,Male,35,91000,1
+15694879,Male,37,144000,1
+15593715,Male,60,102000,1
+15575002,Female,35,60000,0
+15622171,Male,37,53000,0
+15795224,Female,36,126000,1
+15685346,Male,56,133000,1
+15691808,Female,40,72000,0
+15721007,Female,42,80000,1
+15794253,Female,35,147000,1
+15694453,Male,39,42000,0
+15813113,Male,40,107000,1
+15614187,Male,49,86000,1
+15619407,Female,38,112000,0
+15646227,Male,46,79000,1
+15660541,Male,40,57000,0
+15753874,Female,37,80000,0
+15617877,Female,46,82000,0
+15772073,Female,53,143000,1
+15701537,Male,42,149000,1
+15736228,Male,38,59000,0
+15780572,Female,50,88000,1
+15769596,Female,56,104000,1
+15586996,Female,41,72000,0
+15722061,Female,51,146000,1
+15638003,Female,35,50000,0
+15775590,Female,57,122000,1
+15730688,Male,41,52000,0
+15753102,Female,35,97000,1
+15810075,Female,44,39000,0
+15723373,Male,37,52000,0
+15795298,Female,48,134000,1
+15584320,Female,37,146000,1
+15724161,Female,50,44000,0
+15750056,Female,52,90000,1
+15609637,Female,41,72000,0
+15794493,Male,40,57000,0
+15569641,Female,58,95000,1
+15815236,Female,45,131000,1
+15811177,Female,35,77000,0
+15680587,Male,36,144000,1
+15672821,Female,55,125000,1
+15767681,Female,35,72000,0
+15600379,Male,48,90000,1
+15801336,Female,42,108000,1
+15721592,Male,40,75000,0
+15581282,Male,37,74000,0
+15746203,Female,47,144000,1
+15583137,Male,40,61000,0
+15680752,Female,43,133000,0
+15688172,Female,59,76000,1
+15791373,Male,60,42000,1
+15589449,Male,39,106000,1
+15692819,Female,57,26000,1
+15727467,Male,57,74000,1
+15734312,Male,38,71000,0
+15764604,Male,49,88000,1
+15613014,Female,52,38000,1
+15759684,Female,50,36000,1
+15609669,Female,59,88000,1
+15685536,Male,35,61000,0
+15750447,Male,37,70000,1
+15663249,Female,52,21000,1
+15638646,Male,48,141000,0
+15734161,Female,37,93000,1
+15631070,Female,37,62000,0
+15761950,Female,48,138000,1
+15649668,Male,41,79000,0
+15713912,Female,37,78000,1
+15586757,Male,39,134000,1
+15596522,Male,49,89000,1
+15625395,Male,55,39000,1
+15760570,Male,37,77000,0
+15566689,Female,35,57000,0
+15725794,Female,36,63000,0
+15673539,Male,42,73000,1
+15705298,Female,43,112000,1
+15675791,Male,45,79000,0
+15747043,Male,46,117000,1
+15736397,Female,58,38000,1
+15678201,Male,48,74000,1
+15720745,Female,37,137000,1
+15637593,Male,37,79000,1
+15598070,Female,40,60000,0
+15787550,Male,42,54000,0
+15603942,Female,51,134000,0
+15733973,Female,47,113000,1
+15596761,Male,36,125000,1
+15652400,Female,38,50000,0
+15717893,Female,42,70000,0
+15622585,Male,39,96000,1
+15733964,Female,38,50000,0
+15753861,Female,49,141000,1
+15747097,Female,39,79000,0
+15594762,Female,39,75000,1
+15667417,Female,54,104000,1
+15684861,Male,35,55000,0
+15742204,Male,45,32000,1
+15623502,Male,36,60000,0
+15774872,Female,52,138000,1
+15611191,Female,53,82000,1
+15674331,Male,41,52000,0
+15619465,Female,48,30000,1
+15575247,Female,48,131000,1
+15695679,Female,41,60000,0
+15713463,Male,41,72000,0
+15785170,Female,42,75000,0
+15796351,Male,36,118000,1
+15639576,Female,47,107000,1
+15693264,Male,38,51000,0
+15589715,Female,48,119000,1
+15769902,Male,42,65000,0
+15587177,Male,40,65000,0
+15814553,Male,57,60000,1
+15601550,Female,36,54000,0
+15664907,Male,58,144000,1
+15612465,Male,35,79000,0
+15810800,Female,38,55000,0
+15665760,Male,39,122000,1
+15588080,Female,53,104000,1
+15776844,Male,35,75000,0
+15717560,Female,38,65000,0
+15629739,Female,47,51000,1
+15729908,Male,47,105000,1
+15716781,Female,41,63000,0
+15646936,Male,53,72000,1
+15768151,Female,54,108000,1
+15579212,Male,39,77000,0
+15721835,Male,38,61000,0
+15800515,Female,38,113000,1
+15591279,Male,37,75000,0
+15587419,Female,42,90000,1
+15750335,Female,37,57000,0
+15699619,Male,36,99000,1
+15606472,Male,60,34000,1
+15778368,Male,54,70000,1
+15671387,Female,41,72000,0
+15573926,Male,40,71000,1
+15709183,Male,42,54000,0
+15577514,Male,43,129000,1
+15778830,Female,53,34000,1
+15768072,Female,47,50000,1
+15768293,Female,42,79000,0
+15654456,Male,42,104000,1
+15807525,Female,59,29000,1
+15574372,Female,58,47000,1
+15671249,Male,46,88000,1
+15779744,Male,38,71000,0
+15624755,Female,54,26000,1
+15611430,Female,60,46000,1
+15774744,Male,60,83000,1
+15629885,Female,39,73000,0
+15708791,Male,59,130000,1
+15793890,Female,37,80000,0
+15646091,Female,46,32000,1
+15596984,Female,46,74000,0
+15800215,Female,42,53000,0
+15577806,Male,41,87000,1
+15749381,Female,58,23000,1
+15683758,Male,42,64000,0
+15670615,Male,48,33000,1
+15715622,Female,44,139000,1
+15707634,Male,49,28000,1
+15806901,Female,57,33000,1
+15775335,Male,56,60000,1
+15724150,Female,49,39000,1
+15627220,Male,39,71000,0
+15672330,Male,47,34000,1
+15668521,Female,48,35000,1
+15807837,Male,48,33000,1
+15592570,Male,47,23000,1
+15748589,Female,45,45000,1
+15635893,Male,60,42000,1
+15757632,Female,39,59000,0
+15691863,Female,46,41000,1
+15706071,Male,51,23000,1
+15654296,Female,50,20000,1
+15755018,Male,36,33000,0
+15594041,Female,49,36000,1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br><span class="line-number">218</span><br><span class="line-number">219</span><br><span class="line-number">220</span><br><span class="line-number">221</span><br><span class="line-number">222</span><br><span class="line-number">223</span><br><span class="line-number">224</span><br><span class="line-number">225</span><br><span class="line-number">226</span><br><span class="line-number">227</span><br><span class="line-number">228</span><br><span class="line-number">229</span><br><span class="line-number">230</span><br><span class="line-number">231</span><br><span class="line-number">232</span><br><span class="line-number">233</span><br><span class="line-number">234</span><br><span class="line-number">235</span><br><span class="line-number">236</span><br><span class="line-number">237</span><br><span class="line-number">238</span><br><span class="line-number">239</span><br><span class="line-number">240</span><br><span class="line-number">241</span><br><span class="line-number">242</span><br><span class="line-number">243</span><br><span class="line-number">244</span><br><span class="line-number">245</span><br><span class="line-number">246</span><br><span class="line-number">247</span><br><span class="line-number">248</span><br><span class="line-number">249</span><br><span class="line-number">250</span><br><span class="line-number">251</span><br><span class="line-number">252</span><br><span class="line-number">253</span><br><span class="line-number">254</span><br><span class="line-number">255</span><br><span class="line-number">256</span><br><span class="line-number">257</span><br><span class="line-number">258</span><br><span class="line-number">259</span><br><span class="line-number">260</span><br><span class="line-number">261</span><br><span class="line-number">262</span><br><span class="line-number">263</span><br><span class="line-number">264</span><br><span class="line-number">265</span><br><span class="line-number">266</span><br><span class="line-number">267</span><br><span class="line-number">268</span><br><span class="line-number">269</span><br><span class="line-number">270</span><br><span class="line-number">271</span><br><span class="line-number">272</span><br><span class="line-number">273</span><br><span class="line-number">274</span><br><span class="line-number">275</span><br><span class="line-number">276</span><br><span class="line-number">277</span><br><span class="line-number">278</span><br><span class="line-number">279</span><br><span class="line-number">280</span><br><span class="line-number">281</span><br><span class="line-number">282</span><br><span class="line-number">283</span><br><span class="line-number">284</span><br><span class="line-number">285</span><br><span class="line-number">286</span><br><span class="line-number">287</span><br><span class="line-number">288</span><br><span class="line-number">289</span><br><span class="line-number">290</span><br><span class="line-number">291</span><br><span class="line-number">292</span><br><span class="line-number">293</span><br><span class="line-number">294</span><br><span class="line-number">295</span><br><span class="line-number">296</span><br><span class="line-number">297</span><br><span class="line-number">298</span><br><span class="line-number">299</span><br><span class="line-number">300</span><br><span class="line-number">301</span><br><span class="line-number">302</span><br><span class="line-number">303</span><br><span class="line-number">304</span><br><span class="line-number">305</span><br><span class="line-number">306</span><br><span class="line-number">307</span><br><span class="line-number">308</span><br><span class="line-number">309</span><br><span class="line-number">310</span><br><span class="line-number">311</span><br><span class="line-number">312</span><br><span class="line-number">313</span><br><span class="line-number">314</span><br><span class="line-number">315</span><br><span class="line-number">316</span><br><span class="line-number">317</span><br><span class="line-number">318</span><br><span class="line-number">319</span><br><span class="line-number">320</span><br><span class="line-number">321</span><br><span class="line-number">322</span><br><span class="line-number">323</span><br><span class="line-number">324</span><br><span class="line-number">325</span><br><span class="line-number">326</span><br><span class="line-number">327</span><br><span class="line-number">328</span><br><span class="line-number">329</span><br><span class="line-number">330</span><br><span class="line-number">331</span><br><span class="line-number">332</span><br><span class="line-number">333</span><br><span class="line-number">334</span><br><span class="line-number">335</span><br><span class="line-number">336</span><br><span class="line-number">337</span><br><span class="line-number">338</span><br><span class="line-number">339</span><br><span class="line-number">340</span><br><span class="line-number">341</span><br><span class="line-number">342</span><br><span class="line-number">343</span><br><span class="line-number">344</span><br><span class="line-number">345</span><br><span class="line-number">346</span><br><span class="line-number">347</span><br><span class="line-number">348</span><br><span class="line-number">349</span><br><span class="line-number">350</span><br><span class="line-number">351</span><br><span class="line-number">352</span><br><span class="line-number">353</span><br><span class="line-number">354</span><br><span class="line-number">355</span><br><span class="line-number">356</span><br><span class="line-number">357</span><br><span class="line-number">358</span><br><span class="line-number">359</span><br><span class="line-number">360</span><br><span class="line-number">361</span><br><span class="line-number">362</span><br><span class="line-number">363</span><br><span class="line-number">364</span><br><span class="line-number">365</span><br><span class="line-number">366</span><br><span class="line-number">367</span><br><span class="line-number">368</span><br><span class="line-number">369</span><br><span class="line-number">370</span><br><span class="line-number">371</span><br><span class="line-number">372</span><br><span class="line-number">373</span><br><span class="line-number">374</span><br><span class="line-number">375</span><br><span class="line-number">376</span><br><span class="line-number">377</span><br><span class="line-number">378</span><br><span class="line-number">379</span><br><span class="line-number">380</span><br><span class="line-number">381</span><br><span class="line-number">382</span><br><span class="line-number">383</span><br><span class="line-number">384</span><br><span class="line-number">385</span><br><span class="line-number">386</span><br><span class="line-number">387</span><br><span class="line-number">388</span><br><span class="line-number">389</span><br><span class="line-number">390</span><br><span class="line-number">391</span><br><span class="line-number">392</span><br><span class="line-number">393</span><br><span class="line-number">394</span><br><span class="line-number">395</span><br><span class="line-number">396</span><br><span class="line-number">397</span><br><span class="line-number">398</span><br><span class="line-number">399</span><br><span class="line-number">400</span><br><span class="line-number">401</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最近更新:</span> <span class="time">2019-12-18 1:37:12 ├F10: PM┤</span></div></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/Tiny-blog/assets/js/app.2c5aab52.js" defer></script><script src="/Tiny-blog/assets/js/2.88f50141.js" defer></script><script src="/Tiny-blog/assets/js/265.35d4bc27.js" defer></script>
+  </body>
+</html>

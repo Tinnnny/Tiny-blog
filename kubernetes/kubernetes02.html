@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Kubernetes 安装集群 | Tiny-blog</title>
+    <meta name="generator" content="VuePress 1.5.1">
+    <link rel="icon" href="/Tiny-blog/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+    <meta name="description" content="Tiny-blog,Vuepress文档，Vuepress博客">
+    <link rel="preload" href="/Tiny-blog/assets/css/0.styles.366936ce.css" as="style"><link rel="preload" href="/Tiny-blog/assets/js/app.2c5aab52.js" as="script"><link rel="preload" href="/Tiny-blog/assets/js/2.88f50141.js" as="script"><link rel="preload" href="/Tiny-blog/assets/js/226.883dac42.js" as="script"><link rel="prefetch" href="/Tiny-blog/assets/js/10.da42f03d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/100.4782b170.js"><link rel="prefetch" href="/Tiny-blog/assets/js/101.2a9e1948.js"><link rel="prefetch" href="/Tiny-blog/assets/js/102.b1011980.js"><link rel="prefetch" href="/Tiny-blog/assets/js/103.dc5deec1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/104.425c5e2b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/105.082066c4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/106.4ccdfe93.js"><link rel="prefetch" href="/Tiny-blog/assets/js/107.1459568a.js"><link rel="prefetch" href="/Tiny-blog/assets/js/108.9a1b26e6.js"><link rel="prefetch" href="/Tiny-blog/assets/js/109.29059245.js"><link rel="prefetch" href="/Tiny-blog/assets/js/11.72229ab9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/110.9d5e59a3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/111.8a145631.js"><link rel="prefetch" href="/Tiny-blog/assets/js/112.c11643b9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/113.944edcd9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/114.85dbb06d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/115.2f269bf3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/116.0f9888bd.js"><link rel="prefetch" href="/Tiny-blog/assets/js/117.adc4f5cc.js"><link rel="prefetch" href="/Tiny-blog/assets/js/118.6f14fabd.js"><link rel="prefetch" href="/Tiny-blog/assets/js/119.c7f63aba.js"><link rel="prefetch" href="/Tiny-blog/assets/js/12.1598abdb.js"><link rel="prefetch" href="/Tiny-blog/assets/js/120.a2e5ee6a.js"><link rel="prefetch" href="/Tiny-blog/assets/js/121.07a52021.js"><link rel="prefetch" href="/Tiny-blog/assets/js/122.79c53b41.js"><link rel="prefetch" href="/Tiny-blog/assets/js/123.7c5c9da8.js"><link rel="prefetch" href="/Tiny-blog/assets/js/124.12bcf0ac.js"><link rel="prefetch" href="/Tiny-blog/assets/js/125.689cb79f.js"><link rel="prefetch" href="/Tiny-blog/assets/js/126.4471b2cd.js"><link rel="prefetch" href="/Tiny-blog/assets/js/127.2eff27c4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/128.f9673a64.js"><link rel="prefetch" href="/Tiny-blog/assets/js/129.0293c452.js"><link rel="prefetch" href="/Tiny-blog/assets/js/13.36df1c25.js"><link rel="prefetch" href="/Tiny-blog/assets/js/130.3d906aec.js"><link rel="prefetch" href="/Tiny-blog/assets/js/131.58a2e30a.js"><link rel="prefetch" href="/Tiny-blog/assets/js/132.b30682b4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/133.b2a755e1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/134.11fad7d2.js"><link rel="prefetch" href="/Tiny-blog/assets/js/135.ffa4a80b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/136.e88a13e5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/137.fda1fc28.js"><link rel="prefetch" href="/Tiny-blog/assets/js/138.f030fe82.js"><link rel="prefetch" href="/Tiny-blog/assets/js/139.6178c4d4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/14.8a0b5bdd.js"><link rel="prefetch" href="/Tiny-blog/assets/js/140.4153f1b3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/141.e5c5e788.js"><link rel="prefetch" href="/Tiny-blog/assets/js/142.dff12636.js"><link rel="prefetch" href="/Tiny-blog/assets/js/143.08b32275.js"><link rel="prefetch" href="/Tiny-blog/assets/js/144.dce05fc3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/145.3bede62f.js"><link rel="prefetch" href="/Tiny-blog/assets/js/146.e68535f4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/147.70083cd3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/148.bbe37500.js"><link rel="prefetch" href="/Tiny-blog/assets/js/149.e46b14d8.js"><link rel="prefetch" href="/Tiny-blog/assets/js/15.f6660f81.js"><link rel="prefetch" href="/Tiny-blog/assets/js/150.a45685fe.js"><link rel="prefetch" href="/Tiny-blog/assets/js/151.704ab362.js"><link rel="prefetch" href="/Tiny-blog/assets/js/152.e7c471f0.js"><link rel="prefetch" href="/Tiny-blog/assets/js/153.2db5b861.js"><link rel="prefetch" href="/Tiny-blog/assets/js/154.68dfe56e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/155.f983e780.js"><link rel="prefetch" href="/Tiny-blog/assets/js/156.5260fb27.js"><link rel="prefetch" href="/Tiny-blog/assets/js/157.ab02a116.js"><link rel="prefetch" href="/Tiny-blog/assets/js/158.ca33dbfc.js"><link rel="prefetch" href="/Tiny-blog/assets/js/159.5f5bc4bb.js"><link rel="prefetch" href="/Tiny-blog/assets/js/16.1b4c6a5c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/160.1a95ba8c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/161.6401b2b2.js"><link rel="prefetch" href="/Tiny-blog/assets/js/162.ee59bc40.js"><link rel="prefetch" href="/Tiny-blog/assets/js/163.05ee232f.js"><link rel="prefetch" href="/Tiny-blog/assets/js/164.9b9f50c9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/165.efe96f9a.js"><link rel="prefetch" href="/Tiny-blog/assets/js/166.ba4eb620.js"><link rel="prefetch" href="/Tiny-blog/assets/js/167.337ad619.js"><link rel="prefetch" href="/Tiny-blog/assets/js/168.9d75d31e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/169.dfaa3e10.js"><link rel="prefetch" href="/Tiny-blog/assets/js/17.1b657f2f.js"><link rel="prefetch" href="/Tiny-blog/assets/js/170.f1f14a12.js"><link rel="prefetch" href="/Tiny-blog/assets/js/171.9efd1343.js"><link rel="prefetch" href="/Tiny-blog/assets/js/172.c60f05f4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/173.704b06d3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/174.0c670db7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/175.9a0585af.js"><link rel="prefetch" href="/Tiny-blog/assets/js/176.cd892702.js"><link rel="prefetch" href="/Tiny-blog/assets/js/177.2402d7d3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/178.43aac8a1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/179.bbaf8de1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/18.52e1c926.js"><link rel="prefetch" href="/Tiny-blog/assets/js/180.e7cd13d0.js"><link rel="prefetch" href="/Tiny-blog/assets/js/181.65b2dae4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/182.714da3b6.js"><link rel="prefetch" href="/Tiny-blog/assets/js/183.ef6d9768.js"><link rel="prefetch" href="/Tiny-blog/assets/js/184.ff1a6402.js"><link rel="prefetch" href="/Tiny-blog/assets/js/185.48dd7132.js"><link rel="prefetch" href="/Tiny-blog/assets/js/186.13bdbbce.js"><link rel="prefetch" href="/Tiny-blog/assets/js/187.d2778f3a.js"><link rel="prefetch" href="/Tiny-blog/assets/js/188.df0f2b27.js"><link rel="prefetch" href="/Tiny-blog/assets/js/189.045dd303.js"><link rel="prefetch" href="/Tiny-blog/assets/js/19.94ffb7a4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/190.01cb8a7c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/191.6ed6b5da.js"><link rel="prefetch" href="/Tiny-blog/assets/js/192.f6adce85.js"><link rel="prefetch" href="/Tiny-blog/assets/js/193.f32e90a5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/194.d9d01ccc.js"><link rel="prefetch" href="/Tiny-blog/assets/js/195.3f37df13.js"><link rel="prefetch" href="/Tiny-blog/assets/js/196.5ac39da5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/197.7b80d742.js"><link rel="prefetch" href="/Tiny-blog/assets/js/198.ab7e17de.js"><link rel="prefetch" href="/Tiny-blog/assets/js/199.e2067d92.js"><link rel="prefetch" href="/Tiny-blog/assets/js/20.e9e94350.js"><link rel="prefetch" href="/Tiny-blog/assets/js/200.15aa2373.js"><link rel="prefetch" href="/Tiny-blog/assets/js/201.f74b3f62.js"><link rel="prefetch" href="/Tiny-blog/assets/js/202.fe653528.js"><link rel="prefetch" href="/Tiny-blog/assets/js/203.8efc3f63.js"><link rel="prefetch" href="/Tiny-blog/assets/js/204.9ce06a30.js"><link rel="prefetch" href="/Tiny-blog/assets/js/205.9c9f2d0c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/206.b3314268.js"><link rel="prefetch" href="/Tiny-blog/assets/js/207.db093363.js"><link rel="prefetch" href="/Tiny-blog/assets/js/208.7b68b87d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/209.f0655b2c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/21.83960581.js"><link rel="prefetch" href="/Tiny-blog/assets/js/210.9f16aad1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/211.70412bbf.js"><link rel="prefetch" href="/Tiny-blog/assets/js/212.1ae66c89.js"><link rel="prefetch" href="/Tiny-blog/assets/js/213.b75a3df9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/214.80d785d4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/215.eb5a1e61.js"><link rel="prefetch" href="/Tiny-blog/assets/js/216.95615e20.js"><link rel="prefetch" href="/Tiny-blog/assets/js/217.6edf39be.js"><link rel="prefetch" href="/Tiny-blog/assets/js/218.22a1beb9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/219.04ce9b33.js"><link rel="prefetch" href="/Tiny-blog/assets/js/22.5be07e4b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/220.b9f1b6b3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/221.a73bce03.js"><link rel="prefetch" href="/Tiny-blog/assets/js/222.42a68841.js"><link rel="prefetch" href="/Tiny-blog/assets/js/223.5cf94f63.js"><link rel="prefetch" href="/Tiny-blog/assets/js/224.69e2cd13.js"><link rel="prefetch" href="/Tiny-blog/assets/js/225.b5441919.js"><link rel="prefetch" href="/Tiny-blog/assets/js/227.b571ee39.js"><link rel="prefetch" href="/Tiny-blog/assets/js/228.95e9ad9c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/229.ca7dd037.js"><link rel="prefetch" href="/Tiny-blog/assets/js/23.859ad8e5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/230.a5760ca1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/231.57b5a043.js"><link rel="prefetch" href="/Tiny-blog/assets/js/232.796e81ec.js"><link rel="prefetch" href="/Tiny-blog/assets/js/233.af2ae687.js"><link rel="prefetch" href="/Tiny-blog/assets/js/234.e7ef77d2.js"><link rel="prefetch" href="/Tiny-blog/assets/js/235.11a983e7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/236.c211f977.js"><link rel="prefetch" href="/Tiny-blog/assets/js/237.73910c09.js"><link rel="prefetch" href="/Tiny-blog/assets/js/238.dde5859c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/239.8ea8cde4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/24.dd243e60.js"><link rel="prefetch" href="/Tiny-blog/assets/js/240.6535a9ae.js"><link rel="prefetch" href="/Tiny-blog/assets/js/241.41de9bf6.js"><link rel="prefetch" href="/Tiny-blog/assets/js/242.84ea299b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/243.53bd0ff9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/244.319b011e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/245.f305a111.js"><link rel="prefetch" href="/Tiny-blog/assets/js/246.97c996cc.js"><link rel="prefetch" href="/Tiny-blog/assets/js/247.98fc6cea.js"><link rel="prefetch" href="/Tiny-blog/assets/js/248.5bd39d92.js"><link rel="prefetch" href="/Tiny-blog/assets/js/249.43d11c2d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/25.1ece1443.js"><link rel="prefetch" href="/Tiny-blog/assets/js/250.d925826e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/251.cbd07be0.js"><link rel="prefetch" href="/Tiny-blog/assets/js/252.d477bd4e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/253.d8c62f9a.js"><link rel="prefetch" href="/Tiny-blog/assets/js/254.2b8ca994.js"><link rel="prefetch" href="/Tiny-blog/assets/js/255.85e384f5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/256.3570615e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/257.719f5031.js"><link rel="prefetch" href="/Tiny-blog/assets/js/258.42ce8a25.js"><link rel="prefetch" href="/Tiny-blog/assets/js/259.feb8ceb0.js"><link rel="prefetch" href="/Tiny-blog/assets/js/26.152602e3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/260.583e09cb.js"><link rel="prefetch" href="/Tiny-blog/assets/js/261.c7a5f4ca.js"><link rel="prefetch" href="/Tiny-blog/assets/js/262.b794f1dc.js"><link rel="prefetch" href="/Tiny-blog/assets/js/263.a8988fa4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/264.55b775a1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/265.35d4bc27.js"><link rel="prefetch" href="/Tiny-blog/assets/js/266.9174869d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/267.4ba8c18b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/268.8bfe6c62.js"><link rel="prefetch" href="/Tiny-blog/assets/js/269.465423e7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/27.58a1d23e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/270.60501088.js"><link rel="prefetch" href="/Tiny-blog/assets/js/271.f428a1eb.js"><link rel="prefetch" href="/Tiny-blog/assets/js/272.5d929001.js"><link rel="prefetch" href="/Tiny-blog/assets/js/273.4e3faef6.js"><link rel="prefetch" href="/Tiny-blog/assets/js/274.e4a78fe2.js"><link rel="prefetch" href="/Tiny-blog/assets/js/275.fb32e581.js"><link rel="prefetch" href="/Tiny-blog/assets/js/276.84df0c6f.js"><link rel="prefetch" href="/Tiny-blog/assets/js/277.6da745ac.js"><link rel="prefetch" href="/Tiny-blog/assets/js/278.65f5d4a0.js"><link rel="prefetch" href="/Tiny-blog/assets/js/279.f54bc912.js"><link rel="prefetch" href="/Tiny-blog/assets/js/28.1d39b5ad.js"><link rel="prefetch" href="/Tiny-blog/assets/js/280.5549f516.js"><link rel="prefetch" href="/Tiny-blog/assets/js/281.8412ef56.js"><link rel="prefetch" href="/Tiny-blog/assets/js/282.6f235d9d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/283.42fb5ba6.js"><link rel="prefetch" href="/Tiny-blog/assets/js/284.ac4c8529.js"><link rel="prefetch" href="/Tiny-blog/assets/js/285.7592b12c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/286.0bdff754.js"><link rel="prefetch" href="/Tiny-blog/assets/js/287.0767e41f.js"><link rel="prefetch" href="/Tiny-blog/assets/js/288.41cdb10b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/289.75a52277.js"><link rel="prefetch" href="/Tiny-blog/assets/js/29.d5d6edb5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/290.ad288561.js"><link rel="prefetch" href="/Tiny-blog/assets/js/291.251d17cc.js"><link rel="prefetch" href="/Tiny-blog/assets/js/292.096d901d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/293.1757bf4c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/294.57ebf10e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/295.7097f6af.js"><link rel="prefetch" href="/Tiny-blog/assets/js/296.c581b5a3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/297.9b7a964c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/298.844926eb.js"><link rel="prefetch" href="/Tiny-blog/assets/js/299.14681a8d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/3.54983402.js"><link rel="prefetch" href="/Tiny-blog/assets/js/30.7205700f.js"><link rel="prefetch" href="/Tiny-blog/assets/js/300.a0b426cc.js"><link rel="prefetch" href="/Tiny-blog/assets/js/301.e9a4acd0.js"><link rel="prefetch" href="/Tiny-blog/assets/js/302.386122c1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/303.ce161494.js"><link rel="prefetch" href="/Tiny-blog/assets/js/304.10a1bd43.js"><link rel="prefetch" href="/Tiny-blog/assets/js/305.dfea512d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/306.725f56d0.js"><link rel="prefetch" href="/Tiny-blog/assets/js/307.154d6422.js"><link rel="prefetch" href="/Tiny-blog/assets/js/308.1412696b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/309.9b028d4b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/31.43c65150.js"><link rel="prefetch" href="/Tiny-blog/assets/js/310.c4c8501e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/311.ded37570.js"><link rel="prefetch" href="/Tiny-blog/assets/js/312.9849887c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/313.e67538fb.js"><link rel="prefetch" href="/Tiny-blog/assets/js/314.d7be933e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/315.8672c686.js"><link rel="prefetch" href="/Tiny-blog/assets/js/316.196c4f7e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/317.1f6a2c22.js"><link rel="prefetch" href="/Tiny-blog/assets/js/318.c1e7ebc4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/319.1e5d3a19.js"><link rel="prefetch" href="/Tiny-blog/assets/js/32.6d2459ee.js"><link rel="prefetch" href="/Tiny-blog/assets/js/320.7f3c10a7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/321.28920ce5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/322.73b6bc5d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/323.ae21c01e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/324.4a5361a9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/325.0e056ef7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/326.1cfcd582.js"><link rel="prefetch" href="/Tiny-blog/assets/js/327.ed7fd4b8.js"><link rel="prefetch" href="/Tiny-blog/assets/js/328.075f99b7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/329.2be1735b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/33.0ff61a14.js"><link rel="prefetch" href="/Tiny-blog/assets/js/330.27405d2f.js"><link rel="prefetch" href="/Tiny-blog/assets/js/331.3e8a8520.js"><link rel="prefetch" href="/Tiny-blog/assets/js/332.406e5225.js"><link rel="prefetch" href="/Tiny-blog/assets/js/333.261b98c0.js"><link rel="prefetch" href="/Tiny-blog/assets/js/334.3d3397b4.js"><link rel="prefetch" href="/Tiny-blog/assets/js/335.4b21bd1b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/336.006b1982.js"><link rel="prefetch" href="/Tiny-blog/assets/js/337.47ae23c1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/338.8bd3a869.js"><link rel="prefetch" href="/Tiny-blog/assets/js/339.518b845b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/34.6188b173.js"><link rel="prefetch" href="/Tiny-blog/assets/js/340.5b869649.js"><link rel="prefetch" href="/Tiny-blog/assets/js/341.56131077.js"><link rel="prefetch" href="/Tiny-blog/assets/js/342.9f6e10e5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/343.825f7f3e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/344.1771eaa7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/345.afc7a778.js"><link rel="prefetch" href="/Tiny-blog/assets/js/346.ec637c8c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/347.9bf9a1c7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/348.3fc0368d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/349.065b9faa.js"><link rel="prefetch" href="/Tiny-blog/assets/js/35.66d76bed.js"><link rel="prefetch" href="/Tiny-blog/assets/js/350.e06cbed7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/351.73e50c04.js"><link rel="prefetch" href="/Tiny-blog/assets/js/352.b24a624e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/353.627159ad.js"><link rel="prefetch" href="/Tiny-blog/assets/js/354.ad3ee54c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/355.c4e57306.js"><link rel="prefetch" href="/Tiny-blog/assets/js/356.9a4767db.js"><link rel="prefetch" href="/Tiny-blog/assets/js/357.d9cab216.js"><link rel="prefetch" href="/Tiny-blog/assets/js/358.51eefca1.js"><link rel="prefetch" href="/Tiny-blog/assets/js/359.a07e6288.js"><link rel="prefetch" href="/Tiny-blog/assets/js/36.9478612a.js"><link rel="prefetch" href="/Tiny-blog/assets/js/360.adbcdc1d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/37.566ece89.js"><link rel="prefetch" href="/Tiny-blog/assets/js/38.4807d8dc.js"><link rel="prefetch" href="/Tiny-blog/assets/js/39.1a7610ce.js"><link rel="prefetch" href="/Tiny-blog/assets/js/4.3ec949b2.js"><link rel="prefetch" href="/Tiny-blog/assets/js/40.89941262.js"><link rel="prefetch" href="/Tiny-blog/assets/js/41.9c5c6d7e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/42.2791a561.js"><link rel="prefetch" href="/Tiny-blog/assets/js/43.e390471b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/44.aa653784.js"><link rel="prefetch" href="/Tiny-blog/assets/js/45.a204f356.js"><link rel="prefetch" href="/Tiny-blog/assets/js/46.d3a58751.js"><link rel="prefetch" href="/Tiny-blog/assets/js/47.547a71eb.js"><link rel="prefetch" href="/Tiny-blog/assets/js/48.0ed2d500.js"><link rel="prefetch" href="/Tiny-blog/assets/js/49.7ada8d03.js"><link rel="prefetch" href="/Tiny-blog/assets/js/5.45bb1db2.js"><link rel="prefetch" href="/Tiny-blog/assets/js/50.e9f59a9c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/51.a848e49d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/52.b1f59256.js"><link rel="prefetch" href="/Tiny-blog/assets/js/53.b68773cf.js"><link rel="prefetch" href="/Tiny-blog/assets/js/54.a6a956f7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/55.2668634c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/56.fc9a40d5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/57.64515059.js"><link rel="prefetch" href="/Tiny-blog/assets/js/58.141b1563.js"><link rel="prefetch" href="/Tiny-blog/assets/js/59.f4123844.js"><link rel="prefetch" href="/Tiny-blog/assets/js/6.d7e7a719.js"><link rel="prefetch" href="/Tiny-blog/assets/js/60.03d8976e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/61.e2e0cc3c.js"><link rel="prefetch" href="/Tiny-blog/assets/js/62.5f5e3fc9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/63.ff9747f5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/64.c52a74f3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/65.bc239ea8.js"><link rel="prefetch" href="/Tiny-blog/assets/js/66.38ada3c7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/67.e83d8716.js"><link rel="prefetch" href="/Tiny-blog/assets/js/68.6a45e3bd.js"><link rel="prefetch" href="/Tiny-blog/assets/js/69.e71ce288.js"><link rel="prefetch" href="/Tiny-blog/assets/js/7.b7386b35.js"><link rel="prefetch" href="/Tiny-blog/assets/js/70.c117cec0.js"><link rel="prefetch" href="/Tiny-blog/assets/js/71.10b9bc47.js"><link rel="prefetch" href="/Tiny-blog/assets/js/72.6908fcff.js"><link rel="prefetch" href="/Tiny-blog/assets/js/73.ad7c7e12.js"><link rel="prefetch" href="/Tiny-blog/assets/js/74.58ec3ed9.js"><link rel="prefetch" href="/Tiny-blog/assets/js/75.c46c52c2.js"><link rel="prefetch" href="/Tiny-blog/assets/js/76.5498a573.js"><link rel="prefetch" href="/Tiny-blog/assets/js/77.1a137a54.js"><link rel="prefetch" href="/Tiny-blog/assets/js/78.ab1343e5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/79.2f63af0f.js"><link rel="prefetch" href="/Tiny-blog/assets/js/8.ab44931b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/80.afeb1180.js"><link rel="prefetch" href="/Tiny-blog/assets/js/81.4b994b30.js"><link rel="prefetch" href="/Tiny-blog/assets/js/82.ae3a05a5.js"><link rel="prefetch" href="/Tiny-blog/assets/js/83.55ea3e17.js"><link rel="prefetch" href="/Tiny-blog/assets/js/84.6801c2ce.js"><link rel="prefetch" href="/Tiny-blog/assets/js/85.5f7f1977.js"><link rel="prefetch" href="/Tiny-blog/assets/js/86.42a3e0a7.js"><link rel="prefetch" href="/Tiny-blog/assets/js/87.fcc22118.js"><link rel="prefetch" href="/Tiny-blog/assets/js/88.30b1ed0a.js"><link rel="prefetch" href="/Tiny-blog/assets/js/89.22b5b85e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/9.2f1806f3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/90.4e1cd660.js"><link rel="prefetch" href="/Tiny-blog/assets/js/91.e5d3fd7b.js"><link rel="prefetch" href="/Tiny-blog/assets/js/92.1e1a3e1e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/93.b10a164d.js"><link rel="prefetch" href="/Tiny-blog/assets/js/94.212e65b8.js"><link rel="prefetch" href="/Tiny-blog/assets/js/95.2ff99752.js"><link rel="prefetch" href="/Tiny-blog/assets/js/96.7bfa5898.js"><link rel="prefetch" href="/Tiny-blog/assets/js/97.9867e9b3.js"><link rel="prefetch" href="/Tiny-blog/assets/js/98.a737b61e.js"><link rel="prefetch" href="/Tiny-blog/assets/js/99.93ce9e3b.js">
+    <link rel="stylesheet" href="/Tiny-blog/assets/css/0.styles.366936ce.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Tiny-blog/" class="home-link router-link-active"><!----> <span class="site-name">Tiny-blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="api online" class="dropdown-title"><span class="title">api online</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.kancloud.cn/yunye/axios/234845" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Axios
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.w3cschool.cn/axurezwjc/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Axure
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.runoob.com/bootstrap/bootstrap-tutorial.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Bootstrap
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://helm.sh/docs/intro/quickstart/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Helm
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jhipster.tech/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Jhipster
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jquery123.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  jQuery
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leetcode-cn.com/problemset/algorithms/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  LeetCode
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://morrisjs.github.io/morris.js/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Morris.js
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://nacos.io/zh-cn/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Nacos
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://spring.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Spring
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/alibaba/spring-cloud-alibaba" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Spring Cloud Alibaba GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://pingcap.com/docs-cn/stable/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  TiDB
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://cn.vuejs.org/v2/api/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://vuex.vuejs.org/zh/api/#vuex-store" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vuex
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="frontEnd" class="dropdown-title"><span class="title">frontEnd</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tiny-blog/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/jquery/" class="nav-link">
+  Jquery
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/vue/vuepress.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/frontother/templateuse.html" class="nav-link">
+  other
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tiny-blog/java00/" class="nav-link">
+  快速入门
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java01/" class="nav-link">
+  面向对象编程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java02/" class="nav-link">
+  异常
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javareflect/" class="nav-link">
+  反射
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java03/" class="nav-link">
+  注解
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java04/" class="nav-link">
+  泛型
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/collection/" class="nav-link">
+  集合
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/structure/" class="nav-link">
+  数据结构和算法
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javaio/" class="nav-link">
+  IO
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/time/" class="nav-link">
+  日期时间
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/class/" class="nav-link">
+  常用类
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java05/" class="nav-link">
+  正则表达式
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/encryption/" class="nav-link">
+  加密与安全
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javathread/" class="nav-link">
+  多线程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java06/" class="nav-link">
+  函数式编程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java07/" class="nav-link">
+  接口
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java08/" class="nav-link">
+  内部类
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java09/" class="nav-link">
+  Scanner 类
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javaosi/" class="nav-link">
+  网络编程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/jdbc/" class="nav-link">
+  JDBC编程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/design/" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="backEnd" class="dropdown-title"><span class="title">backEnd</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tiny-blog/Spring/" class="nav-link">
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/Log4j/" class="nav-link">
+  Log4j
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springweb/" class="nav-link">
+  Spring Web
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springmvc/" class="nav-link">
+  Spring MVC
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/MyBatis/" class="nav-link">
+  MyBatis
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springtransation/" class="nav-link">
+  Spring事务管理
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/communication/" class="nav-link">
+  解决模块间通信问题
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springboot/" class="nav-link">
+  Spring Boot
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springcloud/" class="nav-link">
+  Spring Cloud
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/jvm/" class="nav-link">
+  JVM
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/plugins&amp;utils/" class="nav-link">
+  Plugins&amp;Utils
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/solvedproblems/spring-boot-static.html" class="nav-link">
+  Solved problems
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/other/other01.html" class="nav-link">
+  other
+</a></li></ul></div></div><div class="nav-item"><a href="/Tiny-blog/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/Tiny-blog/leetcode/" class="nav-link">
+  LeetCode
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="容器化部署" class="dropdown-title"><span class="title">容器化部署</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tiny-blog/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/kubernetes/" class="nav-link router-link-active">
+  Kubernetes
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="api online" class="dropdown-title"><span class="title">api online</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.kancloud.cn/yunye/axios/234845" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Axios
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.w3cschool.cn/axurezwjc/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Axure
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.runoob.com/bootstrap/bootstrap-tutorial.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Bootstrap
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://helm.sh/docs/intro/quickstart/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Helm
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jhipster.tech/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Jhipster
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jquery123.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  jQuery
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leetcode-cn.com/problemset/algorithms/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  LeetCode
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://morrisjs.github.io/morris.js/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Morris.js
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://nacos.io/zh-cn/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Nacos
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://spring.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Spring
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/alibaba/spring-cloud-alibaba" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Spring Cloud Alibaba GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://pingcap.com/docs-cn/stable/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  TiDB
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://cn.vuejs.org/v2/api/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://vuex.vuejs.org/zh/api/#vuex-store" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vuex
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="frontEnd" class="dropdown-title"><span class="title">frontEnd</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tiny-blog/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/jquery/" class="nav-link">
+  Jquery
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/vue/vuepress.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/frontother/templateuse.html" class="nav-link">
+  other
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tiny-blog/java00/" class="nav-link">
+  快速入门
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java01/" class="nav-link">
+  面向对象编程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java02/" class="nav-link">
+  异常
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javareflect/" class="nav-link">
+  反射
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java03/" class="nav-link">
+  注解
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java04/" class="nav-link">
+  泛型
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/collection/" class="nav-link">
+  集合
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/structure/" class="nav-link">
+  数据结构和算法
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javaio/" class="nav-link">
+  IO
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/time/" class="nav-link">
+  日期时间
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/class/" class="nav-link">
+  常用类
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java05/" class="nav-link">
+  正则表达式
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/encryption/" class="nav-link">
+  加密与安全
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javathread/" class="nav-link">
+  多线程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java06/" class="nav-link">
+  函数式编程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java07/" class="nav-link">
+  接口
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java08/" class="nav-link">
+  内部类
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/java09/" class="nav-link">
+  Scanner 类
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/javaosi/" class="nav-link">
+  网络编程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/jdbc/" class="nav-link">
+  JDBC编程
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/design/" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="backEnd" class="dropdown-title"><span class="title">backEnd</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tiny-blog/Spring/" class="nav-link">
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/Log4j/" class="nav-link">
+  Log4j
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springweb/" class="nav-link">
+  Spring Web
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springmvc/" class="nav-link">
+  Spring MVC
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/MyBatis/" class="nav-link">
+  MyBatis
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springtransation/" class="nav-link">
+  Spring事务管理
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/communication/" class="nav-link">
+  解决模块间通信问题
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springboot/" class="nav-link">
+  Spring Boot
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/springcloud/" class="nav-link">
+  Spring Cloud
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/jvm/" class="nav-link">
+  JVM
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/plugins&amp;utils/" class="nav-link">
+  Plugins&amp;Utils
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/solvedproblems/spring-boot-static.html" class="nav-link">
+  Solved problems
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/other/other01.html" class="nav-link">
+  other
+</a></li></ul></div></div><div class="nav-item"><a href="/Tiny-blog/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/Tiny-blog/leetcode/" class="nav-link">
+  LeetCode
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="容器化部署" class="dropdown-title"><span class="title">容器化部署</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tiny-blog/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/Tiny-blog/kubernetes/" class="nav-link router-link-active">
+  Kubernetes
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Kubernetes</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Tiny-blog/kubernetes/" aria-current="page" class="sidebar-link">Kubernetes简介</a></li><li><a href="/Tiny-blog/kubernetes/kubernetes01.html" class="sidebar-link">Kubernetes安装前的准备</a></li><li><a href="/Tiny-blog/kubernetes/kubernetes02.html" aria-current="page" class="active sidebar-link">Kubernetes安装集群</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Tiny-blog/kubernetes/kubernetes02.html#概述" class="sidebar-link">概述</a></li><li class="sidebar-sub-header"><a href="/Tiny-blog/kubernetes/kubernetes02.html#创建并修改配置" class="sidebar-link">创建并修改配置</a></li><li class="sidebar-sub-header"><a href="/Tiny-blog/kubernetes/kubernetes02.html#查看所需镜像" class="sidebar-link">查看所需镜像</a></li><li class="sidebar-sub-header"><a href="/Tiny-blog/kubernetes/kubernetes02.html#拉取所需镜像" class="sidebar-link">拉取所需镜像</a></li><li class="sidebar-sub-header"><a href="/Tiny-blog/kubernetes/kubernetes02.html#安装主节点" class="sidebar-link">安装主节点</a></li><li class="sidebar-sub-header"><a href="/Tiny-blog/kubernetes/kubernetes02.html#配置-kubectl" class="sidebar-link">配置 kubectl</a></li><li class="sidebar-sub-header"><a href="/Tiny-blog/kubernetes/kubernetes02.html#验证是否成功" class="sidebar-link">验证是否成功</a></li><li class="sidebar-sub-header"><a href="/Tiny-blog/kubernetes/kubernetes02.html#安装从节点" class="sidebar-link">安装从节点</a></li><li class="sidebar-sub-header"><a href="/Tiny-blog/kubernetes/kubernetes02.html#验证是否成功-2" class="sidebar-link">验证是否成功</a></li><li class="sidebar-sub-header"><a href="/Tiny-blog/kubernetes/kubernetes02.html#查看-pod-状态" class="sidebar-link">查看 Pod 状态</a></li><li class="sidebar-sub-header"><a href="/Tiny-blog/kubernetes/kubernetes02.html#附：扩展阅读" class="sidebar-link">附：扩展阅读</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Tiny-blog/kubernetes/kubernetes02.html#kubeadm-init-的执行过程" class="sidebar-link">kubeadm init 的执行过程</a></li></ul></li></ul></li><li><a href="/Tiny-blog/kubernetes/kubernetes03.html" class="sidebar-link">Kubernetes配置网络</a></li><li><a href="/Tiny-blog/kubernetes/kubernetes04.html" class="sidebar-link">Kubernetes第一个容器</a></li><li><a href="/Tiny-blog/kubernetes/kubernetes05.html" class="sidebar-link">Kubernetes概念总结</a></li><li><a href="/Tiny-blog/kubernetes/kubernetes06.html" class="sidebar-link">Kubernetes通过资源配置运行容器</a></li><li><a href="/Tiny-blog/kubernetes/kubernetes07.html" class="sidebar-link">Kubernetes Ingress简介</a></li><li><a href="/Tiny-blog/kubernetes/kubernetes08.html" class="sidebar-link">Nginx 虚拟主机</a></li><li><a href="/Tiny-blog/kubernetes/kubernetes09.html" class="sidebar-link">Nginx 反向代理</a></li><li><a href="/Tiny-blog/kubernetes/kubernetes10.html" class="sidebar-link">Nginx 负载均衡</a></li><li><a href="/Tiny-blog/kubernetes/kubernetes11.html" class="sidebar-link">Nginx Ingress Controller</a></li><li><a href="/Tiny-blog/kubernetes/kubernetes12.html" class="sidebar-link">Kubernetes 准备数据卷</a></li><li><a href="/Tiny-blog/kubernetes/kubernetes13.html" class="sidebar-link">Kubernetes使用数据卷</a></li><li><a href="/Tiny-blog/kubernetes/kubernetes14.html" class="sidebar-link">Kubernetes ConfigMap</a></li><li><a href="/Tiny-blog/kubernetes/kubernetes15.html" class="sidebar-link">Kubernetes Dashboard</a></li><li><a href="/Tiny-blog/kubernetes/kubernetes16.html" class="sidebar-link">使用 Kuboard 替代 Kubernetes Dashboard</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="kubernetes-安装集群"><a href="#kubernetes-安装集群" class="header-anchor">#</a> Kubernetes 安装集群</h1> <h2 id="概述"><a href="#概述" class="header-anchor">#</a> 概述</h2> <p>kubeadm 是 kubernetes 的集群安装工具，能够快速安装 kubernetes 集群，安装 kubernetes 主要是安装它的各个镜像，而 kubeadm 已经为我们集成好了运行 kubernetes 所需的基本镜像。但由于国内的网络原因，在搭建环境时，无法拉取到这些镜像。此时我们只需要修改为阿里云提供的镜像服务即可解决该问题。</p> <h2 id="创建并修改配置"><a href="#创建并修改配置" class="header-anchor">#</a> 创建并修改配置</h2> <p>创建并进入目录：<code>root@kubernetes-master:/usr/local/kubernetes/cluster#</code></p> <div class="language- line-numbers-mode"><pre class="language-text"><code># 导出配置文件
+kubeadm config print init-defaults --kubeconfig ClusterConfiguration &gt; kubeadm.yml
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><div class="custom-block tip"><p class="custom-block-title">修改配置：</p> <ol><li>将<code>advertiseAddress</code>改成自己的地址 <code>192.168.27.110</code></li> <li>将镜像仓库改为阿里云<code>imageRepository: registry.aliyuncs.com/google_containers</code></li> <li>在networking下增加<code>podSubnet: &quot;10.244.0.0/16&quot;</code></li> <li>确认版本正确，否则可能阻塞。</li></ol></div> <p>尤其注意在修改时不能多加空格或者tab，因为yml的格式是很严格的，多了就会产生错误。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>apiVersion: kubeadm.k8s.io/v1beta2
+bootstrapTokens:
+- groups:
+  - system:bootstrappers:kubeadm:default-node-token
+  token: abcdef.0123456789abcdef
+  ttl: 24h0m0s
+  usages:
+  - signing
+  - authentication
+kind: InitConfiguration
+localAPIEndpoint:
+  # 修改为主节点 IP
+  advertiseAddress: 192.168.27.110
+  bindPort: 6443
+nodeRegistration:
+  criSocket: /var/run/dockershim.sock
+  name: kubernetes-master
+  taints:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+---
+apiServer:
+  timeoutForControlPlane: 4m0s
+apiVersion: kubeadm.k8s.io/v1beta2
+certificatesDir: /etc/kubernetes/pki
+clusterName: kubernetes
+controllerManager: {}
+dns:
+  type: CoreDNS
+etcd:
+  local:
+    dataDir: /var/lib/etcd
+# 国内不能访问 Google，修改为阿里云
+imageRepository: registry.aliyuncs.com/google_containers
+kind: ClusterConfiguration
+# 修改版本号
+kubernetesVersion: v1.16.0
+networking:
+  dnsDomain: cluster.local
+  # 配置 POD 所在网段为我们虚拟机不重叠的网段（这里用的是 Flannel 默认网段）
+  podSubnet: &quot;10.244.0.0/16&quot;
+  serviceSubnet: 10.96.0.0/12
+scheduler: {}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br></div></div><h2 id="查看所需镜像"><a href="#查看所需镜像" class="header-anchor">#</a> 查看所需镜像</h2> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>kubeadm config images list --config kubeadm.yml
+<span class="token comment"># 输出如下</span>
+registry.aliyuncs.com/google_containers/kube-apiserver:v1.15.0
+registry.aliyuncs.com/google_containers/kube-controller-manager:v1.15.0
+registry.aliyuncs.com/google_containers/kube-scheduler:v1.15.0
+registry.aliyuncs.com/google_containers/kube-proxy:v1.15.0
+registry.aliyuncs.com/google_containers/pause:3.1
+registry.aliyuncs.com/google_containers/etcd:3.3.10
+registry.aliyuncs.com/google_containers/coredns:1.3.1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h2 id="拉取所需镜像"><a href="#拉取所需镜像" class="header-anchor">#</a> 拉取所需镜像</h2> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>kubeadm config images pull --config kubeadm.yml
+<span class="token comment"># 输出如下</span>
+<span class="token punctuation">[</span>config/images<span class="token punctuation">]</span> Pulled registry.aliyuncs.com/google_containers/kube-apiserver:v1.15.0
+<span class="token punctuation">[</span>config/images<span class="token punctuation">]</span> Pulled registry.aliyuncs.com/google_containers/kube-controller-manager:v1.15.0
+<span class="token punctuation">[</span>config/images<span class="token punctuation">]</span> Pulled registry.aliyuncs.com/google_containers/kube-scheduler:v1.15.0
+<span class="token punctuation">[</span>config/images<span class="token punctuation">]</span> Pulled registry.aliyuncs.com/google_containers/kube-proxy:v1.15.0
+<span class="token punctuation">[</span>config/images<span class="token punctuation">]</span> Pulled registry.aliyuncs.com/google_containers/pause:3.1
+<span class="token punctuation">[</span>config/images<span class="token punctuation">]</span> Pulled registry.aliyuncs.com/google_containers/etcd:3.3.10
+<span class="token punctuation">[</span>config/images<span class="token punctuation">]</span> Pulled registry.aliyuncs.com/google_containers/coredns:1.3.1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h2 id="安装主节点"><a href="#安装主节点" class="header-anchor">#</a> 安装主节点</h2> <p>执行以下命令初始化主节点，该命令指定了初始化时需要使用的配置文件，其中添加 --upload-certs 参数可以在后续执行加入节点时自动分发证书文件。追加的 <code>tee kubeadm-init.log</code> 用以输出日志。</p> <blockquote><p>注意： 如果安装 kubernetes 版本和下载的镜像版本不统一则会出现 timed out waiting for the condition 错误。中途失败或是想修改配置可以使用 kubeadm reset 命令重置配置，再做初始化操作即可。</p></blockquote> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>kubeadm init --config<span class="token operator">=</span>kubeadm.yml --upload-certs <span class="token operator">|</span> <span class="token function">tee</span> kubeadm-init.log
+<span class="token comment"># 输出如下</span>
+  <span class="token punctuation">[</span>WARNING IsDockerSystemdCheck<span class="token punctuation">]</span>: detected <span class="token string">&quot;cgroupfs&quot;</span> as the Docker cgroup driver. The recommended driver is <span class="token string">&quot;systemd&quot;</span><span class="token builtin class-name">.</span> Please follow the guide at https://kubernetes.io/docs/setup/cri/
+<span class="token punctuation">[</span>preflight<span class="token punctuation">]</span> Pulling images required <span class="token keyword">for</span> setting up a Kubernetes cluster
+<span class="token punctuation">[</span>preflight<span class="token punctuation">]</span> This might take a minute or two, depending on the speed of your internet connection
+<span class="token punctuation">..</span>.
+Your Kubernetes control-plane has initialized successfully<span class="token operator">!</span>
+To start using your cluster, you need to run the following as a regular user:
+  <span class="token function">mkdir</span> -p <span class="token environment constant">$HOME</span>/.kube
+  <span class="token function">sudo</span> <span class="token function">cp</span> -i /etc/kubernetes/admin.conf <span class="token environment constant">$HOME</span>/.kube/config
+  <span class="token function">sudo</span> <span class="token function">chown</span> <span class="token variable"><span class="token variable">$(</span><span class="token function">id</span> -u<span class="token variable">)</span></span><span class="token builtin class-name">:</span><span class="token variable"><span class="token variable">$(</span><span class="token function">id</span> -g<span class="token variable">)</span></span> <span class="token environment constant">$HOME</span>/.kube/config
+You should now deploy a pod network to the cluster.
+Run <span class="token string">&quot;kubectl apply -f [podnetwork].yaml&quot;</span> with one of the options listed at:
+  https://kubernetes.io/docs/concepts/cluster-administration/addons/
+Then you can <span class="token function">join</span> any number of worker nodes by running the following on each as root:
+kubeadm <span class="token function">join</span> <span class="token number">192.168</span>.141.110:6443 --token abcdef.0123456789abcdef <span class="token punctuation">\</span>
+    --discovery-token-ca-cert-hash sha256:f0759e0d352c1a5de4444782b4a676460b2ea7a2876fa0accab572b8629b72c8 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h2 id="配置-kubectl"><a href="#配置-kubectl" class="header-anchor">#</a> 配置 kubectl</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>mkdir -p $HOME/.kube
+cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+# 非 ROOT 用户执行
+chown $(id -u):$(id -g) $HOME/.kube/config
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="验证是否成功"><a href="#验证是否成功" class="header-anchor">#</a> 验证是否成功</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>kubectl get node
+# 输出如下
+NAME                STATUS     ROLES    AGE     VERSION
+kubernetes-master   NotReady   master   4m38s   v1.15.0
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="安装从节点"><a href="#安装从节点" class="header-anchor">#</a> 安装从节点</h2> <p>将 Node 节点加入到集群中很简单，只需要在 Node 服务器上安装 kubeadm，kubectl，kubelet 三个工具，然后使用 kubeadm join 命令加入即可</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>kubeadm join 192.168.27.110:6443 --token abcdef.0123456789abcdef \
+    --discovery-token-ca-cert-hash sha256:dd022a2ea768459142d5ef881e4da44d6aaaf3379538ef48516cd88ca1857dd2 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="验证是否成功-2"><a href="#验证是否成功-2" class="header-anchor">#</a> 验证是否成功</h2> <p>回到 Master 主节点查看是否安装成功</p> <blockquote><p>注意： 如果 Node 节点加入 Master 时配置有问题可以在 Node 节点上使用 <code>kubeadm reset</code> 重置配置再使用 <code>kubeadm join</code> 命令重新加入即可。希望在 master 节点删除 node ，可以使用 <code>kubectl delete nodes &lt;NAME&gt;</code> 删除。</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>kubectl get node
+# 输出如下
+NAME                 STATUS     ROLES    AGE   VERSION
+kubernetes-master    NotReady   master   20m   v1.15.0
+kubernetes-node-01   NotReady   &lt;none&gt;   16s   v1.15.0
+kubernetes-node-02   NotReady   &lt;none&gt;   6s    v1.15.0
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h2 id="查看-pod-状态"><a href="#查看-pod-状态" class="header-anchor">#</a> 查看 Pod 状态</h2> <p>coredns 尚未运行，此时我们还需要安装网络插件</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>kubectl get pod -n kube-system -o wide
+# 输出如下
+NAME                                        READY   STATUS    RESTARTS   AGE     IP                NODE                 NOMINATED NODE   READINESS GATES
+coredns-bccdc95cf-9s4bm                     0/1     Pending   0          24m     &lt;none&gt;            &lt;none&gt;               &lt;none&gt;           &lt;none&gt;
+coredns-bccdc95cf-s8ggd                     0/1     Pending   0          24m     &lt;none&gt;            &lt;none&gt;               &lt;none&gt;           &lt;none&gt;
+etcd-kubernetes-master                      1/1     Running   0          24m     192.168.141.110   kubernetes-master    &lt;none&gt;           &lt;none&gt;
+kube-apiserver-kubernetes-master            1/1     Running   0          24m     192.168.141.110   kubernetes-master    &lt;none&gt;           &lt;none&gt;
+kube-controller-manager-kubernetes-master   1/1     Running   0          23m     192.168.141.110   kubernetes-master    &lt;none&gt;           &lt;none&gt;
+kube-proxy-8s87d                            1/1     Running   0          4m56s   192.168.141.120   kubernetes-node-01   &lt;none&gt;           &lt;none&gt;
+kube-proxy-cbnlb                            1/1     Running   0          4m46s   192.168.141.121   kubernetes-node-02   &lt;none&gt;           &lt;none&gt;
+kube-proxy-vwhxj                            1/1     Running   0          24m     192.168.141.110   kubernetes-master    &lt;none&gt;           &lt;none&gt;
+kube-scheduler-kubernetes-master            1/1     Running   0          24m     192.168.141.110   kubernetes-master    &lt;none&gt;           &lt;none&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h2 id="附：扩展阅读"><a href="#附：扩展阅读" class="header-anchor">#</a> 附：扩展阅读</h2> <h3 id="kubeadm-init-的执行过程"><a href="#kubeadm-init-的执行过程" class="header-anchor">#</a> kubeadm init 的执行过程</h3> <ul><li>init： 指定版本进行初始化操作</li> <li>preflight： 初始化前的检查和下载所需要的 Docker 镜像文件</li> <li>kubelet-start： 生成 kubelet 的配置文件 var/lib/kubelet/config.yaml，没有这个文件 kubelet 无法启动，所以初始化之前的 kubelet 实际上启动不会成功</li> <li>certificates： 生成 Kubernetes 使用的证书，存放在 /etc/kubernetes/pki 目录中</li> <li>kubeconfig： 生成 KubeConfig 文件，存放在 /etc/kubernetes 目录中，组件之间通信需要使用对应文件</li> <li>control-plane： 使用 /etc/kubernetes/manifest 目录下的 YAML 文件，安装 Master 组件</li> <li>etcd： 使用 /etc/kubernetes/manifest/etcd.yaml 安装 Etcd 服务</li> <li>wait-control-plane： 等待 control-plan 部署的 Master 组件启动</li> <li>apiclient： 检查 Master 组件服务状态。</li> <li>uploadconfig： 更新配置</li> <li>kubelet： 使用 configMap 配置 kubelet</li> <li>patchnode： 更新 CNI 信息到 Node 上，通过注释的方式记录</li> <li>mark-control-plane： 为当前节点打标签，打了角色 Master，和不可调度标签，这样默认就不会使用 Master 节点来运行 Pod</li> <li>bootstrap-token： 生成 token 记录下来，后边使用 kubeadm join 往集群中添加节点时会用到</li> <li>addons： 安装附加组件 CoreDNS 和 kube-proxy</li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最近更新:</span> <span class="time">2019-11-27 4:23:38 ├F10: PM┤</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Tiny-blog/kubernetes/kubernetes01.html" class="prev">
+        Kubernetes安装前的准备
+      </a></span> <span class="next"><a href="/Tiny-blog/kubernetes/kubernetes03.html">
+        Kubernetes配置网络
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/Tiny-blog/assets/js/app.2c5aab52.js" defer></script><script src="/Tiny-blog/assets/js/2.88f50141.js" defer></script><script src="/Tiny-blog/assets/js/226.883dac42.js" defer></script>
+  </body>
+</html>
